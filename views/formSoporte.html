@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de privacidad - ATOMIC STUDIOS</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family: 'Chau Philomene One', sans-serif;
+    }
+
+    body{
+        background-color: #212124;
+    }
+
+    .paragraph{
+        font-size: 30px;
+        color: white;
+    }
+
+
+</style>
+<body>
+    <div class="position-relative">
+        <img src="../img/background.png" alt="Descripción de la imagen" class="img-fluid w-100" style="filter: blur(4px);">
+        <div class="text-center position-absolute top-50 start-50 translate-middle" style="transform: translate(-50%, -50%); color: white;">
+          <h1 class="text-center display-1">SOPORTE</h1>
+          <img src="../img/linea.png" class="img-fluid" style="filter: invert(100%);" alt="COSITO">
+        </div>
+      </div>
+    <div class="text-center" style="margin-top: 4%; margin-left: 7.5%; margin-right: 7.5%;">
+        <form action="">
+            <p class="paragraph">Llene el siguiente formulario para ponerte en contacto con nosotros</p>
+            <img src="../img/logo.png" alt="logo" class="img-fluid" style="width: 15%; rotate: -90deg;">
+            <div class="paragraph" style="margin-top: 10px;">
+                <p>Nombre de Usuario</p>
+                <input type="text" name="username" id="username" placeholder="ZIKARIO123">
+    
+                <p>Correo Electronico</p>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+    
+                <p>Asunto</p>
+                <select name="asuntos" id="asuntos">
+                    <option value="0" selected >Seleccionar...</option>
+                    <option value="1">Reportar usuario</option>
+                    <option value="2">Reportar Bug</option>
+                    <option value="3">Otros</option>
+                </select>
+    
+                <p>Mensaje</p>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="7"></textarea>
+            </div>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>
