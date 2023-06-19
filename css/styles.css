@@ -6,19 +6,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    flex-wrap: wrap;
+    min-height: 10vh;
     background-color: rgb(22, 21, 21);
 }
 
 .nav-bar div:nth-child(1){
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 50%;
-    justify-content: space-around;
 }
 
 .nav-bar div:nth-child(2){
     display: flex;
-    width: 250px;
+    width: 15em;
 }
 
 .nav-bar div :nth-child(n){
@@ -30,12 +32,11 @@ body{
 }
 
 .nav-bar div button{
-    padding: 8px 15px;
+    padding: 7px 10px;
     margin: 0px 5px;
     border: none;
     border-radius: 10px;
     background-color: rgb(36, 34, 34);
-
 }
 
 .nav-bar div button:nth-child(2){
@@ -70,14 +71,15 @@ body{
 .imgdef-texto p{
     text-transform: uppercase;
     color: white;
-    font-size: 50px;
+    font-size: clamp(2em, 5vw, 5em);
     font-weight: 500;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
 }
 
 .imgdef-texto img{
-    color: wheat;
+    filter: invert(100%);
+    width: 40vw;
 }
 
 /* CONTENEDOR PRINCIPAL */
