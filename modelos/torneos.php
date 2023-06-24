@@ -1,5 +1,12 @@
 <?php
-    $query = mysqli_query($conn, "SELECT * FROM torneos ORDER BY id DESC");
+    $sql = "SELECT  torneos.*, 
+                    usuarios.fotoPerfil, 
+                    usuarios.nombre as userName 
+                FROM torneos 
+                LEFT JOIN usuarios ON usuarios.id = torneos.campeon_id 
+                ORDER BY id DESC;";
+    
+    $query = mysqli_query($conn, $sql);
 
     if(!$query){
         die('Hubo un error en la consulta' . mysqli_error($conn));

@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso de privacidad - ATOMIC STUDIOS</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap" rel="stylesheet">
-</head>
-<style>
-    *{
-        font-family: 'Chau Philomene One', sans-serif;
-    }
-
-    body{
-        background-color: #212124;
-    }
-
-    .paragraph{
-        font-size: 30px;
-        color: white;
-    }
-
-
-</style>
-<body>
-    <div class="position-relative">
-        <img src="../img/background.png" alt="Descripción de la imagen" class="img-fluid w-100" style="filter: blur(4px);">
-        <div class="text-center position-absolute top-50 start-50 translate-middle" style="transform: translate(-50%, -50%); color: white;">
-          <h1 class="text-center display-1">AVISO DE PRIVACIDAD</h1>
-          <img src="../img/linea.png" class="img-fluid" style="filter: invert(100%);" alt="COSITO">
-        </div>
-      </div>
-    <div class="text-start" style="margin-top: 4%; margin-left: 7.5%; margin-right: 7.5%;">
-        <i style="font-size: 25px;">Modificado por ultima vez: 20 de Mayo de 2023</i>
-        <p class="text-white" style="margin-top: 10px;">
+<div class="text-start" style="margin-top: 4%; margin-left: 7.5%; margin-right: 7.5%;">
+        <i class="lead">Modificado por ultima vez: 20 de Mayo de 2023</i>
+        <p class="paragraph" style="margin-top: 10px;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error unde deleniti, et amet cum dolorem neque non deserunt omnis commodi tempora dicta temporibus adipisci, quaerat earum enim voluptatum est.
             Inventore animi veniam totam aut ipsam cumque autem quibusdam harum. At tenetur, unde nemo officia eligendi autem quae ratione ullam eaque fuga, facere ea in nulla, laborum minima? Labore, optio?
             Earum quis facilis quia ad voluptatibus, qui eum nemo esse possimus reiciendis vel ullam sapiente natus suscipit doloribus explicabo commodi.
@@ -44,7 +8,7 @@
             Pariatur, est harum magnam libero exercitationem obcaecati laborum a dolorum!
             Quam ab odio error eum sequi tempore et blanditiis nulla a, assumenda minus expedita. Non ipsam beatae porro inventore:
         </p>
-        <ul class="text-white">
+        <ul class="paragraph">
             <li>Quidem ipsa quo beatae quisquam soluta, ducimus animi earum quod alias. Ut eligendi error alias magnam porro eos distinctio recusandae ipsum reprehenderit fugiat iusto sed, quam asperiores architecto veniam
                 velit non iste totam perspiciatis voluptatem nam perferendis quaerat. Corporis, aliquid unde?
             </li>
@@ -70,7 +34,4 @@
             Cum dolores neque dignissimos voluptas consequatur facere commodi, provident voluptatem nam recusandae eius minima deserunt incidunt soluta eveniet nostrum, ipsa et harum ut fugit at quibusdam debitis. Voluptatibus, numquam rerum!
             Dolores doloremque eveniet veniam accusantium obcaecati suscipit ea consequuntur velit iure nobis asperiores voluptatibus eius beatae est soluta porro, maxime provident sed minus facere sapiente, id quo repudiandae? Corrupti, enim.
         </p>
-    </div>
-</body>
-
-</html>
+</div>
