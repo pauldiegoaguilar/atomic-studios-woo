@@ -1,4 +1,4 @@
-<div class="text-start" style="margin-top: 4%; margin-left: 7.5%; margin-right: 7.5%;">
+<div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
     <i class="lead">Modificado por ultima vez: 20 de Mayo de 2023</i>
     <p class="paragraph" style="margin-top: 10px;">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error unde deleniti, et amet cum dolorem neque non deserunt omnis commodi tempora dicta temporibus adipisci, quaerat earum enim voluptatum est.

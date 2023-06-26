@@ -23,10 +23,10 @@
     </div>
 
     <div class="extras">
-        <a style="text-decoration: none; color: white;" href="hentaila.com">SOPORTE</a>
-        <a style="text-decoration: none; color: white;" href="hentaila.com">AVISO DE PRIVACIDAD</a>
-        <a style="text-decoration: none; color: white;" href="hentaila.com">TERMINOS DE SERVICIO</a>
-        <a style="text-decoration: none; color: white;" href="hentaila.com">PREFERENCIA DE COOKIES</a> <br> 
+        <a style="text-decoration: none; color: white;" href="main.php?section=soporte">SOPORTE</a>
+        <a style="text-decoration: none; color: white;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
+        <a style="text-decoration: none; color: white;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
+        <a style="text-decoration: none; color: white;" href="#">PREFERENCIA DE COOKIES</a>
     </div>
     
     <h1 class="copy" style="font-size: 13.5px; color: white;">© 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</h1>

@@ -1,4 +1,3 @@
-
 function MostrarCard(tagId)
 {
     var img = $('#t-img-'+tagId).attr('src');

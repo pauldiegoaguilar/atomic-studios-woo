@@ -1,4 +1,4 @@
-<div class="text-start" style="margin-top: 4%; margin-left: 7.5%; margin-right: 7.5%;">
+<div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
     <i class="text-grey lead">Modificado por ultima vez: 25 de Mayo de 2023</i>
 
     <p class="paragraph">

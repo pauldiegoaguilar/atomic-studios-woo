@@ -6,6 +6,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,15 +26,15 @@
         <div class="col-md-6 d-flex justify-content-around align-items-start lead p-0">
             <div class="d-flex align-self-center mx-1">
                 <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg;">
-                <div class="text-white">ATOMIC<br>STUDIOS</div>
+                <div class="text-white align-self-center" style="line-height: 20px;" >ATOMIC<br>STUDIOS</div>
             </div>
-            <a class="text-white align-self-center mx-1" href="#">NOTICIAS</a>
-            <a class="text-white align-self-center mx-1" href="?section=soporte">SOPORTE</a>
-            <a class="text-white align-self-center mx-1" href="?section=torneos">TORNEOS</a>
+            <a class="text-white align-self-center mx-1" href="#" style="text-decoration: none;">NOTICIAS</a>
+            <a class="text-white align-self-center mx-1" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
+            <a class="text-white align-self-center mx-1" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center p-0">
-            <a class="lead rounded border-0" href="main2.php?section=login" style="height: 30px;  background-color: #2B282C;">INICIAR SESIÓN</a>
-            <button class="lead rounded border-0" style="height: 30px; margin: 0px 30px; background-color: #7BB0FF">JUEGA YA</button>
+            <a class="lead rounded border-0" href="main2.php?section=login" style="padding: 5px 20px; text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
+            <button class="lead rounded border-0" style="padding: 5px 20px; margin: 0px 30px; background-color: #7BB0FF">JUEGA YA</button>
         </div>
     </div>
    
