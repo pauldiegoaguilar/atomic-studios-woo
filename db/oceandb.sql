@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2023 a las 05:13:50
+-- Tiempo de generación: 26-06-2023 a las 07:48:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.19
 
@@ -51,6 +51,14 @@ CREATE TABLE `cofres` (
   `modelo` varchar(100) NOT NULL,
   `droprate` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cofres`
+--
+
+INSERT INTO `cofres` (`id`, `nombre`, `rareza`, `oro`, `tiempo`, `modelo`, `droprate`) VALUES
+(1, 'cofre fantasma', 'unico', 10000, '62:00:00', 'modelos/ghostchest.blend', '0.1'),
+(2, 'cofre pirata', 'legendario', 5000, '22:00:00', 'modelos/piratechest.blend', '3');
 
 -- --------------------------------------------------------
 
@@ -122,7 +130,8 @@ CREATE TABLE `torneos` (
 
 INSERT INTO `torneos` (`id`, `nombre`, `descripcion`, `monedas`, `cofre_id`, `campeon_id`, `fecha_alta`, `fecha_baja`, `ruta`) VALUES
 (1, 'torneopasado', 'este es el torneo pasado', 2000, 1, 1, '2023-06-18', '2023-06-18', 'img/radar.png'),
-(2, 'torneoactual', 'este es el torneo actual', 3000, 2, 1, '2023-06-18', NULL, 'img/radar.png');
+(2, 'torneoactual', 'este es el torneo actual', 3000, 2, 1, '2023-06-18', '2023-06-19', 'img/radar.png'),
+(3, 'elgulaj', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat recusandae voluptatum ad nobis iste alias soluta quod dolorem dolore pariatur, cumque quia aspernatur eos veritatis. Molestias tenetur deleniti ducimus consequuntur!', 4000, 1, NULL, '2023-06-19', NULL, 'img/radar.png');
 
 -- --------------------------------------------------------
 
@@ -138,12 +147,19 @@ CREATE TABLE `usuarios` (
   `genero` varchar(30) NOT NULL,
   `fotoPerfil` varchar(200) DEFAULT NULL,
   `monedas` mediumint(8) UNSIGNED NOT NULL,
-  `descripcion` varchar(200) NOT NULL,
+  `descripcion` varchar(200) NOT NULL DEFAULT '"..."',
   `flota_id` tinyint(3) UNSIGNED NOT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL,
   `victorias` mediumint(8) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`) VALUES
+(1, 'rodrigo', 'roroacostacant@gmail.com', '12345678', 'masculino', 'img/perfil-def.png', 0, '\"...\"', 1, '2023-06-24', NULL, 0);
 
 --
 -- Índices para tablas volcadas
@@ -205,7 +221,7 @@ ALTER TABLE `chestroom`
 -- AUTO_INCREMENT de la tabla `cofres`
 --
 ALTER TABLE `cofres`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -229,13 +245,13 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de la tabla `torneos`
 --
 ALTER TABLE `torneos`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -9,6 +9,7 @@ function MostrarCard(tagId)
     var coins = $('#t-coins-'+tagId).text();
     var campeon = $('#t-champ-'+tagId).text() == '' ? '"..."' : $('#t-champ-'+tagId).text();    
     var imgPerfil = $('#t-prolife-'+tagId).text();
+    var rareza = $('#t-rareza-'+tagId).text();
     
     $('#fk-screen').css({
         'display': 'flex',
@@ -21,6 +22,7 @@ function MostrarCard(tagId)
     $('#ts-desc').text(descripcion);
     $('#ts-alta').text(alta);
     $('#ts-baja').text(baja);
-    $('#ts-coins').text('monedas: '+coins);
-    $('#ts-champ').text('campeon: '+campeon);
+    $('#ts-coins').text('$'+coins);
+    $('#ts-champ').text(campeon);
+    $('#ts-rareza').text(rareza);
 }
