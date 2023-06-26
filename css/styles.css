@@ -134,3 +134,89 @@ body{
 .img-wiki{
     width: 100%;
 }
+
+/* LOGIN - REGISTRO DE USUARIO - RECUPERACION DE CUENTA */
+
+/*.gradient-custom {
+    /* fallback for old browsers 
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}*/
+
+*{
+    font-family: 'Chau Philomene One', sans-serif;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder{
+    color: #7691a8;
+}
+
+.atomic{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    
+}
+
+.stu{
+    position: absolute;
+    top: 35px;
+}
+
+.logo{
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 100px;   
+    right: 115px;
+    top: -10px;
+
+}
+
+
+.bg-image {
+    background: url('../img/over_ocean.jpg') no-repeat;
+    filter: blur(4px);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.bg-text {
+    background: linear-gradient(to top, #013c70af, #044680b8,  #2e6ca3b0, #96c7ffb6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.extras{
+    z-index: 5;
+    position: absolute;
+    top: 93vh;
+    left: 10px;
+    font-size: 25px;
+    
+}.extras a{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.copy{
+    z-index: 5;
+    position: absolute;
+    top: 97.5vh;
+    left: 25px;
+}

@@ -19,21 +19,21 @@
     <link rel="icon" src="">
     <title>Document</title>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden" style="background-color: #2B282C;">
 
-    <div class="row" style="background-color: rgb(22, 21, 21);">
+    <div class="row" style="background-color: #1B191B; height: 70px;">
         <div class="col-md-6 d-flex justify-content-around align-items-start lead p-0">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-self-center mx-1">
                 <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg;">
-                <div class="text-white">ATOMIC STUDIOS</div>
+                <div class="text-white">ATOMIC<br>STUDIOS</div>
             </div>
             <a class="text-white align-self-center mx-1" href="#">NOTICIAS</a>
             <a class="text-white align-self-center mx-1" href="?section=soporte">SOPORTE</a>
             <a class="text-white align-self-center mx-1" href="?section=torneos">TORNEOS</a>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center p-0">
-            <button class="lead rounded border-0" style="height: 30px;  background-color: rgb(36, 34, 34);">INICIAR SESIÓN</button>
-            <button class="lead rounded border-0" style="height: 30px; margin: 0px 15px; background-color: rgb(74, 191, 191)">JUEGA YA</button>
+            <a class="lead rounded border-0" href="main2.php?section=login" style="height: 30px;  background-color: #2B282C;">INICIAR SESIÓN</a>
+            <button class="lead rounded border-0" style="height: 30px; margin: 0px 30px; background-color: #7BB0FF">JUEGA YA</button>
         </div>
     </div>
    
@@ -49,13 +49,13 @@
         <?php require_once "views/" . $section . ".php"?>
     </div>
 
-    <div class="row d-flex justify-content-evenly align-items-center py-4 lead" style="background-color: rgb(36, 35, 35);">
+    <div class="row d-flex justify-content-evenly align-items-center py-4 lead" style="background-color: #222022;">
         <a class="col-sm-2 text-center text-white m-0" href="?section=war-over-ocean-wiki">ACERCA DE WAR OVER OCEAN</a>
         <a class="col-sm-2 text-center text-white m-0">DESARROLLADORES</a>
         <a class="col-sm-2 text-center text-white m-0">PREFERENCIAS DE COOKIES</a>
     </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-cente py-3" style="background-color: rgb(22, 21, 21);">
+    <div class="d-flex flex-column align-items-center justify-content-cente py-3" style="background-color: #1B191B; width: 100%;">
         
         <div class="d-flex align-items-center">
             <img src="img/logo.png" alt="LOGO" style="width: 60px; height: auto; rotate: -90deg; filter:invert(50%);">
