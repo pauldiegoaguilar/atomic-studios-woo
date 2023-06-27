@@ -5,28 +5,30 @@
                 <div class="card bg-white text-info" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center" style="height: 570px;">
                         <div class="mb-md-5"> <!-- mb-md-4 -->
-                            <h2 style="color: #013c70; font-size: 45px;" class="fw-bold mb-2 text-uppercase pb-5">Crear una cuenta</h2>
-
-                            <div class="form-outline form-white mb-4">
-                                <input style="background-color: #9cbfdd; font-size: 25px;" type="text" id="typeUsernameX" class="form-control form-control-lg"
-                                    placeholder="Nombre de Usuario" />
-                            </div>
-
-                            <div class="form-outline form-white mb-4">
-                                <input style="background-color: #9cbfdd; font-size: 25px;" type="email" id="typeEmailX" class="form-control form-control-lg"
-                                    placeholder="Correo Electronico" />
-                            </div>
-
-                            <div  class="form-outline form-white mb-4">
-                                <input style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg"
-                                    placeholder="Contraseña" />
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                <a style="color: #013c70; font-size: 21px;" class="text-decoration-none" href="?section=login">¿Ya tienes una cuenta? Inicia sesion</a>
-                            </div>
-
-                            <button class="btn btn-outline-dark btn-lg px-5" type="submit" style="background-color: #013c70; color: white; font-size: 40px;">Conectarse</button>
+                            <form action="" method="">
+                                <h2 style="color: #013c70; font-size: 45px;" class="fw-bold mb-2 text-uppercase pb-5">Crear una cuenta</h2>
+    
+                                <div class="form-outline form-white mb-4 input-div">
+                                    <input style="background-color: #9cbfdd; font-size: 25px;" type="text" id="typeUsernameX" class="form-control form-control-lg"
+                                        placeholder="Nombre de Usuario" />
+                                </div>
+    
+                                <div class="form-outline form-white mb-4 input-div">
+                                    <input style="background-color: #9cbfdd; font-size: 25px;" type="email" id="typeEmailX" class="form-control form-control-lg"
+                                        placeholder="Correo Electronico" />
+                                </div>
+    
+                                <div  class="form-outline form-white mb-4 input-div">
+                                    <input style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg"
+                                        placeholder="Contraseña" />
+                                </div>
+    
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <a style="color: #013c70; font-size: 21px;" class="text-decoration-none" href="?section=login">¿Ya tienes una cuenta? Inicia sesion</a>
+                                </div>
+    
+                                <button class="btn btn-outline-dark btn-lg px-5" type="submit" style="background-color: #013c70; color: white; font-size: 40px;">Conectarse</button>
+                            </form>
                         </div>
                     </div>
                 </div>

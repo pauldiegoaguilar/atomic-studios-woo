@@ -6,7 +6,7 @@
                     <div class="card-body p-5 text-center" style="height: 460px;">
                         <div class="mb-md-5"> <!-- mb-md-4 -->
                             <h2 style="color: #013c70; font-size: 45px;" class="fw-bold mb-2 text-uppercase">Recuperacion de Cuenta</h2>
-                            <div class="form-outline form-white mb-4">
+                            <div class="form-outline form-white mb-4 input-div">
                                 <h5 style="margin: 30px 0;">Escribe tu correo para enviarte un codigo para cambiar tu Contraseña</h5>
                                 <input style="background-color: #9cbfdd; font-size: 25px;" type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo Electronico" />
                             </div>
