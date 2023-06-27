@@ -9,7 +9,7 @@
 
   <div class="row">
   <?php foreach($torneosInfo as $torneo){?>
-          <div class="card m-2" style="width: 14rem;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
+          <div class="card m-2" style="width: 14rem; background-color: #222022;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
             <img class="card-img-top p-1" src="<?php echo $torneo['ruta']?>" alt="Card image cap" id="t-img-<?php echo $torneo['id']?>">
             <div class="card-body">
               <h3 class="row justify-content-center text-uppercase text-white" id="t-title-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></h3>
@@ -26,7 +26,7 @@
   </div>
 
   <div class="w-100 h-100 fixed-top justify-content-center align-items-center bg-transparent" id="fk-screen" style="display: none;">
-    <div class="row m-3 bg-dark overflow-auto" id="ts-card" style="display: none; max-width: 70em; max-height: 40em;">
+    <div class="row m-3 overflow-auto" id="ts-card" style="display: none; max-width: 70em; max-height: 40em; background-color: #222022;">
       <img class="col-md-6" src="img/radar.png" alt="Card Image" id="ts-img">
       <div class="card-body col-md-6 position-relative p-3">
         <div type="button" class="btn-close btn-close-white position-absolute end-0" aria-label="Close" onclick="$('#ts-card, #fk-screen').hide('slow');"></div>

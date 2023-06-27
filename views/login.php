@@ -5,14 +5,14 @@
                 <div class="card bg-white text-info" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center" style="height: 550px;">
                         <div class="mb-md-5"> <!-- mb-md-4 -->
-                            <form action="">
+                            <form action="" method="">
                                 <h2 style="color: #013c70; font-size: 45px;" class="fw-bold mb-2 text-uppercase pb-5">Iniciar Sesion</h2>
     
-                                <div class="form-outline form-white mb-4">
+                                <div class="form-outline form-white mb-4 input-div">
                                     <input style="background-color: #9cbfdd; font-size: 25px;" type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo Electronico" />
                                 </div>
     
-                                <div class="form-outline form-white mb-4">
+                                <div class="form-outline form-white mb-4 input-div">
                                     <input style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña" />
                                 </div>
     

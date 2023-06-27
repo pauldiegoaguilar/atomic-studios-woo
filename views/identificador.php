@@ -6,9 +6,14 @@
                     <div class="card-body p-5 text-center" style="height: 460px;">
                         <div class="mb-md-5"> <!-- mb-md-4 -->
                             <h2 style="color: #013c70; font-size: 45px;" class="fw-bold mb-2 text-uppercase">Recuperacion de Cuenta</h2>
-                            <div class="form-outline form-white mb-4">
-                                <h5 style="margin: 30px 0;">Escribe el codigo que te enviamos</h5>
-                                <input style="background-color: #9cbfdd; font-size: 25px;" type="text" id="typeCodeX" class="form-control form-control-lg" placeholder="Codigo" />
+                            <h5 style="margin: 30px 0;">Escribe el codigo que te enviamos</h5>
+                            <div class="d-flex justify-content-center form-outline form-white mb-4 input-div">
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode0X" class="form-control form-control-lg" placeholder="1" maxlength="1" />
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode1X" class="form-control form-control-lg" placeholder="2" maxlength="1" />
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode2X" class="form-control form-control-lg" placeholder="3" maxlength="1" />
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode3X" class="form-control form-control-lg" placeholder="4" maxlength="1" />
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode4X" class="form-control form-control-lg" placeholder="5" maxlength="1" />
+                                <input style="background-color: #9cbfdd; font-size: 35px; width: 50px; margin: 0 2.5px;" type="text" id="typeCode5X" class="form-control form-control-lg" placeholder="6" maxlength="1" />
                             </div>
                             <a href="?section=cambiarContra" class="btn btn-outline-dark btn-lg px-5" style="background-color: #013c70; color: white; font-size: 40px;">Enviar</a>
                         </div>
