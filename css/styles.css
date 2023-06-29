@@ -23,6 +23,23 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+.homewoo:hover{
+    filter: invert(71%) sepia(82%) saturate(994%) hue-rotate(186deg) brightness(107%) contrast(102%);
+}
+
+.links{
+    padding: 7px;
+}
+
+.links:hover{
+    background-color: #bbbbbb2b;
+    border-radius: 10px;
+}
+
+.lnav:hover{
+    border-bottom: 3.5px solid #7BB0FF;
+}
+
 .woo{
     height: 100%;
     background: linear-gradient(to top, #ffffff, #ffffffde 15%, #ffffffdf 30%, #ffffff83, #ffffff1c 50%, #ffffff00);
