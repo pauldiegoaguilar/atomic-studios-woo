@@ -1,16 +1,15 @@
-*{
+* {
     font-family: 'Chau Philomene One', sans-serif;
     user-select: none;
 }
 
-body{
+body {
     margin: 0px;
     background-color: #2B282C;
-    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-track {
@@ -21,28 +20,38 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-    box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.woo{
+    height: 100%;
+    background: linear-gradient(to top, #ffffff, #ffffffde 15%, #ffffffdf 30%, #ffffff83, #ffffff1c 50%, #ffffff00);
+}
+
+.cartel{
+    height: 100%;
+    background: linear-gradient(to top, #dbdbdb 50%, #dbdbdb60 65%, #ffffff00);
 }
 
 /* NAV BAR */
 
 .download:hover,
-.btn-login{
+.btn-login {
     color: #ffffff;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     background-color: #403a44 !important;
 }
 
-.download:hover{
+.download:hover {
     background-color: #9bc3ff !important;
 }
 
 
 /* SOPORTE */
 
-.paragraph ~ input[type="submit"]:hover{
+.paragraph~input[type="submit"]:hover {
     color: #2B282C;
 }
 
@@ -51,33 +60,32 @@ body::-webkit-scrollbar-thumb {
 
 .input-div input[type="email"]::placeholder,
 .input-div input[type="password"]::placeholder,
-.input-div input[type="text"]::placeholder{
+.input-div input[type="text"]::placeholder {
     color: #7691a8;
 }
 
-.atomic{
+.atomic {
     position: absolute;
     top: 20px;
     left: 100px;
     z-index: 10;
     color: rgb(255, 255, 255);
-    
+
 }
 
-.stu{
+.stu {
     position: absolute;
     top: 35px;
 }
 
-.logo{
+.logo {
     transform: rotate(-90deg);
     position: absolute;
-    width: 100px;   
+    width: 100px;
     right: 115px;
     top: -10px;
 
 }
-
 
 .bg-image {
     background: url('../img/over_ocean.jpg') no-repeat;
@@ -88,7 +96,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-text {
-    background: linear-gradient(to top, #013c70af, #044680b8,  #2e6ca3b0, #96c7ffb6);
+    background: linear-gradient(to top, #013c70af, #044680b8, #2e6ca3b0, #96c7ffb6);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,22 +104,24 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
     width: 100%;
     height: 100vh;
-    
+
 }
 
-.extras{
+.extras {
     z-index: 5;
     position: absolute;
     top: 93vh;
     left: 10px;
     font-size: 25px;
-    
-}.extras a{
+
+}
+
+.extras a {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.copy{
+.copy {
     z-index: 5;
     position: absolute;
     top: 97.5vh;

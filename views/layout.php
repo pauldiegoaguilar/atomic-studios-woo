@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,18 +18,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
 
-    <link rel="icon" src="">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Atomic Studios • <?php echo ucfirst(str_replace("-", " ", $section)) ?></title>
 </head>
+
 <body class="overflow-x-hidden">
 
     <div class="row" style="background-color: #1B191B; height: 70px;">
         <div class="col-md-6 d-flex justify-content-around align-items-start lead p-0">
-            <div class="d-flex align-self-center mx-1">
-                <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg;">
-                <div class="text-white align-self-center" style="line-height: 20px;" >ATOMIC<br>STUDIOS</div>
-            </div>
-            <a class="text-white align-self-center mx-1" href="#" style="text-decoration: none;">NOTICIAS</a>
+            <a class="align-self-center" href="?section=war-over-ocean" style="text-decoration: none;">
+                <div class="d-flex mx-1">
+                    <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg;">
+                    <div class="text-white align-self-center" style="line-height: 20px;">ATOMIC<br>STUDIOS</div>
+                </div>
+            </a>
+            <a class="text-white align-self-center mx-1" href="?section=noticias" style="text-decoration: none;">NOTICIAS</a>
             <a class="text-white align-self-center mx-1" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
             <a class="text-white align-self-center mx-1" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
         </div>
@@ -37,30 +41,36 @@
             <a class="lead rounded border-0 download" href="includes/installer.txt" download style="padding: 5px 20px; margin: 0px 30px; text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
         </div>
     </div>
-   
-    <div class="row position-relative">
-        <img src="img/background.png" alt="IMAGE" class="img-fluid p-0" style="filter: blur(4px);">
-        <div class="text-center position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
-          <h1 class="text-center text-uppercase font-weight-bold display-1 text-white"><?php echo str_replace("-", " ", $section)?></h1>
-          <img src="img/linea.png" class="img-fluid" style="filter: invert(100%);" alt="IMAGE">
-        </div>
-    </div>
 
-    <div class="container my-4">
-        <?php require_once "views/" . $section . ".php"?>
-    </div>
+    <?php
+    if ($section != 'war-over-ocean') { ?>
+        <div class="row position-relative">
+            <img src="img/background.png" alt="IMAGE" class="img-fluid p-0" style="filter: blur(4px);">
+            <div class="text-center position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
+                <h1 class="text-center text-uppercase font-weight-bold display-1 text-white"><?php echo str_replace("-", " ", $section) ?></h1>
+                <img src="img/linea.png" class="img-fluid" style="filter: invert(100%);" alt="IMAGE">
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <?php require_once "views/" . $section . ".php" ?>
+        </div>
+    <?php
+    } else {
+        require_once "views/" . $section . ".php";
+    } ?>
 
     <div class="row d-flex justify-content-evenly align-items-center py-4 lead" style="background-color: #222022;">
         <a class="text-center text-white m-0" style="width: 18%; text-decoration: none;" href="?section=war-over-ocean-wiki">ACERCA DE WAR OVER OCEAN</a>
-        <a class="text-center text-white m-0" style="width: 18%; text-decoration: none;">DESARROLLADORES</a>
+        <a class="text-center text-white m-0" style="width: 18%; text-decoration: none;" href="?section=desarrolladores">DESARROLLADORES</a>
         <a class="text-center text-white m-0" style="width: 18%; text-decoration: none;">PREFERENCIAS DE COOKIES</a>
     </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-cente py-3" style="background-color: #1B191B; width: 100%;">
+    <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B; width: 100%;">
         <div class="d-flex flex-column">
             <div class="d-flex align-self-center">
                 <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg; filter:invert(50%);">
-                <div class="text-grey align-self-center" style="line-height: 15px; margin-right: 5px;" >ATOMIC<br>STUDIOS</div>
+                <div class="text-grey align-self-center" style="line-height: 15px; margin-right: 5px;">ATOMIC<br>STUDIOS</div>
             </div>
             <p class="text-center" style="font-size: 15px">&copy 2023 Atomic Studios</p>
         </div>
@@ -81,4 +91,5 @@
         </div>
     </div>
 </body>
+
 </html>
