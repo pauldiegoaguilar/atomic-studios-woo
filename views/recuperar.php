@@ -9,8 +9,9 @@
                             <div class="form-outline form-white mb-4 input-div">
                                 <h5 style="margin: 30px 0;">Escribe tu correo para enviarte un codigo para cambiar tu Contraseña</h5>
                                 <input style="background-color: #9cbfdd; font-size: 25px;" type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Correo Electronico" />
+                                <p class="text-center text-danger lead" id="email-error-recup">Error: ELPEPE VIVE</p>
+                                <a href="javascript:verifEmail();" class="btn btn-outline-dark btn-lg px-5" style="background-color: #013c70; color: white; font-size: 40px;">Enviar</a>
                             </div>
-                            <a href="?section=identificador" class="btn btn-outline-dark btn-lg px-5" style="background-color: #013c70; color: white; font-size: 40px;">Enviar</a>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
                     FROM torneos 
                         LEFT JOIN usuarios ON usuarios.id = torneos.campeon_id 
                         INNER JOIN cofres on cofres.id = torneos.cofre_id
-                    ORDER BY id DESC;;";
+                    ORDER BY id DESC;";
     
     $query = mysqli_query($conn, $sql);
 
