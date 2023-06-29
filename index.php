@@ -1,3 +1,3 @@
 <?php
-    header('Location: main.php?section=terminos-de-servicio');
+    header('Location: main.php?section=war-over-ocean');
 ?>
