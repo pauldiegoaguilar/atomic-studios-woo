@@ -1,5 +1,5 @@
 <?php
-    include "../includes/config.php";
+    include "includes/config.php";
 
     if(!empty($_POST['regi'])){
         if (empty($_POST['nomR']) or empty($_POST['emailR']) or empty($_POST['passR'])) {

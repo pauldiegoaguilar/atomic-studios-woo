@@ -31,7 +31,7 @@
         <a style="text-decoration: none; color: white;" href="#">PREFERENCIA DE COOKIES</a>
     </div>
 
-    <h1 class="copy" style="font-size: 13.5px; color: white;">© 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</h1>
+    <h1 class="copy" style="font-size: 13.5px; color: white;">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</h1>
 
     <div class="bg-image"></div>
 

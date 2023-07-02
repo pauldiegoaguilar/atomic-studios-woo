@@ -1,8 +1,3 @@
-<?php
-    include ("includes/config.php");
-    include ("modelos/funcion-reg.php");
-?>
-
 <section class="vh-100 gradient-custom bg-text">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
