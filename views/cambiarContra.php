@@ -2,7 +2,6 @@
     session_start();
     if(!empty($_SESSION)){
 ?>
-<section class="vh-100 gradient-custom bg-text">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -28,7 +27,7 @@
             </div>
         </div>
     </div>
-</section>
+
 <?php } 
     else 
     { 

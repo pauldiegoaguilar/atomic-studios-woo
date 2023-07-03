@@ -17,26 +17,29 @@
 </head>
 
 <body>
+    
+    <div class="img-fluid bg-image"></div>
 
-    <div class="atomic">
-        <img class="logo" src="img/logo.png" alt="">
-        <h1> ATOMIC </h1>
-        <h1 class="stu"> STUDIOS </h1>
+    <div class="d-flex align-items-center" style="height: 20vh">
+        <img style="max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios">
+        <p class="text-white fs-2 m-0 lh-1" style="z-index: 1;">ATOMIC<br>STUDIOS</p>
     </div>
+  
+    <section class="container d-flex align-items-center justify-content-center w-75" style="height: 100vh;">
 
-    <div class="extras">
-        <a style="text-decoration: none; color: white;" href="main.php?section=soporte">SOPORTE</a>
-        <a style="text-decoration: none; color: white;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
-        <a style="text-decoration: none; color: white;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
-        <a style="text-decoration: none; color: white;" href="#">PREFERENCIA DE COOKIES</a>
+        <?php require_once "views/" . $section . ".php" ?>
+
+    </section>
+
+    <div class="w-75 d-flex flex-column mt-3">
+        <div class="d-flex flex-wrap" style="z-index: 1;">
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte">SOPORTE</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="#">PREFERENCIA DE COOKIES</a>
+        </div>
+        <h1 style="z-index: 1;" class="fs-6 text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</h1>
     </div>
-
-    <h1 class="copy" style="font-size: 13.5px; color: white;">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</h1>
-
-    <div class="bg-image"></div>
-
-    <!-- Contenido cambiador xd -->
-    <?php require_once "views/" . $section . ".php" ?>
 
 </body>
 

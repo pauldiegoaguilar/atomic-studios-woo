@@ -22,5 +22,5 @@ function MostrarCard(tagId) {
     $('#ts-baja').text(baja);
     $('#ts-coins').text('$' + coins);
     $('#ts-champ').text(campeon);
-    $('#ts-rareza').text(rareza);
+    $('#ts-rareza').addClass(rareza).text(rareza);
 }

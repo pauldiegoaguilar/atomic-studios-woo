@@ -30,7 +30,7 @@ function verifEmail(){
           },
         });
       }else if(emailVefif[1] !== "gmail.com" || emailVefif.length > 2){
-        $("#email-error-recup").html("Error: El debe ser de tipo Gmail.");
+        $("#email-error-recup").html("Error: El correo debe ser de tipo Gmail.");
       }
     }else{
       $("#email-error-recup").html("Error: No se ha ingresado una dirección de correo.");

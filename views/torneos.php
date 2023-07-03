@@ -9,7 +9,7 @@
 
   <div class="row">
   <?php foreach($torneosInfo as $torneo){?>
-          <div class="card m-2" style="width: 14rem; background-color: #222022;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
+          <div class="card m-2" style="width: 14rem; background-color: #222022; cursor: pointer;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
             <img class="card-img-top p-1" src="<?php echo $torneo['ruta']?>" alt="Card image cap" id="t-img-<?php echo $torneo['id']?>">
             <div class="card-body">
               <h3 class="row justify-content-center text-uppercase text-white" id="t-title-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></h3>
@@ -26,31 +26,33 @@
   </div>
 
   <div class="w-100 h-100 fixed-top justify-content-center align-items-center bg-transparent" id="fk-screen" style="display: none;">
-    <div class="row m-3 overflow-auto" id="ts-card" style="display: none; max-width: 70em; max-height: 40em; background-color: #222022;">
-      <img class="col-md-6" src="img/radar.png" alt="Card Image" id="ts-img">
+    <div class="row m-3 overflow-auto" id="ts-card" style="display: none; max-width: 1000px; max-height: 500px; background-color: #222022;">
+      <img class="col-md-6 p-0" src="img/radar.png" alt="Card Image" id="ts-img">
       <div class="card-body col-md-6 position-relative p-3">
-        <div type="button" class="btn-close btn-close-white position-absolute end-0" aria-label="Close" onclick="$('#ts-card, #fk-screen').hide('slow');"></div>
+        <div type="button" class="btn-close btn-close-white position-absolute end-0 top-0 p-2" aria-label="Close" onclick="$('#ts-card, #fk-screen').hide('slow');"></div>
         <!-- TITULO -->
         <h1 class="card-title text-white text-uppercase text-center m-3" id="ts-title">Card title</h1>
         <!-- DESCRIPCION -->
-        <p class="text-uppercase text-center w-100 text-white my-3" id="ts-desc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="text-uppercase text-center w-100 text-white my-5" id="ts-desc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <hr>
         <!-- RECOMPENSAS -->
         <h3 class="text-uppercase text-danger text-center my-2">recompensas</h3>
-        <div class="d-flex justify-content-around">
-          <div class="d-flex align-items-center" style="height: 30px; width: 30px;">
-            <p class="text-danger px-1 fs-4 m-0">+1</p>
-            <img class="img-fluid" style="filter:invert(100%);" src="img/unico.png" alt="chestImage">
-            <p id="ts-rareza" class="text-danger text-uppercase px-1 fs-8 m-0"></p>
+        <div class="row">
+          <div class="col-6 d-flex align-items-center justify-content-center">
+            <p class="px-1 fs-4 m-0">+1</p>
+            <img style="width: 1.50em; height:1.50em; filter:invert(100%);" src="img/unico.png" alt="chestImage">
+            <p id="ts-rareza" class="text-uppercase px-1 fs-8 m-0"></p>
           </div>
-          <h4 id="ts-coins" class="text-warning text-uppercase px-2" style="margin:0px;" >An euro</h4>
+          <h4 id="ts-coins" class="col-6 text-center coins text-uppercase px-2" style="margin:0px;" >An euro</h4>
         </div>
+        <hr>
         <!-- CAMPEON -->
-        <h3 class="text-uppercase text-danger text-center my-2">campeon</h3>
-        <h4 id="ts-champ" class="text-white text-center text-uppercase fs-4 py-3">See ya champ</h4>
+        <h3 class="text-uppercase text-danger text-center mt-3">campeon</h3>
+        <h4 id="ts-champ" class="text-warning text-center text-uppercase fs-4">See ya champ</h4>
         <!-- FOOTER -->
-        <div class="card-footer w-100 d-flex justify-content-between">
-          <p class="text-muted" id="ts-alta">Last updated 3 mins ago</p>
-          <p class="text-muted" id="ts-baja">Last updated 3 mins ago</p>
+        <div class="row card-footer w-100 position-absolute p-3 bottom-0">
+          <p class="col-6 text-muted text-start m-0 p-0" id="ts-alta">Last updated 3 mins ago</p>
+          <p class="col-6 text-muted text-end m-0 p-0" id="ts-baja">Last updated 3 mins ago</p>
         </div>
       </div>
     </div>
