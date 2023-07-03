@@ -1,5 +1,3 @@
-/*  CONSTANTES  */
-const specialChar = true;
 
 
 function verifEmail(){
@@ -107,18 +105,40 @@ function confirmPassword(){
 
 
 
-/* Evaluador de password (menor de 10 caracteres, al menos 3 especiales y alfanumerico)
+/* Evaluador de password (menor de 10 caracteres, al menos 3 especiales y alfanumerico)*/
 function GetChar(event) {
   var constructor = $("#typePasswordX").val();
   var key = event.key;
 
-  if (specialChar) {
-    var specialCharCount = constructor.match(/[!@#$%^&*(),.?":{}|<>]/g);
-    if (!specialCharCount && specialCharCount.length >= 3) {
-      $('#error-password').text("Debe contener al menos 3 caracteres especiales");
-    } else {
-      specialChar = false;
-    }
+  specChar = constructor.match(/[!@#$%^&*(),.?":{}|<>]/g);
+
+  if (specChar == null || specChar.length < 3) {
+    $('#error-password').text("Debe contener al menos 3 caracteres especiales");
+    return;
   }
-  alert(specialCharCount);
-}*/
+
+  $('#error-password').text("");
+
+  NumChar = constructor.match(/[0-9]/g);
+
+  if (NumChar == null || NumChar.length < 3) {
+    $('#error-password').text("Debe contener al menos 3 numeros enteros");
+    return;
+  }
+
+  abcChar = constructor.match(/[a-zA-Z]/g);
+
+  if (abcChar == null || abcChar.length < 3) {
+    $('#error-password').text("Debe contener al menos 3 letras");
+    return;
+  }
+
+  $('#error-password').text("");
+
+  if (constructor.length > 10) {
+    $('#error-password').text("Debe ser menor de 10 caracteres");
+    return;
+  }
+
+  $('#error-password').text("");
+}
