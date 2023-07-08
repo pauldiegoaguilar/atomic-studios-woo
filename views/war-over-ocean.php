@@ -13,7 +13,7 @@
 
 <div class="row m-4">
     <iframe class="col-md-8 position-relative p-0" style="top: -95px;" height="495" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="col-md-4 d-flex flex-column">
+    <div class="col-md-4 px-5 d-flex flex-column">
         <h1 style="color: #7BB0FF;">Lorem ipsum dolor sit amet</h1>
         <hr>
         <p>
@@ -40,7 +40,7 @@
         <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
             <h1 style="font-size: 25px;">POTENCIA TUS ATAQUES</h1>
             <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
-            <p style="font-size: 18px; width: 80%;">Descubre cómo los diferentespower-ups te dan ventajas únicasen cada partida.</p>
+            <p style="font-size: 18px; width: 80%;">Descubre cómo los diferentes power-ups te dan ventajas únicas en cada partida.</p>
         </div>
     </div>
     <div class="d-flex flex-column" style="width: 310px;">
@@ -50,7 +50,7 @@
         <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
             <h1 style="font-size: 25px;">HAZ LUCIR TU ARMADA</h1>
             <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
-            <p style="font-size: 18px; width: 80%;">Obtén aspectos gratuitos paratu flota conforme juegas o compra laque quieras en la tienda.</p>
+            <p style="font-size: 18px; width: 80%;">Obtén aspectos gratuitos para tu flota conforme juegas o compra la que quieras en la tienda.</p>
         </div>
     </div>
 </div>
