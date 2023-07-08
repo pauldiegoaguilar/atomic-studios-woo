@@ -13,8 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <!-- JS -->
-    <script src="js/scriptsLogin.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/scriptsLogin.js"></script>
     <!-- TITLE -->
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Atomic Studios • <?php echo ucfirst(str_replace("-", " ", $section)) ?></title>
@@ -24,7 +24,7 @@
     
     <div class="img-fluid bg-image"></div>
 
-    <div class="homewoo d-flex align-items-center" onclick="location.assign('index.php');">
+    <div class="homewoo d-flex align-items-center" style="cursor:pointer;" onclick="location.assign('index.php');">
         <img style="max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios">
         <p class="text-white fs-2 m-0 lh-1" style="z-index: 1;">ATOMIC<br>STUDIOS</p>
     </div>
@@ -35,14 +35,13 @@
 
     </section>
 
-    <div class="w-75 d-flex flex-column mt-3 fixed-bottom">
+    <div class="w-50 d-flex flex-column mt-3 fixed-bottom d-none d-lg-flex">
         <div class="d-flex flex-wrap" style="z-index: 1;">
             <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte">SOPORTE</a>
             <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
             <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="#">PREFERENCIA DE COOKIES</a>
         </div>
-        <small style="z-index: 1;" class="text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS.</small>
+        <small style="z-index: 1;" class="text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS</small>
     </div>
 
 </body>

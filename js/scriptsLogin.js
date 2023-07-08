@@ -48,7 +48,7 @@ function genCode(){
       }
 
       $("#email-error-recup").html("El código se ha generado con éxito");
-      location.assign("?section=identificador");
+      setTimeout(location.reload(), 3000);
     }
   });
 }
@@ -57,10 +57,10 @@ function verifCode(){
 
   $('#verificador-iden').removeClass('text-danger').addClass('text-success').html("Verificando...");
 
-  var code = $('#selector-identif').children().map(function(){return $(this).val();}).get().join("");
-
+  var code = $('#selector-identif').children().map(function(){return $(this).val();}).toArray().join(""); //Con toArray, pasa de ser objJQUERY a un arreglo
+  
   if(!/^\d+$/.test(code)){ // expresion js
-    $('#selector-identif').children().map(function(){return $(this).val("");})
+    $('#selector-identif').children().val("");
     $('#verificador-iden').removeClass('text-success').addClass('text-danger').html("Error: Entrada invalida");
     return;
   }
@@ -142,3 +142,14 @@ function GetChar(event) {
 
   $('#error-password').text("");
 }
+
+$(document).ready(function(){
+  $('[id="typeCodeX"]').keyup(function(e){
+    if(e.keyCode == 13){
+      $(this).nextAll().first().focus();
+    }
+    else if(e.keyCode == 8){
+      $(this).prevAll().first().focus();
+    }
+  });
+});

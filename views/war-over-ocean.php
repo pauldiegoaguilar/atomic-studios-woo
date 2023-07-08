@@ -1,7 +1,7 @@
-<div class="row position-relative">
+<div class="row position-relative w-100 m-0">
     <img src="img/over_ocean.jpg" alt="IMAGE" class="img-fluid p-0">
-    <div class="woo text-center position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
-        <div class="d-flex flex-column align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="top: 70%;">
+    <div class="woo text-center position-absolute top-50 start-50 translate-middle p-0">
+        <div class="d-none d-md-block d-flex flex-column align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="bottom: 90px;">
             <p class="paragraph" style="color: #403a44;">DISPONIBLE EN</p>
             <div class="d-flex align-items-center justify-content-center" style="width: 200px; height: 70px; background-color: #000000; border-radius: 15px;">
                 <img src="img/pc-icon.png" alt="pc-icon" style="height: 70px; filter: invert(100%) brightness(1.75);">
@@ -11,9 +11,9 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-center text-start" style="margin-top: 4%; margin-left: 5%; margin-right: 5%;">
-    <iframe class="position-relative p-0" style="top: -150px;" width="880" height="495" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="d-flex flex-column" style="margin-left: 100px; width: 380px;">
+<div class="row m-4">
+    <iframe class="col-md-8 position-relative p-0" style="top: -95px;" height="495" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="col-md-4 d-flex flex-column">
         <h1 style="color: #7BB0FF;">Lorem ipsum dolor sit amet</h1>
         <hr>
         <p>

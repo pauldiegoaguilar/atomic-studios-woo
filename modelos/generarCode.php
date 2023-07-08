@@ -22,7 +22,7 @@
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'waroverocean@gmail.com';
-        $mail->Password   =  $password;
+        $mail->Password   =  'cpzrfkvzdjdzkupy';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
     
