@@ -23,34 +23,34 @@
 </div>
 
 <div class="d-flex justify-content-center text-start" style="margin-bottom: 5%; margin-left: 10%; margin-right: 10%;">
-    <div class="row position-relative">
-        <img class="img-fluid p-0" src="img/cartel.png" alt="img">
-        <div class="cartel position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
-            <div class="d-flex flex-column text-center align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="top: 50%; width: 95%; color: #1B191B;">
-                <h1 style="font-size: 35px;">DOMICA CADA MOMENTO</h1>
-                <div style="height: 5px; width: 80%; margin: 20px 0; border-bottom: 2px solid #1B191B;"></div>
-                <p style="font-size: 23px; width: 80%;">La jugabilidad por turnos te dará oportunidad de reaccionar y contraatacar... al igual que a tu oponente.</p>
-            </div>
+    <div class="d-flex flex-column" style="width: 310px;">
+        <div class="cartel">
+            <img src="img/cartel.png" alt="img" class="img-fluid">
+        </div>
+        <div class="d-flex flex-column text-center align-items-center text-cartel">
+            <h1 style="font-size: 25px;">DOMINA CADA MOMENTO</h1>
+            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
+            <p style="font-size: 18px; width: 80%;">La jugabilidad por turnos te dará oportunidad de reaccionar y contraatacar... al igual que a tu oponente.</p>
         </div>
     </div>
-    <div class="row position-relative" style="margin: 0 5%;">
-        <img class="img-fluid p-0" src="img/cartel.png" alt="img">
-        <div class="cartel position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
-            <div class="d-flex flex-column text-center align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="top: 50%; width: 95%; color: #1B191B;">
-                <h1 style="font-size: 35px;">POTENCIA TUS ATAQUES</h1>
-                <div style="height: 5px; width: 80%; margin: 20px 0; border-bottom: 2px solid #1B191B;"></div>
-                <p style="font-size: 23px; width: 80%;">Descubre cómo los diferentespower-ups te dan ventajas únicasen cada partida.</p>
-            </div>
+    <div class="d-flex flex-column" style="width: 310px; margin: 0 5%;">
+        <div class="cartel">
+            <img src="img/cartel.png" alt="img" class="img-fluid">
+        </div>
+        <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
+            <h1 style="font-size: 25px;">POTENCIA TUS ATAQUES</h1>
+            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
+            <p style="font-size: 18px; width: 80%;">Descubre cómo los diferentespower-ups te dan ventajas únicasen cada partida.</p>
         </div>
     </div>
-    <div class="row position-relative">
-        <img class="img-fluid p-0" src="img/cartel.png" alt="img">
-        <div class="cartel position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
-            <div class="d-flex flex-column text-center align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="top: 50%; width: 95%; color: #1B191B;">
-                <h1 style="font-size: 35px;">HAZ LUCIR TU ARMADA</h1>
-                <div style="height: 5px; width: 80%; margin: 20px 0; border-bottom: 2px solid #1B191B;"></div>
-                <p style="font-size: 23px; width: 80%;">Obtén aspectos gratuitos paratu flota conforme juegas o compra laque quieras en la tienda.</p>
-            </div>
+    <div class="d-flex flex-column" style="width: 310px;">
+        <div class="cartel">
+            <img src="img/cartel.png" alt="img" class="img-fluid">
+        </div>
+        <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
+            <h1 style="font-size: 25px;">HAZ LUCIR TU ARMADA</h1>
+            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
+            <p style="font-size: 18px; width: 80%;">Obtén aspectos gratuitos paratu flota conforme juegas o compra laque quieras en la tienda.</p>
         </div>
     </div>
 </div>

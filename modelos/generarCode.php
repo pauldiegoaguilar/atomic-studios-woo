@@ -25,11 +25,11 @@
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
     
-        $mail->setFrom('waroverocean@gmail.com', 'WarOverOcean');
+        $mail->setFrom('waroverocean@gmail.com', 'Atomic Studios');
         $mail->addAddress($destinatario);
         /*comienzo del cuerpo del html */
         $mail->isHTML(true);
-        $mail->Subject = "Restablecer Clave de WAR OVER OCEAN" . "\r\n";
+        $mail->Subject = "Restablecer Clave de War Over Ocean" . "\r\n";
         $mail->Body    = '<html><body<div style="
         position: absolute; 
         left:30%; 
@@ -47,7 +47,7 @@
         Ingresa el siguiente codigo para restablecer la clave:<br>
         <br>
         <span style="border: 1px solid #00bbff;background-color:#00bbff38;padding:10px 20px; border-radius: 10px;">'.$clave.'</span>
-        </h3>Si no quieres cambiar la clave, simplemente ignore este correo.<br>Atte.: <b>War Over Ocean Staff<b></div></body></html>';
+        </h3>Si no quieres cambiar la clave, simplemente ignore este correo.<br>Atte.: <b>Atomic Studios Staff<b></div></body></html>';
     
         $mail->send();
         echo "1";
