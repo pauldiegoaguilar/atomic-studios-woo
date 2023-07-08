@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
 
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png">
     <title>Atomic Studios • <?php echo ucfirst(str_replace("-", " ", $section)) ?></title>
 </head>
 

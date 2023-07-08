@@ -47,6 +47,6 @@
     <p>Nos reservamos el derecho de actualizar o modificar este Aviso de Privacidad en cualquier momento. Te
         recomendamos revisar esta página periódicamente para estar al tanto de los cambios realizados.</p>
 
-    <p>Si tienes alguna pregunta o inquietud sobre nuestro Aviso de Privacidad, no dudes en contactarnos a través de
-    <a href="mailto:waroverocean@gmail.com?subject=Aviso de Privacidad - Consulta">waroverocean@gmail.com</a>.</p>
+    <p>Si tienes alguna pregunta o inquietud sobre nuestro Aviso de Privacidad, no dudes en contactarnos a través del apartado
+    <a href="?section=soporte" class="text-white">SOPORTE</a>.</p>
 </div>

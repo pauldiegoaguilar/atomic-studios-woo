@@ -61,8 +61,8 @@
         informáticos que puedan afectar el rendimiento o la seguridad del juego.
     </p>
 
-    <p>De tener algún problema, te recomendamos comunicarte con nuestro soporte a través de
-    <a href="mailto:waroverocean@gmail.com?subject=Terminos de Servicio - Consulta">waroverocean@gmail.com</a>.</p>
+    <p>De tener algún problema, te recomendamos comunicarte con nuestro
+    <a href="?section=soporte" class="text-white">SOPORTE</a>.</p>
 
     <p>Estos Términos de Servicio constituyen el acuerdo completo entre el usuario y Atomic Studios con respecto al juego.
         Te recomendamos revisar periódicamente los Términos, ya que pueden estar sujetos a modificaciones. Si continúas
