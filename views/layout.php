@@ -18,33 +18,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
 
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png">
     <title>Atomic Studios • <?php echo ucfirst(str_replace("-", " ", $section)) ?></title>
 </head>
 
-<body class="overflow-x-hidden">
+<body>
 
-    <div class="row" style="background-color: #1B191B;">
-        <div class="col-md-6 d-flex justify-content-around align-items-start lead p-0">
-            <a class="homewoo align-self-center" href="?section=war-over-ocean" style="text-decoration: none;">
-                <div class="d-flex mx-1">
-                    <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg;">
-                    <div class="text-white align-self-center" style="line-height: 20px;">ATOMIC<br>STUDIOS</div>
-                </div>
-            </a>
-            <a class="links lnav text-white align-self-center mx-1" href="?section=noticias" style="text-decoration: none;">NOTICIAS</a>
-            <a class="links lnav text-white align-self-center mx-1" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
-            <a class="links lnav text-white align-self-center mx-1" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end align-items-center p-0">
-            <a class="lead rounded border-0 btn-login" href="main2.php?section=login" style="padding: 5px 20px; text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
-            <a class="lead rounded border-0 download" href="includes/installer.txt" download style="padding: 5px 20px; margin: 0px 30px; text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
+    <div class="row w-100 m-0" style="background-color: #1B191B;">
+        <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center" href="?section=war-over-ocean" style="text-decoration: none;">
+            <img src="img/logo.png" class="col-sm-6 d-none d-sm-block" alt="LOGO" style="rotate: -90deg;">
+            <div class="col-12 col-sm-6 col-sm text-sm-start text-center text-white align-self-center fs-3 lh-1 mt-1">ATOMIC <br class="d-none d-sm-block">STUDIOS</div>
+        </a>
+        <div class="row col-sm-8 col-md-9 col-lg-10">
+            <div class="col-lg-6 d-flex justify-content-around align-items-start lead fs-4">
+                <a class="links lnav text-white align-self-center" href="?section=noticias" style="text-decoration: none;">NOTICIAS</a>
+                <a class="links lnav text-white align-self-center" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
+                <a class="links lnav text-white align-self-center" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-evenly justify-content-lg-end  align-items-center p-0 fs-4">
+                <a class="lead rounded border-0 btn-login p-2 m-2" href="main2.php?section=login" style="text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
+                <a class="lead rounded border-0 download p-2 m-2" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
+            </div>
         </div>
     </div>
 
     <?php
     if ($section != 'war-over-ocean') { ?>
-        <div class="row position-relative">
+        <div class="row position-relative w-100 m-0">
             <img src="img/background.png" alt="IMAGE" class="img-fluid p-0" style="filter: blur(4px);">
             <div class="text-center position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
                 <h1 class="text-center text-uppercase font-weight-bold display-1 text-white"><?php echo str_replace("-", " ", $section) ?></h1>
@@ -60,13 +60,13 @@
         require_once "views/" . $section . ".php";
     } ?>
 
-    <div class="row d-flex justify-content-around align-items-center py-4 lead" style="background-color: #222022;">
+    <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 lead" style="background-color: #222022;">
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=acerca-de-woo">ACERCA DE WAR OVER OCEAN</a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=desarrolladores">DESARROLLADORES</a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;">PREFERENCIAS DE COOKIES</a>
     </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B; width: 100%;">
+    <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B;">
         <div class="d-flex flex-column">
             <div class="d-flex align-self-center">
                 <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg; filter:invert(50%);">

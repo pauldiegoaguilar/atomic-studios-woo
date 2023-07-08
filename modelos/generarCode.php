@@ -7,6 +7,7 @@
     require '../includes/PHPMailer/Exception.php';
     require '../includes/PHPMailer/PHPMailer.php';
     require '../includes/PHPMailer/SMTP.php';
+    require '../includes/config.php';
 
     $clave = $_SESSION['code'];
     $destinatario = $_SESSION['mail'];
@@ -21,7 +22,7 @@
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'waroverocean@gmail.com';
-        $mail->Password   = 'vhelxjqobrjuawpy';
+        $mail->Password   =  'cpzrfkvzdjdzkupy';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
     

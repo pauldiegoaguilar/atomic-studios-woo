@@ -8,16 +8,16 @@ body {
     background-color: #2B282C;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 10px;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #403a44;
     border-radius: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -29,15 +29,6 @@ body::-webkit-scrollbar-thumb {
 
 .links{
     padding: 7px;
-}
-
-.links:hover{
-    background-color: #bbbbbb2b;
-    border-radius: 10px;
-}
-
-.lnav:hover{
-    border-bottom: 3.5px solid #7BB0FF;
 }
 
 .woo{
@@ -118,42 +109,52 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-image {
+    position: fixed;
     background: url('../img/over_ocean.jpg') no-repeat;
-    filter: blur(4px);
+    filter: blur(4px) brightness(60%);
     width: 100%;
     height: 100vh;
     background-size: cover;
+    z-index: 0;
 }
 
-.bg-text {
-    background: linear-gradient(to top, #013c70af, #044680b8, #2e6ca3b0, #96c7ffb6);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100%;
-    height: 100vh;
 
+/*  TORNEOS */
+
+.legendario{
+    color: rgb(146, 162, 1);
 }
 
-.extras {
-    z-index: 5;
-    position: absolute;
-    top: 93vh;
-    left: 10px;
-    font-size: 25px;
-
+.coins{
+    color: rgb(243, 251, 14);
 }
 
-.extras a {
-    padding-left: 15px;
-    padding-right: 15px;
+.unico{
+    color: rgb(235, 7, 7);
 }
 
-.copy {
-    z-index: 5;
-    position: absolute;
-    top: 97.5vh;
-    left: 25px;
+.custom-card{
+    transition-property: transform, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/*  EFECTOS */
+
+@media(min-width: 768px){   /* Todos menos moviles*/
+    .custom-card:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 5px white;
+    }
+}
+
+@media(min-width: 992px){   /* Solo PC*/
+    .links:hover{
+        background-color: #bbbbbb2b;
+        border-radius: 10px;
+    }
+    
+    .lnav:hover{
+        border-bottom: 3.5px solid #7BB0FF;
+    }
 }
