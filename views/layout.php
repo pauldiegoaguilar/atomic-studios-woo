@@ -25,17 +25,18 @@
 <body>
 
     <div class="row w-100 m-0" style="background-color: #1B191B;">
-        <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center" href="?section=war-over-ocean" style="text-decoration: none;">
+        <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center mt-1" href="?section=war-over-ocean" style="text-decoration: none;">
             <img src="img/logo.png" class="col-sm-6 d-none d-sm-block" alt="LOGO" style="rotate: -90deg;">
             <div class="col-12 col-sm-6 col-sm text-sm-start text-center text-white align-self-center fs-3 lh-1 mt-1">ATOMIC <br class="d-none d-sm-block">STUDIOS</div>
         </a>
+        <hr class="d-block d-sm-none w-75 m-0 mx-auto mt-2"> 
         <div class="row col-sm-8 col-md-9 col-lg-10">
-            <div class="col-lg-6 d-flex justify-content-around align-items-start lead fs-4">
+            <div class="col-lg-6 d-flex justify-content-around align-items-start lead fs-3">
                 <a class="links lnav text-white align-self-center" href="?section=noticias" style="text-decoration: none;">NOTICIAS</a>
                 <a class="links lnav text-white align-self-center" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
             </div>
-            <div class="col-lg-6 d-flex justify-content-evenly justify-content-lg-end  align-items-center p-0 fs-4">
+            <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0 fs-3">
                 <a class="lead rounded border-0 btn-login p-2 m-2" href="main2.php?section=login" style="text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
                 <a class="lead rounded border-0 download p-2 m-2" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
             </div>

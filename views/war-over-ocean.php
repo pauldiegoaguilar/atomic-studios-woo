@@ -1,19 +1,19 @@
 <div class="row position-relative w-100 m-0">
     <img src="img/over_ocean.jpg" alt="IMAGE" class="img-fluid p-0">
     <div class="woo text-center position-absolute top-50 start-50 translate-middle p-0">
-        <div class="d-none d-md-block d-flex flex-column align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="bottom: 90px;">
-            <p class="paragraph" style="color: #403a44;">DISPONIBLE EN</p>
-            <div class="d-flex align-items-center justify-content-center" style="width: 200px; height: 70px; background-color: #000000; border-radius: 15px;">
-                <img src="img/pc-icon.png" alt="pc-icon" style="height: 70px; filter: invert(100%) brightness(1.75);">
-                <div class="text-white align-self-center" style="margin-left: 10px; font-size: 35px;">PC</div>
+        <div class="availablePc d-flex flex-column align-items-center justify-content-center position-absolute start-50 translate-middle-x p-0" style="bottom: 15%;">
+            <p class="fs-6 my-1" style="color: #403a44;">DISPONIBLE EN</p>
+            <div class="d-flex align-items-center justify-content-center py-1 px-4" style="background-color: #000000; border-radius: 15px;">
+                <img src="img/pc-icon.png" alt="pc-icon" style="height: 3rem; filter: invert(100%) brightness(1.75);">
+                <div class="text-white align-self-center fs-4">PC</div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="row m-4">
-    <iframe class="col-md-8 position-relative p-0" style="top: -95px;" height="495" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="col-md-4 px-5 d-flex flex-column">
+    <iframe class="col-lg-8 position-relative p-0" style="top: -40px;" height="420" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="col-lg-4 px-5 d-flex flex-column">
         <h1 style="color: #7BB0FF;">Lorem ipsum dolor sit amet</h1>
         <hr>
         <p>
@@ -22,35 +22,35 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-center text-start" style="margin-bottom: 5%; margin-left: 10%; margin-right: 10%;">
-    <div class="d-flex flex-column" style="width: 310px;">
-        <div class="cartel">
-            <img src="img/cartel.png" alt="img" class="img-fluid">
+<div class="row d-flex justify-content-lg-around m-5">
+    <div class="row col-lg-4 d-flex flex-lg-column m-lg-0 mb-2">
+        <div class="col-lg-12 col-sm-6 col-0 p-0">
+            <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
-        <div class="d-flex flex-column text-center align-items-center text-cartel">
-            <h1 style="font-size: 25px;">DOMINA CADA MOMENTO</h1>
-            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
-            <p style="font-size: 18px; width: 80%;">La jugabilidad por turnos te dará oportunidad de reaccionar y contraatacar... al igual que a tu oponente.</p>
-        </div>
-    </div>
-    <div class="d-flex flex-column" style="width: 310px; margin: 0 5%;">
-        <div class="cartel">
-            <img src="img/cartel.png" alt="img" class="img-fluid">
-        </div>
-        <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
-            <h1 style="font-size: 25px;">POTENCIA TUS ATAQUES</h1>
-            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
-            <p style="font-size: 18px; width: 80%;">Descubre cómo los diferentes power-ups te dan ventajas únicas en cada partida.</p>
+        <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
+            <p class="fs-4 m-0 mt-2">DOMINA CADA MOMENTO</p>
+            <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
+            <p class="lead mt-2">La jugabilidad por turnos te dará oportunidad de reaccionar y contraatacar... al igual que a tu oponente.</p>
         </div>
     </div>
-    <div class="d-flex flex-column" style="width: 310px;">
-        <div class="cartel">
-            <img src="img/cartel.png" alt="img" class="img-fluid">
+    <div class="row col-lg-4 d-flex flex-lg-column m-lg-0 mb-2">
+        <div class="col-lg-12 col-sm-6 col-0 p-0">
+            <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
-        <div class="d-flex flex-column text-center align-items-center text-cartel" style="height: 187px;">
-            <h1 style="font-size: 25px;">HAZ LUCIR TU ARMADA</h1>
-            <div style="height: 5px; width: 80%; margin: 10px 0; border-bottom: 2px solid #1B191B;"></div>
-            <p style="font-size: 18px; width: 80%;">Obtén aspectos gratuitos para tu flota conforme juegas o compra la que quieras en la tienda.</p>
+        <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
+            <p class="fs-4 m-0 mt-2">POTENCIA TUS ATAQUES</p>
+            <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
+            <p class="lead mt-2">Descubre cómo los diferentes power-ups te dan ventajas únicas en cada partida.</p>
+        </div>
+    </div>
+    <div class="row col-lg-4 d-flex flex-lg-column">
+        <div class="col-lg-12 col-sm-6 col-0 p-0">
+            <img src="img/cartel.png" alt="img" class="h-100 w-100">
+        </div>
+        <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
+            <p class="fs-4 m-0 mt-2">HAZ LUCIR TU ARMADA</p>
+            <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
+            <p class="lead mt-2">Obtén aspectos gratuitos para tu flota conforme juegas o compra la que quieras en la tienda.</p>
         </div>
     </div>
 </div>
