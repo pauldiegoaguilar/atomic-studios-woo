@@ -22,18 +22,20 @@
 
 <body>
     
-    <div class="img-fluid bg-image"></div>
+    <div class="bg-image" stlye="z-index: -1;"></div>
 
-    <div class="homewoo d-flex align-items-center" style="cursor:pointer;" onclick="location.assign('index.php');">
-        <img style="max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios">
-        <p class="text-white fs-2 m-0 lh-1" style="z-index: 1;">ATOMIC<br>STUDIOS</p>
+    <div class="homewoo d-flex align-items-center fixed-top" onclick="location.assign('index.php');">
+        <img style="cursor: pointer; max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios" class="customLogo">
+        <p class="d-none d-sm-block text-white fs-2 m-0 lh-1" style="cursor: pointer; z-index: 1;">ATOMIC<br>STUDIOS</p>
     </div>
   
-    <section class="container d-flex align-items-center justify-content-center w-75 my-5">
+    <div class="d-flex align-items-center" style="height: 100vh;">
+        <section class="d-flex justify-content-center w-100">
 
-        <?php require_once "views/" . $section . ".php" ?>
+            <?php require_once "views/" . $section . ".php" ?>
 
-    </section>
+        </section>
+    </div>
 
     <div class="w-50 d-flex flex-column mt-3 fixed-bottom d-none d-lg-flex">
         <div class="d-flex flex-wrap" style="z-index: 1;">

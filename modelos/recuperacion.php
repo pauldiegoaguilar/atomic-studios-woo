@@ -22,7 +22,7 @@
         }
 
         $code = random_int(100000, 999999);
-
+        $now = date('Y-m-d H:i:s');
         $qryI = mysqli_query($conn, "INSERT INTO codigos VALUES(NULL, '" . $mail . "', $code, NOW(), NULL)"); //Genera nuevo codigo
         
         if (!$qryI) {
@@ -32,6 +32,7 @@
         session_start();
         $_SESSION['mail'] = $mail;
         $_SESSION['code'] = $code;
+        $_SESSION['date'] = $now;
 
         echo $respuesta;
     } else {

@@ -3,7 +3,7 @@
 function verifEmail(){
     var email_recup = $('#typeEmailX').val();
 
-    console.log(email_recup); // ^[^\s@]+@[^\s@]+\.[^\s@]+$ ver en un futuro xd
+    // ^[^\s@]+@[^\s@]+\.[^\s@]+$ ver en un futuro xd
     
     if(email_recup.length !== 0){
       var emailVefif = email_recup.split("@");
@@ -72,12 +72,17 @@ function verifCode(){
     dataType: 'text',
 
     success: function(res){
+      console.log(res);
       if(!res * 1){
         $('#verificador-iden').removeClass('text-success').addClass('text-danger').html('Error: Codigo incorrecto');
         return;
       }
+      else if(res == '2'){
+        $('#verificador-iden').removeClass('text-success').addClass('text-danger').html('Error: El codigo ha deprecado');
+        return;
+      }
       $('#verificador-iden').html("Success: Codigo ingresado con exito");
-      setTimeout(location.assign('?section=cambiarContra'), 2000);
+      //setTimeout(location.assign('?section=cambiarContra'), 2000);
     }
   })
 }

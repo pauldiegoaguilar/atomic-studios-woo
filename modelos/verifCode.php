@@ -5,16 +5,28 @@
 
     $mail = $_SESSION['mail'];
     $code = $_POST['codigo'];
+    $dateS = $_SESSION['date'];
+    $now = date('Y-m-d H:i:s');
 
-    if($_SESSION['code'] == $code){
-        $_SESSION['code'] = '';
-        $sql = "UPDATE codigos SET fecha_baja = NOW() WHERE mail = '" . $mail . "' AND fecha_baja IS NULL"; 
-        $qry = mysqli_query($conn, $sql); 
+    function queryF($c, $m){
+        $sql = "UPDATE codigos SET fecha_baja = NOW() WHERE mail = '" . $m . "' AND fecha_baja IS NULL"; 
+        $qry = mysqli_query($c, $sql); 
 
         if(!$qry){
-            die('Error Consulta: ' . mysqli_error($conn));
+            die('Error Consulta: ' . mysqli_error($c));
         }
-        echo "1";
+    }
+
+    if($_SESSION['code'] == $code){
+        if(date('Y-m-d H:i:s', strtotime($dateS . '+15 minutes')) <= $now){
+            queryF($conn, $mail);
+            echo '2';
+        }
+        else{
+            $_SESSION['date'] = strtotime($dateS . '+16 minutes');
+            queryF($conn, $mail);
+            echo "1";
+        }
     }
     else{
         echo "";

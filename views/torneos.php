@@ -26,7 +26,7 @@
   </div>
 
   <div class="w-100 h-100 fixed-top justify-content-center align-items-center bg-transparent" id="fk-screen" style="display: none;">
-    <div class="row m-3 overflow-auto position-relative" id="ts-card" style="display: none; max-width: 1000px; max-height: 500px; background-color: #222022;">
+    <div class="row m-3 overflow-auto position-relative" id="ts-card" style="display: none; max-width: 1000px; max-height: 530px; background-color: #222022;">
       <div type="button" class="btn-close btn-close-white position-absolute end-0 top-0 p-2" style="z-index: 1;" aria-label="Close" onclick="$('#ts-card, #fk-screen').hide('slow');"></div>
       <img class="col-lg-6 p-0" src="img/radar.png" alt="Card Image" id="ts-img">
       <div class=" col-lg-6 card-body position-relative p-3">

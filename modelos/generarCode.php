@@ -25,7 +25,6 @@
         $mail->Password   =  'cpzrfkvzdjdzkupy';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
-    
         $mail->setFrom('waroverocean@gmail.com', 'Atomic Studios');
         $mail->addAddress($destinatario);
         /*comienzo del cuerpo del html */

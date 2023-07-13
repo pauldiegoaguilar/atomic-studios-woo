@@ -27,7 +27,7 @@
     <div class="row w-100 m-0" style="background-color: #1B191B;">
         <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center mt-1" href="?section=war-over-ocean" style="text-decoration: none;">
             <img src="img/logo.png" class="col-sm-6 d-none d-sm-block" alt="LOGO" style="rotate: -90deg;">
-            <div class="col-12 col-sm-6 col-sm text-sm-start text-center text-white align-self-center fs-3 lh-1 mt-1">ATOMIC <br class="d-none d-sm-block">STUDIOS</div>
+            <div class="col-12 col-sm-6 text-sm-start text-center text-white align-self-center fs-3 lh-1 mt-1">ATOMIC <br class="d-none d-sm-block">STUDIOS</div>
         </a>
         <hr class="d-block d-sm-none w-75 m-0 mx-auto mt-2"> 
         <div class="row col-sm-8 col-md-9 col-lg-10">

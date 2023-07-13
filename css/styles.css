@@ -162,7 +162,11 @@ body {
         opacity: 0.2;
     }
 
-    .availablePc:focu{
+    .availablePc:hover{
         opacity: 1;
+    }
+
+    .customLogo{
+        filter: invert(100%);
     }
 }
