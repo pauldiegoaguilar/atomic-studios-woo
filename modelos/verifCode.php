@@ -20,15 +20,14 @@
     if($_SESSION['code'] == $code){
         if(date('Y-m-d H:i:s', strtotime($dateS . '+15 minutes')) <= $now){
             queryF($conn, $mail);
-            echo '2';
+            echo "Error: El codigo ha deprecado";
         }
         else{
             $_SESSION['date'] = strtotime($dateS . '+16 minutes');
             queryF($conn, $mail);
-            echo "1";
         }
     }
     else{
-        echo "";
+        echo "Error: Codigo incorrecto";
     }
 ?>

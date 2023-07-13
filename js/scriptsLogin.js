@@ -71,18 +71,14 @@ function verifCode(){
     data: {codigo: code},
     dataType: 'text',
 
-    success: function(res){
-      console.log(res);
-      if(!res * 1){
-        $('#verificador-iden').removeClass('text-success').addClass('text-danger').html('Error: Codigo incorrecto');
+    success: function(msg){
+      
+      if(msg[0] == "E"){
+        $('#verificador-iden').removeClass('text-success').addClass('text-danger').html(msg);
         return;
       }
-      else if(res == '2'){
-        $('#verificador-iden').removeClass('text-success').addClass('text-danger').html('Error: El codigo ha deprecado');
-        return;
-      }
-      $('#verificador-iden').html("Success: Codigo ingresado con exito");
-      //setTimeout(location.assign('?section=cambiarContra'), 2000);
+
+      location.assign('?section=cambiarContra');
     }
   })
 }
