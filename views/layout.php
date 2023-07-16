@@ -36,9 +36,9 @@
                 <a class="links lnav text-white align-self-center" href="?section=soporte" style="text-decoration: none;">SOPORTE</a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
             </div>
-            <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0 fs-3">
-                <a class="lead rounded border-0 btn-login p-2 m-2" href="main2.php?section=login" style="text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
-                <a class="lead rounded border-0 download p-2 m-2" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
+            <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
+                <a class="lead rounded border-0 btn-login p-2 m-2 fs-4" href="main2.php?section=login" style="text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
+                <a class="lead rounded border-0 download p-2 m-2 fs-4" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
             </div>
         </div>
     </div>

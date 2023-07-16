@@ -17,18 +17,30 @@
         }
     }
 
+    $json = array(
+            'msg' => '',
+            'access' => 0, 
+            );
+
     if($_SESSION['code'] == $code){
+
         if(date('Y-m-d H:i:s', strtotime($dateS . '+15 minutes')) <= $now){
             queryF($conn, $mail);
-            echo '2';
+
+            $json['msg'] = 'Error: El codigo ha deprecado';
+            echo json_encode($json);
         }
         else{
             $_SESSION['date'] = strtotime($dateS . '+16 minutes');
             queryF($conn, $mail);
-            echo "1";
+
+            $json['msg'] = $code;
+            $json['access'] = 1;
+            echo json_encode($json);
         }
     }
     else{
-        echo "";
+        $json['msg'] = 'Error: Codigo incorrecto';
+        echo json_encode($json);
     }
 ?>

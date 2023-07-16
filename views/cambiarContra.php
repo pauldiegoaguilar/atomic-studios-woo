@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if(!empty($_SESSION)){
+    if($_SESSION['code'] == $_GET['v']){
 ?>
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -12,7 +12,7 @@
                             <div  class="form-outline form-white input-div">
                                 <h5>Cambia tu contraseña</h5>
                                 <input type="hidden" id="constructor-id" value="">
-                                <input onkeyup="GetChar(event);" style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña" />
+                                <input onkeyup="getChar(this.value);" style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Contraseña" />
                                 <p class="row text-start fs-6 m-0 pt-2 lh-1" style="color: rgb(182 190 197 / 80%);"><i id="error-password"></i></p>
                             </div>
                             <div  class="form-outline form-white mb-4 input-div mt-2">
