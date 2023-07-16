@@ -1,3 +1,9 @@
+<?php
+    require_once 'includes/config.php';
+    
+    require_once 'modelos/current-user.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,6 +22,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
     <link rel="shortcut icon" href="img/icon.png">
@@ -37,8 +44,23 @@
                 <a class="links lnav text-white align-self-center" href="?section=torneos" style="text-decoration: none;">TORNEOS</a>
             </div>
             <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
+            <?php
+                if(isset($user)){ ?>
+                    <div class="dropdown ">
+                        <button class="btn dropdown-toggle text-white" style="background-color: #2c2c2c; border-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                            <?php echo $user['nombre']; ?>
+                        </button>
+                        <ul class="dropdown-menu p-2" style="background-color: #2c2c2c; border-top: 4px solid #7BB0FF;">
+                            <li><a class="dropdown-item op" download href="includes/installer.txt">Descargar</a></li>
+                            <li><hr class="dropdown-divider" style="background-color: grey;"></li>
+                            <li><a class="dropdown-item op" href="modelos/logout.php">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+
+            <?php }else{ ?>
                 <a class="lead rounded border-0 btn-login p-2 m-2 fs-4" href="main2.php?section=login" style="text-decoration: none; background-color: #2B282C;">INICIAR SESIÓN</a>
                 <a class="lead rounded border-0 download p-2 m-2 fs-4" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF">JUEGA YA</a>
+            <?php } ?>
             </div>
         </div>
     </div>

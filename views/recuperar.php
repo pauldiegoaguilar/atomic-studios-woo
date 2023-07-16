@@ -9,7 +9,7 @@
                 <h5 class="p-4">Escribe tu correo para enviarte un codigo para cambiar tu Contraseña</h5>
                 <input type="email" id="typeEmailX" placeholder="Correo Electronico" class="form-control form-control-lg " style="background-color: #9cbfdd;" popups="none"/>
                 <p class="text-center text-danger lead" id="email-error-recup"></p>
-                <a href="javascript:verifEmail();" class="btn btn-outline-dark btn-lg px-5 text-white fs-2" style="background-color: #013c70;">Enviar</a>
+                <a href="javascript:verifEmail();" class="btn btn-lg px-5 text-white fs-2" style="background-color: #013c70;">Enviar</a>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
             </div>
             <p class="text-center text-success lead" id="verificador-iden"></p>
             <div class="text-center m-3">
-                <a href="javascript:verifCode();" class="btn btn-outline-dark btn-lg px-5 fs-2" style="background-color: #013c70; color: white;">Enviar</a>
+                <a href="javascript:verifCode();" class="btn btn-lg px-5 fs-2" style="background-color: #013c70; color: white;">Enviar</a>
             </div>
             <a href="modelos/destroyer.php?s=recuperar" class="ps-3"><< Atras</a>
         </div>

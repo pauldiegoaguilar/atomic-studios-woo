@@ -24,7 +24,7 @@
     
     <div class="bg-image" stlye="z-index: -1;"></div>
 
-    <div class="homewoo d-flex align-items-center fixed-top" onclick="location.assign('index.php');">
+    <div class="d-flex align-items-center" style="position: fixed; top: 0; left: 0; z-index: 1030;" onclick="location.assign('main2.php?section=login');">
         <img style="cursor: pointer; max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios" class="customLogo">
         <p class="d-none d-sm-block text-white fs-2 m-0 lh-1" style="cursor: pointer; z-index: 1;">ATOMIC<br>STUDIOS</p>
     </div>
@@ -39,9 +39,9 @@
 
     <div class="w-50 d-flex flex-column mt-3 fixed-bottom d-none d-lg-flex">
         <div class="d-flex flex-wrap" style="z-index: 1;">
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte">SOPORTE</a>
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte">SOPORTE</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
+            <a class="text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
         </div>
         <small style="z-index: 1;" class="text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS</small>
     </div>

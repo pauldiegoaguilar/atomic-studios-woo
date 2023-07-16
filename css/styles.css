@@ -170,3 +170,8 @@ body {
         filter: invert(100%);
     }
 }
+
+.op:hover{
+    border-radius: 5px;
+    background-color: #4d4d4d;
+}

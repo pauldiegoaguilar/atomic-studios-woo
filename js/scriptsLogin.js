@@ -200,3 +200,42 @@ $(document).ready(function(){
     }
   });
 });
+
+/* -- Login -- */
+
+function verifLogin(form) {
+  let mail = form.emailL.value;
+  let pass = form.passL.value;
+  let valid = true;
+
+  $('#errorLog').css('display', 'none');
+
+  if(valid) {
+    $.ajax({
+      type: "POST",
+      url: "modelos/funcion-log.php",
+      data: { emailL: mail, passL: pass },
+
+      success: function(res) {
+        if(res){
+          $('#successLog').html('Bienvenido, ' + res);
+
+          $('#successLog').css('display', 'block');
+          setTimeout(function(){location.assign('main.php?section=war-over-ocean')}, 1500);
+
+        }
+        else{
+          $('#errorLog').css('display', 'block');
+        }
+      },
+
+      error: function(res){
+        console.log(res);
+        alert('Error: Compruebe su conexión a internet, intente más tarde');
+        location.assign('index.php');
+      }
+    });
+  }
+
+
+}
