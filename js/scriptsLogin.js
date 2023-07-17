@@ -46,11 +46,12 @@ function verifRegis(form) {
   let name = form.nomR.value;
   let mail = form.emailR.value;
   let pass = form.passR.value;
-  let valid = true;
 
-  $('#error-nomR, #error-nomRe, #error-emailR, #error-emailRe, #error-passR').css('display', 'none');
+  $('#dataVerif').removeClass('d-none');
+  $('#error-nomR, #error-nomRe, #error-emailR, #error-emailRe, #error-passR, #successReg').addClass('d-none');
 
-  if(valid) {
+  setTimeout(function(){
+    $('#dataVerif').addClass('d-none');
     $.ajax({
       type: "POST",
       url: "modelos/funcion-reg.php",
@@ -62,22 +63,25 @@ function verifRegis(form) {
           selArr.shift();
           let selector = selArr.toString();
 
-          $(selector).css('display', 'block');
+          $(selector).removeClass('d-none');
         }
         else{
-          $('#successReg').css('display', 'block');
+          $('#successReg').removeClass('d-none');
           setTimeout(function(){location.assign('?section=login')}, 3000);
         }
       },
 
-      error: function(res){
-        console.log(res);
-        alert('Error: Compruebe su conexión a internet, intente más tarde');
+      error: function(res, errType){
+        alert(
+          'Error: Verifica tu conexión a internet o contactate con soporte. \n'+ 
+          'Tipo de error: ' + errType + '\n'+
+          'Respuesta del servidor: '+ res);
         location.assign('index.php');
       }
     });
-  }
+  }, 1500);
 }
+
 
 
 function verifEmail(){
