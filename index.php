@@ -1,3 +1,3 @@
 <?php
-    header('Location: main.php?section=war-over-ocean');
+    header('Location: main.php?section=war-over-ocean&la=esp');
 ?>

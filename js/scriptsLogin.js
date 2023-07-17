@@ -4,6 +4,12 @@ function emailText(text){
   return isValid;
 }
 
+function getLan(){
+  let url = window.location.href;
+  let lan = url.split('&').pop();
+  return lan;
+}
+
 /* Evaluador de password (menor de 20 caracteres, al menos 3 especiales y alfanumerico)*/
 function getChar(tag) {
   var constructor = tag;
@@ -67,7 +73,7 @@ function verifRegis(form) {
         }
         else{
           $('#successReg').removeClass('d-none');
-          setTimeout(function(){location.assign('?section=login')}, 3000);
+          setTimeout(function(){location.assign('?section=login&'+getLan())}, 3000);
         }
       },
 
@@ -125,7 +131,7 @@ function genCode(){
       }
 
       $("#email-error-recup").html("El código se ha generado con éxito");
-      setTimeout(function(){location.reload()}, 3000);
+      setTimeout(function(){location.reload()}, 1500);
     }
   });
 }
@@ -156,7 +162,7 @@ function verifCode(){
       }
       
       $('#verificador-iden').html("Success: Codigo ingresado con exito");
-      setTimeout(location.assign('?section=cambiarContra&v=' + res.msg), 2000);
+      setTimeout(location.assign('?section=cambiarContra&v=' + res.msg + '&' + getLan()), 2000);
     },
     error: function(r){
       console.log(r);
@@ -181,7 +187,7 @@ function confirmPassword(){
       
       success: function(){
         $('#verifiedPass').show('fast');
-        setTimeout(location.assign('main.php?section=war-over-ocean'), 5000);
+        setTimeout(location.assign('main.php?section=war-over-ocean&'+ getLan()), 5000);
       },
 
       error: function(){

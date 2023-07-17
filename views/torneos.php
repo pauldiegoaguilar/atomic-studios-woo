@@ -5,7 +5,7 @@
 ?>
 
 <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
-  <h2 class="text-white border-bottom py-1">Ultimos Torneos</h2>
+  <h2 class="text-white border-bottom py-1"><?php echo $lang['torneos']['txtSec1t']?></h2>
 
   <div class="row d-flex justify-content-center">
   <?php foreach($torneosInfo as $torneo){?>

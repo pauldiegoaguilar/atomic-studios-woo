@@ -21,7 +21,14 @@
 </head>
 
 <body>
-    
+    <script>
+        let url=window.location.href;
+        let getVal = url.split('&').pop();
+        alert(getVal);
+    </script>
+
+    <?php $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);?>
+
     <div class="bg-image" stlye="z-index: -1;"></div>
 
     <div class="homewoo d-flex align-items-center fixed-top" onclick="location.assign('index.php');">
@@ -39,11 +46,11 @@
 
     <div class="w-50 d-flex flex-column mt-3 fixed-bottom d-none d-lg-flex">
         <div class="d-flex flex-wrap" style="z-index: 1;">
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte">SOPORTE</a>
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad">AVISO DE PRIVACIDAD</a>
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio">TERMINOS DE SERVICIO</a>
+            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte&la=<?php echo $_GET['la']?>"><?php echo $lang['nav']['s']?></a>
+            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad&la=<?php echo $_GET['la']?>"><?php echo $lang['footer']['a']?></a>
+            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio&la=<?php echo $_GET['la']?>"><?php echo $lang['footer']['te']?></a>
         </div>
-        <small style="z-index: 1;" class="text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. TODOS LOS DERECHOS RESERVADOS</small>
+        <small style="z-index: 1;" class="text-white mt-2 ps-2">&copy 2023 ATOMIC STUDIOS. <?php echo $lang['footer']['t']?></small>
     </div>
 
 </body>
