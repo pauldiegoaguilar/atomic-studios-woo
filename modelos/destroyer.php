@@ -4,6 +4,8 @@
     session_destroy();
 
     $section = $_GET['s'];
-    header('Location: ../main2.php?section=' . $section);
+    $lan = $_GET['la'];
+
+    header('Location: ../main2.php?section=' . $section . '&la=' . $lan );
     exit();
 ?>

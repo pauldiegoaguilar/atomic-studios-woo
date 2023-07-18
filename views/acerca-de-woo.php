@@ -1,29 +1,25 @@
 <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
-    <h2 class="text-white display-6">¿Qué es War Over Ocean (WOO)?</h2>
+    <h2 class="text-white display-6"><?php echo $lang['acerca de woo']['txtSec1t']?></h2>
     <p class="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illum magni tempore aliquam harum illo voluptatibus officiis natus hic enim, ea eaque vero li*bero explicabo atque deleniti impedit, sunt in.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, cumque, totam ratione ea tempora porro asperiores nam incidunt exercitationem quidem itaque non sed architecto voluptate. Beatae minima laudantium vel labore.
+        <?php echo $lang['acerca de woo']['txtSec1b']?>
     </p>
-    <h2 class="text-white display-6">¿Inserte pregunta?</h2>
+    <h2 class="text-white display-6"><?php echo $lang['acerca de woo']['txtSec2t']?></h2>
     <p class="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illum magni tempore aliquam harum illo voluptatibus officiis natus hic enim, ea eaque vero li*bero explicabo atque deleniti impedit, sunt in.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, cumque, totam ratione ea tempora porro asperiores nam incidunt exercitationem quidem itaque non sed architecto voluptate. Beatae minima laudantium vel labore.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, cumque, totam ratione ea tempora porro asperiores nam incidunt exercitationem quidem itaque non sed architecto voluptate. Beatae minima laudantium vel labore.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, cumque, totam ratione ea tempora porro asperiores nam incidunt exercitationem quidem itaque non sed architecto voluptate. Beatae minima laudantium vel labore.
+        <?php echo $lang['acerca de woo']['txtSec2b']?>
     </p>
-    <h2 class="text-white display-6">¿Inserte pregunta mas interesante?</h2>
+    <h2 class="text-white display-6"><?php echo $lang['acerca de woo']['txtSec3t']?></h2>
     <p class="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illum magni tempore aliquam harum illo voluptatibus officiis natus hic enim, ea eaque vero li*bero explicabo atque deleniti impedit, sunt in.
+        <?php echo $lang['acerca de woo']['txtSec3b']?>
     </p>
-    <h2 class="text-white display-6">¿Pregunta con imagen?</h2>
+    <h2 class="text-white display-6"><?php echo $lang['acerca de woo']['txtSec4t']?></h2>
     <p class="paragraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illum magni tempore aliquam harum illo voluptatibus officiis natus hic enim, ea eaque vero li*bero explicabo atque deleniti impedit, sunt in:
+        <?php echo $lang['acerca de woo']['txtSec4e']?>
     </p>
 
     <img src="img/radar.png" class="w-100" style="height: 350px;">
 
     <p class="paragraph">
         <br>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse doloremque, laborum hic asperiores eos neque excepturi error quisquam fugit quis. Error perferendis vel possimus, esse excepturi a quibusdam facere ratione.
+        <?php echo $lang['acerca de woo']['txtSec4f']?>
     </p>
 </div>

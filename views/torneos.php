@@ -5,23 +5,23 @@
 ?>
 
 <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
-  <h2 class="text-white border-bottom py-1">Ultimos Torneos</h2>
+  <h2 class="text-white border-bottom py-1"><?php echo $lang['torneos']['txtSec1t']?></h2>
 
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex flex-wrap">
   <?php foreach($torneosInfo as $torneo){?>
-          <div class="custom-card card m-2" style="width: 14rem; background-color: #222022; cursor: pointer;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
-            <img class="card-img-top p-1" src="<?php echo $torneo['ruta']?>" alt="Card image cap" id="t-img-<?php echo $torneo['id']?>">
-            <div class="card-body">
-              <h3 class="row justify-content-center text-uppercase text-white" id="t-title-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></h3>
-              <p class="card-text text-truncate" id="t-desc-<?php echo $torneo['id']?>"><?php echo $torneo['descripcion']?></p>
-              <p class="m-0"><i id="t-alta-<?php echo $torneo['id']?>">Publicado: <?php echo $torneo['fecha_alta']?></i></p>
-              <p class="m-0"><i id="t-baja-<?php echo $torneo['id']?>">Finalizado: <?php echo $torneo['fecha_baja']==NULL ? '--/--/--' : $torneo['fecha_baja']?></i></p>
-              <p class="d-none" id="t-coins-<?php echo $torneo['id']?>"><?php echo $torneo['monedas']?></p>
-              <p class="d-none" id="t-champ-<?php echo $torneo['id']?>"><?php echo $torneo['userName']?></p>
-              <p class="d-none" id="t-prolife-<?php echo $torneo['id']?>"><?php echo $torneo['fotoPerfil']?></p>
-              <p class="d-none" id="t-rareza-<?php echo $torneo['id']?>"><?php echo $torneo['rareza']?></p>
-            </div>
-          </div>
+      <div class="custom-card m-2 p-0" style="width: 18rem; min-height: 450px; cursor: pointer;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
+        <img class="w-100 h-50" src="<?php echo $torneo['ruta']?>" alt="Card image cap" id="t-img-<?php echo $torneo['id']?>">
+        <div class="h-50 py-2">
+          <h2 class="row justify-content-center text-uppercase text-white" id="t-title-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></h2>
+          <p class="fs-5 text-truncate text-truncate" id="t-desc-<?php echo $torneo['id']?>"><?php echo $torneo['descripcion']?></p>
+          <p class="text-white m-0"><i id="t-alta-<?php echo $torneo['id']?>">Publicado: <?php echo $torneo['fecha_alta']?></i></p>
+          <p class="text-white m-0"><i id="t-baja-<?php echo $torneo['id']?>">Finalizado: <?php echo $torneo['fecha_baja']==NULL ? '--/--/--' : $torneo['fecha_baja']?></i></p>
+          <p class="d-none" id="t-coins-<?php echo $torneo['id']?>"><?php echo $torneo['monedas']?></p>
+          <p class="d-none" id="t-champ-<?php echo $torneo['id']?>"><?php echo $torneo['userName']?></p>
+          <p class="d-none" id="t-prolife-<?php echo $torneo['id']?>"><?php echo $torneo['fotoPerfil']?></p>
+          <p class="d-none" id="t-rareza-<?php echo $torneo['id']?>"><?php echo $torneo['rareza']?></p>
+        </div>
+      </div>
   <?php }?>
   </div>
 

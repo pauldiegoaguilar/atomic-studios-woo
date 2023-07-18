@@ -27,7 +27,7 @@
         if(date('Y-m-d H:i:s', strtotime($dateS . '+15 minutes')) <= $now){
             queryF($conn, $mail);
 
-            $json['msg'] = 'Error: El codigo ha deprecado';
+            $json['msg'] = 'verificador-deprecated';
             echo json_encode($json);
         }
         else{
@@ -40,7 +40,7 @@
         }
     }
     else{
-        $json['msg'] = 'Error: Codigo incorrecto';
+        $json['msg'] = 'verificador-incorrect';
         echo json_encode($json);
     }
 ?>

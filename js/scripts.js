@@ -25,6 +25,9 @@ function MostrarCard(tagId) {
     $('#ts-rareza').addClass(rareza).text(rareza);
 }
 
-/*function openPreferencesMenu(){
-    $('#preferencesMenu').css({'display': 'flex'});
-}*/
+function switchLan(lan){
+    lan = lan === 'esp' ? 'eng' : 'esp';
+  
+    let url = window.location.href.replace(/(la=)(\w+)/, '$1'+lan);
+    location.assign(url);
+}
