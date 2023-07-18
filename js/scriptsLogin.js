@@ -7,13 +7,7 @@ function emailText(text){
 function switchLan(lan){
   lan = lan === 'esp' ? 'eng' : 'esp';
 
-  let url = window.location.href;
-  let get = url.split('=');
-
-  get.pop();
-  get.push(lan);
-  url = get.join('=');
-
+  let url = window.location.href.replace(/(la=)(\w+)/, '$1'+lan);
   location.assign(url);
 }
 
