@@ -45,6 +45,9 @@
         </div>
     </div>
 
+    <img src="img/<?php echo $_GET['la']?>.jpg" style="position: fixed; height: 35px; top: 45%; left: 15px; z-index: 9999; cursor: pointer;" 
+        onclick="switchLan('<?php echo $_GET['la']?>')" alt="Country Flag">
+
     <?php
     if ($section != 'war-over-ocean') { ?>
         <div class="row position-relative w-100 m-0">

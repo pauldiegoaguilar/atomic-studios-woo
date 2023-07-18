@@ -21,21 +21,20 @@
 </head>
 
 <body>
-    <script>
-        let url=window.location.href;
-        let getVal = url.split('&').pop();
-        alert(getVal);
-    </script>
 
     <?php $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);?>
 
     <div class="bg-image" stlye="z-index: -1;"></div>
 
-    <div class="homewoo d-flex align-items-center fixed-top" onclick="location.assign('index.php');">
-        <img style="cursor: pointer; max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios" class="customLogo">
-        <p class="d-none d-sm-block text-white fs-2 m-0 lh-1" style="cursor: pointer; z-index: 1;">ATOMIC<br>STUDIOS</p>
+    <div class="d-flex align-items-center fixed-top" style="z-index: 9999;">
+        <div class="homewoo d-flex align-items-center" onclick="location.assign('index.php');">
+            <img style="cursor: pointer; max-width: 6em; rotate: -90deg;" src="img/logo.png" alt="Atomic Studios" class="customLogo">
+            <p class="d-none d-sm-block text-white fs-2 m-0 lh-1" style="cursor: pointer; z-index: 1;">ATOMIC<br>STUDIOS</p>
+        </div>
+        <img src="img/<?php echo $_GET['la']?>.jpg" style="height: 35px; right: 15px; position: absolute; cursor: pointer;" onclick="switchLan('<?php echo $_GET['la']?>')" alt="Country Flag">
     </div>
   
+
     <div class="d-flex align-items-center" style="height: 100vh;">
         <section class="d-flex justify-content-center w-100">
 

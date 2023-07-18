@@ -13,11 +13,18 @@
                                 <h5><?php echo $lang['recuperar']['c']?></h5>
                                 <input type="hidden" id="constructor-id" value="">
                                 <input onkeyup="getChar(this.value);" style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="<?php echo $lang['placeholder']['pass']?>" />
-                                <p class="row text-start fs-6 m-0 pt-2 lh-1" style="color: rgb(182 190 197 / 80%);"><i id="error-password"></i></p>
                             </div>
                             <div  class="form-outline form-white mb-4 input-div mt-2">
                                 <input style="background-color: #9cbfdd; font-size: 25px;" type="password" id="typePasswordConfirmX" class="form-control form-control-lg" placeholder="<?php echo $lang['placeholder']['cpass']?>" />
                             </div>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-char"><?php echo $lang['errors']['char']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-num"><?php echo $lang['errors']['num']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-alpha"><?php echo $lang['errors']['alpha']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-len"><?php echo $lang['errors']['length']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-conn"><?php echo $lang['errors']['conn']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-eq"><?php echo $lang['errors']['same']?></p>
+                            <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-fields"><?php echo $lang['errors']['fillFields']?></p>
+
                             <p class="text-center text-sucess lead d-none" id="verifiedPass"><?php echo $lang['recuperar']['s']?></p>
                             <a href="javascript:confirmPassword();" class="btn btn-outline-dark btn-lg px-5 fs-1" style="background-color: #013c70; color: white;"><?php echo $lang['input']['submit1']?></a>
                         </div>

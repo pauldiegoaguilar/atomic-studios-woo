@@ -24,3 +24,13 @@ function MostrarCard(tagId) {
     $('#ts-champ').text(campeon);
     $('#ts-rareza').addClass(rareza).text(rareza);
 }
+
+function switchLan(lan){
+    lan = lan === 'esp' ? 'eng' : 'esp';
+    let url = window.location.href;
+    let get = url.split('=');
+    get.pop();
+    get.push(lan);
+    url = get.join('=');
+    location.assign(url);
+}
