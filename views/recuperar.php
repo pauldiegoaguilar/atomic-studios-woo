@@ -2,12 +2,12 @@
     session_start();
     if(empty($_SESSION)){
 ?>
-    <div class="w-auto h-auto bg-white rounded-2" style="z-index: 1;">
+    <div class="w-auto h-auto bg-white" style="z-index: 1; border-radius: 15px;">
         <div class="mb-md-5"> 
             <h2 style="color: #013c70; font-size: 45px;" class="fw-bold m-4 text-uppercase text-center"><?php echo $lang['recuperar']['title']?></h2>
             <div class="form-outline form-white m-4 input-div text-center">
                 <h5 class="p-4"><?php echo $lang['recuperar']['e']?></h5>
-                <input type="email" id="typeEmailX" placeholder="<?php echo $lang['placeholder']['correo']?>" class="form-control form-control-lg " style="background-color: #9cbfdd;" popups="none"/>
+                <input type="email" id="typeEmailX" placeholder="<?php echo $lang['placeholder']['correo']?>" class="form-control form-control-lg mb-3" style="background-color: #9cbfdd;" popups="none"/>
                 <!--    Mensajes de error   -->
                 <p class="d-none text-center text-success lead" id="email-success-recup"><?php echo $lang['errors']['success']?></p>
                 <p class="d-none text-center text-success lead" id="email-gen-recup"><?php echo $lang['errors']['genCode']?></p>
@@ -20,7 +20,7 @@
         </div>
     </div>
 <?php } else{?>
-    <div class="w-auto h-auto bg-white rounded" style="z-index: 1;">
+    <div class="w-auto h-auto bg-white" style="z-index: 1; border-radius: 15px;">
         <div> <!-- mb-md-4 -->
             <h2 style="color: #013c70;" class="fw-bold mb-2 text-uppercase text-center p-4 fs-1"><?php echo $lang['recuperar']['title']?></h2>
             <h5 class="text-center p-3"><?php echo $lang['recuperar']['ec']?></h5>

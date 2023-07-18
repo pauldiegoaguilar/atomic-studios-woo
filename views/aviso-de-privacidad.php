@@ -43,5 +43,5 @@
     <p><?php echo $lang['aviso de privacidad']['txtSec7bn']?></p>
 
     <p><?php echo $lang['aviso de privacidad']['txtSec7bs']?>
-    <a href="?section=soporte" class="text-white"><?php echo $lang['aviso de privacidad']['txtSec7bso']?></a>.</p>
+    <a href="?section=soporte&la=<?php echo $_GET['la'];?>" class="text-white"><?php echo $lang['aviso de privacidad']['txtSec7bso']?></a>.</p>
 </div>

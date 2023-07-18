@@ -37,7 +37,7 @@
     </p>
 
     <p><?php echo $lang['terminos de servicio']['txtSec7bd']?>
-    <a href="?section=soporte" class="text-white"><?php echo $lang['terminos de servicio']['txtSec7bs']?></a>.</p>
+    <a href="?section=soporte&la=<?php echo $_GET['la'];?>" class="text-white"><?php echo $lang['terminos de servicio']['txtSec7bs']?></a>.</p>
 
     <p>
         <?php echo $lang['terminos de servicio']['txtSec8']?>

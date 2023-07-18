@@ -46,9 +46,19 @@
                 <a class="links lnav text-white align-self-center" href="?section=torneos&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t']?></a>
             </div>
             <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
+                <div class="dropdown-center">
+                    <button class="btn btn-sm" type="button" style="border: none;" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                        <img src="img/language.png" alt="lang-icon" style="width: 30px; cursor: pointer;">
+                    </button>
+                    <ul class="dropdown-menu p-2" style="background-color: #ffffff; border-top: 4px solid #7BB0FF; border-left: none; border-right: none; border-bottom: none;">
+                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'; /*$_GET['la']*/?>')">Español</a></li>
+                        <li><hr class="dropdown-divider" style="color: #878787;"></li>
+                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'; /*$_GET['la']*/?>')">Ingles</a></li>
+                    </ul>
+                </div>
             <?php
                 if(isset($user)){ ?>
-                    <div class="dropdown ">
+                    <div class="dropdown">
                         <button class="btn dropdown-toggle text-white" style="background-color: #2c2c2c; border-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
                             <?php echo $user['nombre']; ?>
                         </button>
@@ -68,9 +78,6 @@
             </div>
         </div>
     </div>
-
-    <img src="img/<?php echo $_GET['la']?>.jpg" style="position: fixed; height: 35px; top: 45%; left: 15px; z-index: 9999; cursor: pointer;" 
-        onclick="switchLan('<?php echo $_GET['la']?>')" alt="Country Flag">
 
     <?php
     if ($section != 'war-over-ocean') { ?>

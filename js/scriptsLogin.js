@@ -257,8 +257,7 @@ function verifLogin(form) {
           $('#successLog').html('Bienvenido, ' + res);
 
           $('#successLog').css('display', 'block');
-          setTimeout(function(){location.assign('main.php?section=war-over-ocean')}, 1500);
-
+          setTimeout(function(){location.assign('main.php?section=war-over-ocean&'+getLan())}, 1500);
         }
         else{
           $('#errorLog').css('display', 'block');
@@ -272,6 +271,4 @@ function verifLogin(form) {
       }
     });
   }
-
-
 }

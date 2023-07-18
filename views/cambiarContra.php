@@ -5,9 +5,9 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card bg-white text-info" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center" style="height: 490px;">
-                        <div class="mb-md-5"> <!-- mb-md-4 -->
+                <div class="card bg-white text-info" style="border-radius: 15px;">
+                    <div class="card-body p-5 text-center">
+                        <div> <!-- mb-md-4 -->
                             <h2 style="color: #1d3b55;" class="fs-1 fw-bold mb-2 text-uppercase pb-3"><?php echo $lang['recuperar']['title']?></h2>
                             <div  class="form-outline form-white input-div">
                                 <h5><?php echo $lang['recuperar']['c']?></h5>
@@ -26,7 +26,7 @@
                             <p class="d-none text-danger text-center fs-6 mb-4 pt-2 " id="error-fields"><?php echo $lang['errors']['fillFields']?></p>
 
                             <p class="text-center text-sucess lead d-none" id="verifiedPass"><?php echo $lang['recuperar']['s']?></p>
-                            <a href="javascript:confirmPassword();" class="btn btn-outline-dark btn-lg px-5 fs-1" style="background-color: #013c70; color: white;"><?php echo $lang['input']['submit1']?></a>
+                            <a href="javascript:confirmPassword();" class="btn btn-lg px-5 fs-1" style="background-color: #013c70; color: white;"><?php echo $lang['input']['submit1']?></a>
                         </div>
                     </div>
                 </div>
