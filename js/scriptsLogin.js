@@ -206,6 +206,14 @@ $(document).ready(function(){
 function verifLogin(form) {
   let mail = form.emailL.value;
   let pass = form.passL.value;
+  let remind;
+
+  if(document.getElementById('form1Example3').checked){
+    remind = form.remind.value;
+  }else{
+    remind = '';
+  }
+
   let valid = true;
 
   $('#errorLog').css('display', 'none');
@@ -214,7 +222,7 @@ function verifLogin(form) {
     $.ajax({
       type: "POST",
       url: "modelos/funcion-log.php",
-      data: { emailL: mail, passL: pass },
+      data: { emailL: mail, passL: pass, remindL: remind },
 
       success: function(res) {
         if(res){

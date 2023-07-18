@@ -53,6 +53,8 @@
                         <ul class="dropdown-menu p-2" style="background-color: #2c2c2c; border-top: 4px solid #7BB0FF;">
                             <li><a class="dropdown-item op" download href="includes/installer.txt">Descargar</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
+                            <li><a class="dropdown-item op" href="#">Administracion</a></li>
+                            <li><hr class="dropdown-divider" style="background-color: grey;"></li>
                             <li><a class="dropdown-item op" href="modelos/logout.php">Cerrar Sesión</a></li>
                         </ul>
                     </div>
@@ -86,7 +88,51 @@
     <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 lead" style="background-color: #222022;">
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=acerca-de-woo">ACERCA DE WAR OVER OCEAN</a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=desarrolladores">DESARROLLADORES</a>
-        <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;">PREFERENCIAS DE COOKIES</a>
+        <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none; cursor: pointer;" onclick="$('#preferencesMenu').css({'display': 'flex'});">PREFERENCIAS DE COOKIES</a>
+    </div>
+
+    <div id="preferencesMenu" class="fixed-top justify-content-end" style="z-index: 1030; background-color: #242424aa; height: 100vh; display: none;">
+        <div class="d-flex flex-column bg-white text-dark p-3 overflow-auto" style="max-width: 400px; position: relative; ">
+            <div class="d-flex justify-content-between">
+                <h4 class="mb-4">Preferencias de almacenamiento</h4>
+                <button type="button" class="btn btn-dark btn-sm mb-4" onclick="$('#preferencesMenu').css({'display': 'none'});">X</button>
+            </div>
+            <div>
+                <h5>Lorem ipsum</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h5>Lorem ipsum</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
+                </div>
+            </div>
+            <hr style="color: black;">
+            <div>
+                <h5>Lorem ipsum</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
+                </div>
+            </div>
+            <hr style="color: black;">
+            <div>
+                <h5>Lorem ipsum</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B;">

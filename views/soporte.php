@@ -4,11 +4,10 @@
     <form action="">
         <div class="paragraph" style="margin-top: 10px;">
             <p for="inputPassword" style="text-align: left !important;" class="mt-2">Nombre de Usuario</p>
-
-            <input type="text" class="form-control text-light" style="background-color: #2B282C;" id="inputPassword" placeholder="ZIKARIOGAY">
+            <input type="text" class="form-control text-light" style="background-color: #2B282C;" id="inputPassword" value="<?php echo isset($user) ? $user['nombre'] : '' ; ?>" placeholder="ZIKARIOGAY">
 
             <p for="email" style="text-align: left !important;" class="text-left mt-2">Correo Electronico</p>
-            <input type="email" name="email" class="form-control text-light text-truncate" style="background-color: #2B282C;" id="email" placeholder="YourGameMailExample@gmail.com">
+            <input type="email" name="email" class="form-control text-light text-truncate" style="background-color: #2B282C;" id="email" value="<?php echo isset($user) ? $user['email'] : '' ; ?>" placeholder="YourGameMailExample@gmail.com">
 
             <p for="asuntos" style="text-align: left !important;" class="text-left mt-2">Asunto</p>
             <select name="asuntos" class="form-control text-light" style="background-color: #2B282C;" id="asuntos">

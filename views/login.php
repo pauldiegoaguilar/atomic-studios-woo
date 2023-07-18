@@ -3,8 +3,8 @@
         <p style="color: #013c70;" class="display-4 fw-bold px-5 pt-5 text-center">INICIAR SESION</p>
     
         <div class="form-outline form-white m-4 input-div">
-            <input style="background-color: #9cbfdd;" type="email" id="typeEmailX" name="emailL" autocomplete="off" class="form-control form-control-lg mb-4" placeholder="Correo Electrónico" />
-            <input style="background-color: #9cbfdd;" type="password" id="typePasswordX" name="passL" class="form-control form-control-lg" placeholder="Contraseña" />
+            <input style="background-color: #9cbfdd;" type="email" id="typeEmailX" name="emailL" autocomplete="off" class="form-control form-control-lg mb-4" value="<?php echo (isset($_COOKIE['email'])) ? $_COOKIE['email'] : '' ?>" placeholder="Correo Electrónico" />
+            <input style="background-color: #9cbfdd;" type="password" id="typePasswordX" name="passL" class="form-control form-control-lg" value="<?php echo (isset($_COOKIE['pass'])) ? $_COOKIE['pass'] : '' ?>" placeholder="Contraseña" />
             <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="errorLog" style="color: rgb(182 190 197 / 80%); display: none;">Correo electronico y/o contraseña incorrectos</p>
             <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="successLog" style="color: #013c70; display: none;">Has iniciado sesion correctamente</p>
         </div>
@@ -15,7 +15,7 @@
         </div>
     
         <div class="form-check d-flex justify-content-start align-items-center m-4">
-            <input style="background-color: #9cbfdd; border-radius: 5px;" class="form-check-input p-3 me-2" type="checkbox" value="" id="form1Example3"/>
+            <input style="background-color: #9cbfdd; border-radius: 5px;" class="form-check-input p-3 me-2" type="checkbox" <?php echo (isset($_COOKIE['remind'])) ? $_COOKIE['remind'] : '' ?> value="SI" name="remind" id="form1Example3"/>
             <label style="color: #013c70;" class="fs-5 form-check-label" for="form1Example3">Permanecer Conectado</label>
         </div>
     

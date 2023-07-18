@@ -24,3 +24,7 @@ function MostrarCard(tagId) {
     $('#ts-champ').text(campeon);
     $('#ts-rareza').addClass(rareza).text(rareza);
 }
+
+/*function openPreferencesMenu(){
+    $('#preferencesMenu').css({'display': 'flex'});
+}*/
