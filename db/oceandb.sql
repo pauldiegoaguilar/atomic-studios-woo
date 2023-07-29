@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-07-2023 a las 03:27:26
+-- Tiempo de generación: 29-07-2023 a las 18:47:57
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.19
 
@@ -88,7 +88,60 @@ INSERT INTO `codigos` (`id`, `mail`, `codigo`, `fecha_alta`, `fecha_baja`) VALUE
 (31, 'roroacostacant@gmail.com', '246222', '2023-07-02 01:38:25', '2023-07-02 01:47:27'),
 (32, 'roroacostacant@gmail.com', '126648', '2023-07-02 01:47:27', '2023-07-02 01:51:47'),
 (33, 'roroacostacant@gmail.com', '145738', '2023-07-02 01:51:47', '2023-07-02 03:35:15'),
-(34, 'roroacostacant@gmail.com', '389532', '2023-07-02 21:37:56', '2023-07-02 22:09:29');
+(34, 'roroacostacant@gmail.com', '389532', '2023-07-02 21:37:56', '2023-07-02 22:09:29'),
+(35, 'roroacostacant@gmail.com', '145134', '2023-07-03 07:08:11', '2023-07-03 07:12:53'),
+(36, 'roroacostacant@gmail.com', '390678', '2023-07-05 05:50:00', '2023-07-05 05:55:34'),
+(37, 'roroacostacant@gmail.com', '927898', '2023-07-05 05:55:34', '2023-07-05 05:57:00'),
+(38, 'roroacostacant@gmail.com', '565167', '2023-07-05 05:57:00', '2023-07-05 05:59:17'),
+(39, 'roroacostacant@gmail.com', '718357', '2023-07-05 05:59:17', '2023-07-05 06:08:20'),
+(40, 'roroacostacant@gmail.com', '442050', '2023-07-05 06:08:20', '2023-07-05 06:09:34'),
+(41, 'roroacostacant@gmail.com', '705628', '2023-07-07 21:49:53', '2023-07-07 21:50:56'),
+(42, 'roroacostacant@gmail.com', '342057', '2023-07-07 21:50:56', '2023-07-07 21:53:53'),
+(43, 'roroacostacant@gmail.com', '292083', '2023-07-07 21:53:53', '2023-07-07 22:01:03'),
+(44, 'roroacostacant@gmail.com', '896907', '2023-07-07 22:48:12', '2023-07-07 22:53:38'),
+(45, 'roroacostacant@gmail.com', '207344', '2023-07-07 22:53:38', '2023-07-07 22:54:32'),
+(46, 'roroacostacant@gmail.com', '935473', '2023-07-07 22:54:32', '2023-07-07 22:54:58'),
+(47, 'roroacostacant@gmail.com', '997566', '2023-07-07 22:54:58', '2023-07-07 22:56:47'),
+(48, 'roroacostacant@gmail.com', '476751', '2023-07-07 22:56:47', '2023-07-07 22:58:35'),
+(49, 'roroacostacant@gmail.com', '410911', '2023-07-07 23:36:09', '2023-07-08 07:07:15'),
+(50, 'roroacostacant@gmail.com', '531306', '2023-07-08 07:07:17', '2023-07-08 16:30:17'),
+(51, 'roroacostacant@gmail.com', '464416', '2023-07-08 16:30:17', '2023-07-08 16:33:18'),
+(52, 'roroacostacant@gmail.com', '285818', '2023-07-12 22:02:10', '2023-07-12 22:03:47'),
+(53, 'roroacostacant@gmail.com', '228286', '2023-07-13 07:13:38', '2023-07-13 07:18:01'),
+(54, 'roroacostacant@gmail.com', '816579', '2023-07-13 07:21:08', '2023-07-13 07:22:10'),
+(55, 'roroacostacant@gmail.com', '866459', '2023-07-13 07:31:48', '2023-07-13 07:32:39'),
+(56, 'roroacostacant@gmail.com', '684364', '2023-07-13 07:33:33', '2023-07-13 07:37:57'),
+(57, 'roroacostacant@gmail.com', '838696', '2023-07-13 07:42:02', '2023-07-13 07:42:29'),
+(58, 'roroacostacant@gmail.com', '863091', '2023-07-15 00:33:05', '2023-07-15 00:42:30'),
+(59, 'roroacostacant@gmail.com', '993376', '2023-07-15 01:08:30', '2023-07-15 01:14:44'),
+(60, 'roroacostacant@gmail.com', '572174', '2023-07-15 01:14:44', '2023-07-15 01:16:17'),
+(61, 'roroacostacant@gmail.com', '832255', '2023-07-15 22:27:13', '2023-07-15 22:27:29'),
+(62, 'roroacostacant@gmail.com', '334943', '2023-07-15 22:27:29', '2023-07-15 22:40:32'),
+(63, 'roroacostacant@gmail.com', '928068', '2023-07-15 22:40:32', '2023-07-15 22:41:37'),
+(64, 'roroacostacant@gmail.com', '871611', '2023-07-16 11:15:30', '2023-07-17 14:14:33'),
+(65, 'roroacostacant@gmail.com', '148461', '2023-07-17 14:14:34', '2023-07-17 14:20:41'),
+(66, 'roroacostacant@gmail.com', '367286', '2023-07-17 14:26:29', '2023-07-17 14:27:39'),
+(67, 'roroacostacant@gmail.com', '267134', '2023-07-17 14:27:39', '2023-07-17 14:27:51'),
+(68, 'roroacostacant@gmail.com', '945714', '2023-07-17 14:27:51', '2023-07-17 14:28:41'),
+(69, 'a@gmail.com', '994199', '2023-07-17 20:39:20', '2023-07-17 20:41:08'),
+(70, 'roroacostacant@gmail.com', '747180', '2023-07-17 20:40:09', '2023-07-17 21:10:36'),
+(71, 'a@gmail.com', '775885', '2023-07-17 20:41:08', '2023-07-17 20:41:47'),
+(72, 'a@gmail.com', '732402', '2023-07-17 20:41:47', '2023-07-17 21:09:46'),
+(73, 'a@gmail.com', '314715', '2023-07-17 21:09:47', '2023-07-18 02:45:01'),
+(74, 'roroacostacant@gmail.com', '805939', '2023-07-17 21:10:36', '2023-07-17 21:11:59'),
+(75, 'roroacostacant@gmail.com', '780534', '2023-07-17 21:40:44', '2023-07-17 21:41:00'),
+(76, 'roroacostacant@gmail.com', '612171', '2023-07-17 21:41:00', '2023-07-20 08:30:51'),
+(77, 'a@gmail.com', '351608', '2023-07-18 02:45:01', '2023-07-18 02:45:04'),
+(78, 'a@gmail.com', '460478', '2023-07-18 02:45:04', '2023-07-18 02:45:04'),
+(79, 'a@gmail.com', '846329', '2023-07-18 02:45:05', '2023-07-18 02:45:05'),
+(80, 'a@gmail.com', '994924', '2023-07-18 02:45:05', '2023-07-18 02:45:05'),
+(81, 'a@gmail.com', '751896', '2023-07-18 02:45:05', '2023-07-18 02:45:05'),
+(82, 'a@gmail.com', '280740', '2023-07-18 02:45:05', '2023-07-18 02:45:10'),
+(83, 'a@gmail.com', '587724', '2023-07-18 02:45:10', '2023-07-18 02:53:42'),
+(84, 'a@gmail.com', '487400', '2023-07-18 02:45:10', '2023-07-18 02:53:42'),
+(85, 'a@gmail.com', '438850', '2023-07-18 02:53:42', '2023-07-18 02:53:42'),
+(86, 'a@gmail.com', '434889', '2023-07-18 02:53:42', NULL),
+(87, 'roroacostacant@gmail.com', '727765', '2023-07-20 08:30:51', NULL);
 
 -- --------------------------------------------------------
 
@@ -163,29 +216,50 @@ CREATE TABLE `inventario` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `noticias`
+--
+
+CREATE TABLE `noticias` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `cuerpo` varchar(2000) NOT NULL,
+  `lista` varchar(4000) NOT NULL,
+  `idioma` enum('esp','eng') NOT NULL,
+  `fecha_alta` date NOT NULL,
+  `rutas` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `torneos`
 --
 
 CREATE TABLE `torneos` (
   `id` smallint(5) UNSIGNED NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `descripcion` varchar(400) NOT NULL,
+  `titulo` varchar(50) NOT NULL,
+  `descripcion` varchar(350) NOT NULL,
   `monedas` int(10) UNSIGNED NOT NULL,
   `cofre_id` mediumint(8) UNSIGNED NOT NULL,
+  `cantidadCofres` mediumint(8) UNSIGNED NOT NULL,
   `campeon_id` mediumint(8) UNSIGNED DEFAULT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL,
-  `ruta` varchar(100) NOT NULL
+  `rutas` varchar(100) NOT NULL,
+  `idioma` enum('esp','eng') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `torneos`
 --
 
-INSERT INTO `torneos` (`id`, `nombre`, `descripcion`, `monedas`, `cofre_id`, `campeon_id`, `fecha_alta`, `fecha_baja`, `ruta`) VALUES
-(1, 'torneopasado', 'este es el torneo pasado', 2000, 1, 1, '2023-06-18', '2023-06-18', 'img/radar.png'),
-(2, 'torneoactual', 'este es el torneo actual', 3000, 2, 1, '2023-06-18', '2023-06-19', 'img/radar.png'),
-(3, 'elgulaj', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat recusandae voluptatum ad nobis iste alias soluta quod dolorem dolore pariatur, cumque quia aspernatur eos veritatis. Molestias tenetur deleniti ducimus consequuntur!', 4000, 1, NULL, '2023-06-19', NULL, 'img/radar.png');
+INSERT INTO `torneos` (`id`, `titulo`, `descripcion`, `monedas`, `cofre_id`, `cantidadCofres`, `campeon_id`, `fecha_alta`, `fecha_baja`, `rutas`, `idioma`) VALUES
+(37, 'the motherfucking title  ', 'the motherfucking descirption of this card is awful, i want to sue my mom because she told me i was not her son. but that is not actually the real thing, rather i hate her because she is a mutant fish with an alien helmet who does not hesitate with killing me', 5000, 1, 1, NULL, '2023-07-28', NULL, 'img/cartel.png', 'esp'),
+(38, 'the motherfucking title  ', 'the motherfucking descirption of this card is horrible, quiero demandar a mi mamá porque me dijo que no era su hijo. pero eso no es en realidad lo real, más bien la odio porque es un pez mutante con un casco alienígena que no duda en matarme', 5000, 1, 1, NULL, '2023-07-28', NULL, 'img/cartel.png', 'eng'),
+(39, 'the most epic title', 'the most epic description ever omg it is so fucking epic, give them an emi please they deserve it.\r\ni fucking love this motherfucking piece of shit i dont want to do this kind of stuff, but it is \'right\'.', 5000, 1, 1, NULL, '2023-07-28', NULL, 'img/over_ocean.jpg', 'eng'),
+(40, 'el título más épico ', 'la descripción más épica de la historia es tan jodidamente épica, dales un emi, por favor, se lo merecen.\r\nme encanta este maldito pedazo de mierda, no quiero hacer este tipo de cosas, pero es &quot;correcto&quot;.', 5000, 1, 1, NULL, '2023-07-28', NULL, 'img/over_ocean.jpg', 'esp'),
+(47, 'title title title title', 'this is a paragraph, so do not cut it pleas or i will fucking explode.\r\n\r\nOMG THIS IS INSANE.\r\nTHIS IS A PARAGRAPH, SO DO NOT CUT IT PLEAS OR I WILL FUCKING EXPLODE.\r\n\r\nOMG THIS IS INSANE', 5000, 2, 1, NULL, '2023-07-28', NULL, 'img/icon.png', 'eng'),
+(48, 'title title title title', 'este es un p&aacute;rrafo, as&iacute; que no lo cortes s&uacute;plicas o explotar&eacute;.\n\nOMG ESTO ES UNA LOCURA.\nESTE ES UN P&Aacute;RRAFO, AS&Iacute; QUE NO LO CORTES S&Uacute;PLICAS O EXPLOTAR&Eacute;.\n\nOMG ESTO ES UNA LOCURA', 5000, 2, 1, NULL, '2023-07-28', NULL, 'img/icon.png', 'esp');
 
 -- --------------------------------------------------------
 
@@ -205,15 +279,18 @@ CREATE TABLE `usuarios` (
   `flota_id` tinyint(3) UNSIGNED NOT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL,
-  `victorias` mediumint(8) UNSIGNED NOT NULL
+  `victorias` mediumint(8) UNSIGNED NOT NULL,
+  `partidas` mediumint(8) UNSIGNED NOT NULL,
+  `esMod` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`) VALUES
-(1, 'rodrigo', 'roroacostacant@gmail.com', '', 'masculino', 'img/perfil-def.png', 0, '\"...\"', 1, '2023-06-24', NULL, 0);
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`, `partidas`, `esMod`) VALUES
+(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 0, '\"...\"', 1, '2023-06-24', NULL, 0, 0, 1),
+(25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', NULL, 0, 0, 0);
 
 --
 -- Índices para tablas volcadas
@@ -256,6 +333,12 @@ ALTER TABLE `inventario`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `noticias`
+--
+ALTER TABLE `noticias`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `torneos`
 --
 ALTER TABLE `torneos`
@@ -281,7 +364,7 @@ ALTER TABLE `chestroom`
 -- AUTO_INCREMENT de la tabla `codigos`
 --
 ALTER TABLE `codigos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT de la tabla `cofres`
@@ -308,16 +391,22 @@ ALTER TABLE `inventario`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `noticias`
+--
+ALTER TABLE `noticias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de la tabla `torneos`
 --
 ALTER TABLE `torneos`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

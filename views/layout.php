@@ -12,17 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <!-- JAVASCRIPT -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 
     <link rel="shortcut icon" href="img/icon.png">
@@ -51,18 +51,18 @@
                         <img src="img/language.png" alt="lang-icon" style="width: 30px; cursor: pointer;">
                     </button>
                     <ul class="dropdown-menu p-2" style="background-color: #ffffff; border-top: 4px solid #7BB0FF; border-left: none; border-right: none; border-bottom: none;">
-                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'; /*$_GET['la']*/?>')">Español</a></li>
+                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'?>')">Español</a></li>
                         <li><hr class="dropdown-divider" style="color: #878787;"></li>
-                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'; /*$_GET['la']*/?>')">Ingles</a></li>
+                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'?>')">Ingles</a></li>
                     </ul>
                 </div>
             <?php
-                if(isset($user)){ ?>
+                if(!empty($user)){ ?>
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle text-white" style="background-color: #2c2c2c; border-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
+                        <button class="btn dropdown-toggle text-white fs-5" style="background-color: #2c2c2c; border-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
                             <?php echo $user['nombre']; ?>
                         </button>
-                        <ul class="dropdown-menu p-2" style="background-color: #2c2c2c; border-top: 4px solid #7BB0FF;">
+                        <ul class="dropdown-menu p-2 fs-5" style="background-color: #2c2c2c; border-top: 4px solid #7BB0FF;">
                             <li><a class="dropdown-item op" download href="includes/installer.txt">Descargar</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
                             <li><a class="dropdown-item op" href="#">Administracion</a></li>

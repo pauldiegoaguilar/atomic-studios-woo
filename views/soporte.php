@@ -3,10 +3,10 @@
     <img src="img/logo.png" alt="logo" class="img-fluid" style="max-width: 60px; height: auto; rotate: -90deg;">
     <div class="paragraph" style="margin-top: 10px;">
         <p for="inputPassword" style="text-align: left !important;" class="mt-2"><?php echo $lang['soporte']['n']?></p>
-        <input type="text" class="form-control text-light" style="background-color: #2B282C;" id="inputPassword" value="<?php echo isset($user) ? $user['nombre'] : '' ; ?>" placeholder="<?php echo $lang['placeholder']['nick']?>">
+        <input type="text" class="form-control text-light" style="background-color: #2B282C;" id="inputPassword" value="<?php echo !empty($user) ? $user['nombre'] : '' ; ?>" placeholder="<?php echo $lang['placeholder']['nick']?>">
 
         <p for="email" style="text-align: left !important;" class="text-left mt-2"><?php echo $lang['soporte']['c']?></p>
-        <input type="email" name="email" class="form-control text-light text-truncate" style="background-color: #2B282C;" id="email" value="<?php echo isset($user) ? $user['email'] : '' ; ?>" placeholder="<?php echo $lang['placeholder']['mail']?>">
+        <input type="email" name="email" class="form-control text-light text-truncate" style="background-color: #2B282C;" id="email" value="<?php echo !empty($user) ? $user['email'] : '' ; ?>" placeholder="<?php echo $lang['placeholder']['mail']?>">
         
         <p for="asuntos" style="text-align: left !important;" class="text-left mt-2"><?php echo $lang['soporte']['a']?></p>
         <select name="asuntos" class="form-control text-light" style="background-color: #2B282C;" id="asuntos">

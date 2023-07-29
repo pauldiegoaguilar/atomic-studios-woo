@@ -46,6 +46,16 @@ body {
     color: #1B191B;
 }
 
+/* MEMINGOS */	
+*{
+  font-family: 'Chau Philomene One', sans-serif;
+}
+
+.paragraph{
+  font-size: 25px;
+  color: white
+}
+
 /* NAV BAR */
 
 .download:hover,
@@ -117,16 +127,8 @@ body {
 
 /*  TORNEOS */
 
-.legendario{
-    color: rgb(146, 162, 1);
-}
-
 .coins{
     color: rgb(243, 251, 14);
-}
-
-.unico{
-    color: rgb(235, 7, 7);
 }
 
 .custom-card{
@@ -135,11 +137,22 @@ body {
     transition-timing-function: ease-in-out;
 }
 
+/*  NOTICIAS    */
+
+#new{
+    transition: all 0.3s ease-in;
+}
+
 /*  EFECTOS */
 
 @media(min-width: 768px){   /* Todos menos moviles*/
     
     .custom-card:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 1px 5px rgb(30, 29, 29);
+    }
+
+    #new:hover{
         transform: scale(1.05);
         box-shadow: 0px 1px 5px rgb(30, 29, 29);
     }
