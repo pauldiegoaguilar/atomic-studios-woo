@@ -31,7 +31,7 @@
     </div>
  
     <div id="newDetails" class="d-none position-relative m-4">
-        <div class="d-flex align-items-center position-relative w-100 bg-dark overflow-hidden" style="height: 380px; top: -70px;" id="ndCarrusel">
+        <div class="d-flex align-items-center position-relative w-100 bg-dark overflow-hidden" style="height: 380px; top: -60px;" id="ndCarrusel">
             <button class="position-absolute start-0 text-light btn border-0 fs-4" onclick="lastSlide();"><</button>
             <button class="position-absolute end-0 text-light btn border-0 fs-4" onclick="nextSlide();">></button>
         </div>
@@ -43,8 +43,9 @@
             Hello and welcome! A while ago we asked on Twitter if you had any questions you’d like us to answer. We took a while to collect the best and most frequently asked questions and prepare some answers for you guys.
         </p>
         
-        <h2 class="justify-self-start py-1 mb-4 w-75 border-bottom  text-warning text-uppercase"><?php echo $lang['crear noticia']['q']?></h2>
-        <div class="d-flex flex-column justify-content-start" id="ndList"></div>
+        <div class="d-none d-flex flex-column justify-content-start" id="ndList">
+            <h2 class="justify-self-start py-1 mb-4 w-75 border-bottom  text-warning text-uppercase"><?php echo $lang['crear noticia']['q']?></h2>
+        </div>
     </div>
 
 

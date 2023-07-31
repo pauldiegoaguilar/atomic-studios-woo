@@ -1,5 +1,8 @@
 <?php 
-    if(!empty($user) && !$user['esMod']){header('Location: index.php');} 
+    if(empty($user) || !$user['esMod']){
+        echo 'Error 404: Not found';
+        exit();
+    } 
 ?>
 
 <script>
@@ -16,7 +19,6 @@
             });
 
         format.val(arr.join('|'));
-        alert($('alertMsg').text());
         $('form').submit();
     }
 
@@ -30,7 +32,7 @@
 
     function showImgs(input){
         filesAmount = input.files.length;
-
+        console.log(input.files);
         if(filesAmount < 6 && filesAmount != 0){
             $('#fileLabel, #carrusel').toggleClass('d-none');
             for(let i=0; i<filesAmount; i++){

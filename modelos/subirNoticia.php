@@ -1,10 +1,10 @@
 <?php
     require_once "../includes/config.php";
 
-    $tit = $_POST['newTitle'];
-    $body = $_POST['newBody'];
-    $list = $_POST['listText'];
-    $lang = $_POST['la'];
+    $tit = nl2br($_POST['newTitle']);
+    $body = nl2br($_POST['newBody']);
+    $list = nl2br($_POST['listText']);
+    $lang = nl2br($_POST['la']);
 
     $getLa = array('esp' => 'eng', 'eng' => 'esp');
     $rutaDbFormat = [];
@@ -15,7 +15,7 @@
         $error = $_FILES['fileSelector']['error'][$i];
 
         if($error < 3){
-            move_uploaded_file($temporal, '../img' . $nombre);
+            move_uploaded_file($temporal, '../img/' . $nombre);
             $rutaDbFormat[$i] = 'img/' . $nombre;
         } else{
             die('Error en la subida de archivos, comuniquese con soporte <br><br>');
