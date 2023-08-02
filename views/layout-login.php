@@ -26,7 +26,12 @@
 
 <body>
 
-    <?php $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);?>
+    <?php 
+    if(file_exists('includes/languages/' . $_GET['la'] . '.ini')){
+        $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);
+    } else{
+        header('Location: index.php');
+    }?>
 
     <div class="bg-image" stlye="z-index: -1;"></div>
 

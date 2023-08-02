@@ -31,7 +31,12 @@
 
 <body>
     
-    <?php $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);?>
+    <?php 
+    if(file_exists('includes/languages/' . $_GET['la'] . '.ini')){
+        $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);
+    } else{
+        header('Location: index.php');
+    }?>
 
     <div class="row w-100 m-0" style="background-color: #1B191B;">
         <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center mt-1" href="?section=war-over-ocean&la=<?php echo $_GET['la']?>" style="text-decoration: none;">
@@ -96,6 +101,41 @@
     } else {
         require_once "views/" . $section . ".php";
     } ?>
+
+    <?php
+        if(!empty($user) && $user['esMod']){?>
+            <script>
+                function submitForm(formId){
+                    let currentLa = $('#language').val();
+                
+                    let form = {
+                        title: $('#apN').val(),
+                    };
+                
+                    $('#' + formId + ' p').each(function (index, element) {
+                      let name = $(element).attr('name');
+                      let content = $(element).html();
+                      form[name] = content;
+                    });
+                    console.log(form);
+                
+                    $.ajax({
+                      url: "modelos/modificarApartado.php?ap=<?php echo str_replace("-", " ", $section)?>&la=" + currentLa,
+                      method: "POST",
+                      data: form,
+                    
+                      success: function(res) {
+                        console.log(res);
+                        confirm($('#alertMsg').val());
+                        location.reload();
+                      },
+                      error: function(error) {
+                        alert("Error, contact with support:" + error);
+                      }
+                    });
+                }
+            </script>  
+    <?php }?>
 
     <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 lead" style="background-color: #222022;">
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=acerca-de-woo&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['a']?></a>
@@ -167,5 +207,4 @@
         </div>
     </div>
 </body>
-
 </html>
