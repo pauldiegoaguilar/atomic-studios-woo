@@ -107,7 +107,6 @@ function verifEmail(){
         data: { email: email_recup },
 
         success: function (result) {
-          console.log(result);
           if (result * 1) {
             $("#email-gen-recup").removeClass('d-none');
             genCode();
@@ -265,9 +264,7 @@ function verifLogin(form) {
       },
 
       error: function(res){
-        console.log(res);
         alert('Error: Compruebe su conexión a internet, intente más tarde');
-        location.assign('index.php');
       }
     });
   }
