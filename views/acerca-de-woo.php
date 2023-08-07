@@ -1,3 +1,5 @@
+<!--    USUARIOS     -->
+
 <?php if(!$user || !$user['esMod']){ ?>
     <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
         <h2 class="text-white display-6"><?php echo $lang['acerca de woo']['txtSec1t']?></h2>
@@ -17,7 +19,7 @@
             <?php echo $lang['acerca de woo']['txtSec4e']?>
         </p>
     
-        <img src="img/radar.png" class="w-100" style="height: 350px;">
+        <img src="<?php echo $lang['acerca de woo']['src0']?>" class="w-100" style="height: 350px;">
     
         <p class="paragraph">
             <br>
@@ -25,6 +27,8 @@
         </p>
     </div>
 <?php return; }?>
+
+<!--    MODERADORES     -->
 
 <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;" id="wikiContTxt">
     <p class="text-white display-6" name="txtSec1t" contenteditable="true"><?php echo $lang['acerca de woo']['txtSec1t']?></p>
@@ -39,7 +43,10 @@
     <p class="text-white display-6" name="txtSec4t" contenteditable="true"><?php echo $lang['acerca de woo']['txtSec4t']?></p>
     <p class="paragraph text-muted" name="txtSec4e" contenteditable="true"><?php echo $lang['acerca de woo']['txtSec4e']?></p>
 
-    <img src="img/radar.png" class="w-100">
+    <div class="position-relative w-100">
+        <input type="file" id="inputFile" class="position-absolute w-100 h-100 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+        <img src="<?php echo $lang['acerca de woo']['src0']?>" class="w-100">
+    </div>
 
     <p class="paragraph text-muted mt-4" name="txtSec4f" contenteditable="true"><?php echo $lang['acerca de woo']['txtSec4f']?></p>
 </div>

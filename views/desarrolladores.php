@@ -11,23 +11,23 @@
  
         <h2 class="text-white display-6">¿Quienes son los Creadores y participantes de esta empresa?</h2>
             <div id="tupadre">
-                <div class="row m-2"><img src="img/paul.jpg" class="col-2 rounded-circle h-75" alt="paul">
+                <div class="row m-2"><img src="<?php echo $lang['desarrolladores']['src0']?>" class="col-2 rounded-circle h-75" alt="paul">
                     <p class="col-10 paragraph text-muted fs-5">Paul: es el programador principal. Es el experto detrás de la programación y la lógica del juego. Transforma las ideas y diseños en código funcional, asegurándose de que todas las características y mecánicas del juego se implementen de manera eficiente y sin problemas.</p>
                 </div>
 
-                <div class="row m-2"><img src="img/torres.png" class="col-2 rounded-circle h-75" alt="torres">
+                <div class="row m-2"><img src="<?php echo $lang['desarrolladores']['src1']?>" class="col-2 rounded-circle h-75" alt="torres">
                     <p class="col-10 paragraph text-muted fs-5">Torres: es el diseñador principal del juego. Es el responsable de definir la visión creativa y el diseño general del juego. Trabaja en estrecha colaboración con el resto del equipo para asegurarse de que la jugabilidad sea emocionante, equilibrada y satisfactoria para los jugadores.</p>
                 </div>
 
-                <div class="row m-2"><img src="img/monzon.png" class="col-2 rounded-circle h-75" alt="matias">
+                <div class="row m-2"><img src="<?php echo $lang['desarrolladores']['src2']?>" class="col-2 rounded-circle h-75" alt="matias">
                     <p class="col-10 paragraph text-muted fs-5">Monzonpro: es el artista principal. Su creatividad y habilidades artísticas dan vida a los barcos, el entorno marítimo y los efectos visuales del juego. Crea modelos en 3D, texturas y animaciones impresionantes, brindando una experiencia visualmente impactante y realista.</p>
                 </div>
 
-                <div class="row m-2"><img src="img/user.png" class="col-2 rounded-circle h-75" alt="sebastian">
+                <div class="row m-2"><img src="<?php echo $lang['desarrolladores']['src3']?>" class="col-2 rounded-circle h-75" alt="sebastian">
                     <p class="col-10 paragraph text-muted fs-5">Sebastian: es el responsable de la música y el sonido. Comprende la importancia de la atmósfera sonora en la inmersión de los jugadores. Compone la música de fondo, los efectos de sonido y las voces, asegurándose de que cada momento del juego esté acompañado por una experiencia auditiva cautivadora y emocionante.</p>
                 </div>
 
-                <div class="row m-2"><img src="img/user.png" class="col-2 rounded-circle h-75" alt="rordrigou">
+                <div class="row m-2"><img src="<?php echo $lang['desarrolladores']['src4']?>" class="col-2 rounded-circle h-75" alt="rordrigou">
                     <p class="col-10 paragraph text-muted fs-5">Rodrigo: se encarga del equilibrio del juego y la optimización. Trabaja en estrecha colaboración con el equipo de diseño y programación para ajustar la dificultad, la progresión y el rendimiento del juego. Realiza pruebas exhaustivas y realiza ajustes para garantizar que los jugadores tengan una experiencia equilibrada y fluida en todas las plataformas.</p>
                 </div>
             </div>
@@ -40,23 +40,33 @@
         
     <p class="text-white display-6" name="txtSec2t" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2t']?></p>
         <div id="tupadre">
-            <div class="row m-2"><img src="img/paul.jpg" class="col-2 rounded-circle h-75" alt="paul">
+            <div class="row position-relative">
+                <input type="file" id="inputFile" class="position-absolute col-2 h-75 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+                <img src="<?php echo $lang['desarrolladores']['src0']?>" class="col-2 rounded-circle h-75" alt="paul">
                 <p class="col-10 paragraph text-muted fs-5" name="txtSec2b1" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2b1']?></p>
             </div>
             
-            <div class="row m-2"><img src="img/torres.png" class="col-2 rounded-circle h-75" alt="torres">
+            <div class="row mt-3 position-relative">
+                <input type="file" id="inputFile" class="position-absolute col-2 h-75 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+                <img src="<?php echo $lang['desarrolladores']['src1']?>" class="col-2 rounded-circle h-75" alt="torres">
                 <p class="col-10 paragraph text-muted fs-5" name="txtSec2b2" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2b2']?></p>
             </div>
             
-            <div class="row m-2"><img src="img/monzon.png" class="col-2 rounded-circle h-75" alt="matias">
+            <div class="row mt-3 position-relative">
+                <input type="file" id="inputFile" class="position-absolute col-2 h-75 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+                <img src="<?php echo $lang['desarrolladores']['src2']?>" class="col-2 rounded-circle h-75" alt="matias">
                 <p class="col-10 paragraph text-muted fs-5" name="txtSec2b3" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2b3']?></p>
             </div>
             
-            <div class="row m-2"><img src="img/user.png" class="col-2 rounded-circle h-75" alt="sebastian">
+            <div class="row mt-3 position-relative">
+                <input type="file" id="inputFile" class="position-absolute col-2 h-75 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+                <img src="<?php echo $lang['desarrolladores']['src3']?>" class="col-2 rounded-circle h-75" alt="sebastian">
                 <p class="col-10 paragraph text-muted fs-5" name="txtSec2b4" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2b4']?></p>
             </div>
             
-            <div class="row m-2"><img src="img/user.png" class="col-2 rounded-circle h-75" alt="rordrigou">
+            <div class="row mt-3 position-relative">
+                <input type="file" id="inputFile" class="position-absolute col-2 h-75 opacity-0" accept="image/*" onchange="imgPreview(this);" style="cursor: pointer;" >
+                <img src="<?php echo $lang['desarrolladores']['src4']?>" class="col-2 rounded-circle h-75" alt="rordrigou">
                 <p class="col-10 paragraph text-muted fs-5" name="txtSec2b5" contenteditable="true"><?php echo $lang['desarrolladores']['txtSec2b5']?></p>
             </div>
         </div>

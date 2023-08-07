@@ -125,13 +125,12 @@
             $.ajax({
               url: 'modelos/chestSelector.php',
               dataType: 'JSON',
-              async: false,
 
               success: function(cofres){
                 cofres.forEach(e=>{
                   $('#chestSelector').append('<option class="text-danger" value="'+e.id+'">'+e.nombre+'</option>');
                 })
-                $('#chestSelector').attr('onclick', '');
+                $('#chestSelector').attr('onclick', false);
               }
             })
           }

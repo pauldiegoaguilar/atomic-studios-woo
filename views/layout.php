@@ -106,33 +106,60 @@
         if(!empty($user) && $user['esMod']){?>
             <script>
                 function submitForm(formId){
-                    let currentLa = $('#language').val();
-                
-                    let form = {
-                        title: $('#apN').val(),
-                    };
-                
-                    $('#' + formId + ' p').each(function (index, element) {
-                      let name = $(element).attr('name');
-                      let content = $(element).html();
-                      form[name] = content;
-                    });
-                    console.log(form);
-                
-                    $.ajax({
-                      url: "modelos/modificarApartado.php?ap=<?php echo str_replace("-", " ", $section)?>&la=" + currentLa,
-                      method: "POST",
-                      data: form,
-                    
-                      success: function(res) {
-                        console.log(res);
-                        confirm($('#alertMsg').val());
-                        location.reload();
-                      },
-                      error: function(error) {
-                        alert("Error, contact with support:" + error);
+                  let formData = new FormData();
+                  let currentLa = $('#language').val();
+                  let imageFile = '';
+              
+                  let txtData = {};
+
+                  txtData['title']= $('#apN').val();
+                  
+                  $('#' + formId + ' p').each(function (index, element) {
+                    let name = $(element).attr('name');
+                    let content = $(element).html();
+                    txtData[name] = content; 
+                  });
+
+
+                  if (document.querySelectorAll('#inputFile').length) {
+                    let inputs = document.querySelectorAll('#inputFile');
+
+                    for (let i = 0; i < inputs.length; i++) {
+                      let imageFile = inputs[i].files[0];
+
+                      if (imageFile) {
+                        formData.append('src' + i, imageFile);
                       }
-                    });
+                    }
+                  }
+                  
+                  formData.append('txt', JSON.stringify(txtData));
+              
+                  $.ajax({
+                    url: "modelos/modificarApartado.php?ap=<?php echo str_replace('-', ' ', $section)?>&la=" + currentLa,
+                    method: "POST",
+                    data: formData,
+                    processData: false, 
+                    contentType: false,
+
+                    success: function(res) {
+                      console.log(res);
+                      confirm($('#alertMsg').val());
+                      location.reload();
+                    },
+
+                    error: function(error) {
+                      alert("Error, contact with support:" + error);
+                    }
+                  });
+                }
+
+                function imgPreview(input){
+                    let file = input.files[0];
+                    if(file){
+                        let src = URL.createObjectURL(file);
+                        $(input).next().attr('src', src);
+                    }
                 }
             </script>  
     <?php }?>

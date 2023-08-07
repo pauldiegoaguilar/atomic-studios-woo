@@ -11,6 +11,7 @@
     </div>
 </div>
 
+<!--    USUARIOS     -->
 <?php if(!$user || !$user['esMod']){?>
 <div class="row m-4">
     <iframe class="col-lg-8 position-relative p-0" style="top: -40px;" height="420" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -56,7 +57,7 @@
     </div>
 </div>
 <?php return; }?>
-
+<!--    MODERADORES     -->
 <div class="row m-4" id="mainPageContTxt">
     <iframe class="col-lg-8 position-relative p-0" style="top: -40px;" height="420" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class="col-lg-4 px-5 d-flex flex-column">
