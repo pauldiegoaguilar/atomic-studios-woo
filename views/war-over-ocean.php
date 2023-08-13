@@ -18,7 +18,7 @@
     <div class="col-lg-4 px-5 d-flex flex-column">
         <h1 style="color: #7BB0FF;"><?php echo $lang['war over ocean']['txtSec1t']?></h1>
         <hr>
-        <p>
+        <p class="lead">
             <?php echo $lang['war over ocean']['txtSec1b']?>
         </p>
     </div>
@@ -63,7 +63,7 @@
     <div class="col-lg-4 px-5 d-flex flex-column">
         <p name="txtSec1t" contenteditable="true" class="display-6" style="color: #7BB0FF;"><?php echo $lang['war over ocean']['txtSec1t']?></p>
         <hr>
-        <p name="txtSec1b" contenteditable="true"><?php echo $lang['war over ocean']['txtSec1b']?></p>
+        <p class="lead" name="txtSec1b" contenteditable="true"><?php echo $lang['war over ocean']['txtSec1b']?></p>
     </div>
 </div>
 

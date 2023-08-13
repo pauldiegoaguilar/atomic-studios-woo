@@ -1,4 +1,4 @@
-  <div class="d-flex justify-content-between border-bottom py-1" id="newsPageHeader">
+  <div class="d-flex justify-content-between border-bottom py-1 mx-auto" style="width: 85%;" id="newsPageHeader">
     <h2 class="text-white"><?php echo $lang['noticias']['u']?></h2>
     <?php if(!empty($user) && $user['esMod']){?>
         <a href="?section=crear-noticia&la=<?php echo $_GET['la']?>" class="btn btn-light px-3 py-1 fs-4 text-uppercase"><?php echo $lang['noticias']['add']?></a>
@@ -29,22 +29,25 @@
             <hr class="bg-primary" style="height: 5px;">
     <?php }?>
     </div>
- 
-    <div id="newDetails" class="d-none position-relative m-4">
-        <div class="d-flex align-items-center position-relative w-100 bg-dark overflow-hidden" style="height: 380px; top: -60px;" id="ndCarrusel">
-            <button class="position-absolute start-0 text-light btn border-0 fs-4" onclick="lastSlide();"><</button>
-            <button class="position-absolute end-0 text-light btn border-0 fs-4" onclick="nextSlide();">></button>
-        </div>
-        <div class="d-flex justify-content-between border-bottom">
-            <h1 style="color: #7BB0FF;" class="my-auto text-uppercase" id="ndTitle">Titulo Noticia</h1>
-            <p class="text-muted fs-4 my-auto">2030/03/23</p>
-        </div>
-        <p class="text-white mt-2 fs-4" style="margin-bottom: 125px;" id="ndBody">
-            Hello and welcome! A while ago we asked on Twitter if you had any questions you’d like us to answer. We took a while to collect the best and most frequently asked questions and prepare some answers for you guys.
-        </p>
-        
-        <div class="d-none d-flex flex-column justify-content-start" id="ndList">
-            <h2 class="justify-self-start py-1 mb-4 w-75 border-bottom  text-warning text-uppercase"><?php echo $lang['crear noticia']['q']?></h2>
+
+    <div id="newDetails" class="d-none position-relative w-100">
+        <button class="position-absolute left-0 btn btn-dark border-0 fs-1 fw-bold ms-1 py-0" onclick="$('#newsPageHeader, #newDetails, #newsFather').toggleClass('d-none');">&#8617;</button>
+        <div class="w-75 mx-auto">
+            <div class="d-flex align-items-center position-relative w-100 bg-dark overflow-hidden" style="height: 380px; top: -60px;" id="ndCarrusel">
+                <button class="position-absolute start-0 text-light btn border-0 fs-4" onclick="lastSlide();"><</button>
+                <button class="position-absolute end-0 text-light btn border-0 fs-4" onclick="nextSlide();">></button>
+            </div>
+            <div class="d-flex justify-content-between border-bottom">
+                <h1 style="color: #7BB0FF;" class="my-auto text-uppercase" id="ndTitle">Titulo Noticia</h1>
+                <p class="text-muted fs-4 my-auto">2030/03/23</p>
+            </div>
+            <p class="text-white mt-2 fs-4" style="margin-bottom: 125px;" id="ndBody">
+                Hello and welcome! A while ago we asked on Twitter if you had any questions you’d like us to answer. We took a while to collect the best and most frequently asked questions and prepare some answers for you guys.
+            </p>
+            
+            <div class="d-none d-flex flex-column justify-content-start" id="ndList">
+                <h2 class="justify-self-start py-1 mb-4 w-75 border-bottom  text-warning text-uppercase"><?php echo $lang['crear noticia']['q']?></h2>
+            </div>
         </div>
     </div>
 

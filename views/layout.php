@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <div class="container my-4">
+        <div class="my-4 w-100">
             <?php require_once "views/" . $section . ".php" ?>
         </div>
     <?php

@@ -58,13 +58,14 @@ function showPost(index){
 
     let imgs = noticias[index].rutas.split(',');
     imgs.forEach(function(e, k){
-        $('#ndCarrusel').append('<img src="'+imgs[k]+'" alt="new Image" class="h-100" style="opacity: 0; width: 0%;" id="slide'+(k)+'">');
+        $('#ndCarrusel').append('<img src="'+imgs[k]+'" alt="new Image" class="h-100" style="opacity: 0; width: 0%; object-fit: contain;" id="slide'+(k)+'">');
     });
+
     if(imgs.length == 1){
         $('#ndCarrusel button').toggleClass('d-none');
     }
     
-    $('#ndCarrusel img').first().attr('style', 'opacity: 1; width: 100%;');
+    $('#ndCarrusel img').first().attr('style', 'opacity: 1; width: 100%; object-fit: contain;');
     $('#newsPageHeader, #newsFather, #newDetails').toggleClass('d-none');
     
     if($('#ndCarrusel img').length > 1){
