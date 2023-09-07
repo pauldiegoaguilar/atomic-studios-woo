@@ -46,10 +46,13 @@
         return;    
     }
     
-    $sql = "INSERT INTO usuarios (id, nombre, email, clave, genero, fotoPerfil, monedas, descripcion, flota_id, fecha_alta, fecha_baja, victorias) VALUES (NULL, '$nombre', '$email', '$contra', 'indefinido', NULL, 0, '...', 1, NOW(), NULL, 0 ) ";
+    $sql = "INSERT INTO usuarios (id, nombre, email, clave, genero, fotoPerfil, monedas, descripcion, flota_id, fecha_alta, fecha_baja, victorias) VALUES (NULL, '$nombre', '$email', '$contra', 'indefinido', 'img/user.png', 0, '...', 1, NOW(), NULL, 0 ) ";
     
     if(mysqli_query($conn, $sql)){
         echo '';
         return;
+    }
+    else{
+        die('Error de Consulta, intentelo más tarde: ' . mysqli_error($conn));
     }
 ?>

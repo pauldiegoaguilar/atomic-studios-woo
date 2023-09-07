@@ -5,7 +5,7 @@
     $contra = mysqli_real_escape_string($conn, $_POST["passL"]);
     $remind = mysqli_real_escape_string($conn, $_POST["remindL"]);
     
-    $sql = "SELECT id, nombre FROM usuarios WHERE email = '$email' AND clave = '$contra'";
+    $sql = "SELECT id, nombre, esMod FROM usuarios WHERE email = '$email' AND clave = '$contra'";
     $qry = mysqli_query($conn, $sql);
     $user = mysqli_fetch_assoc($qry);
     $validation = mysqli_num_rows($qry);
@@ -25,6 +25,7 @@
         session_start();
 
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['esMod'] = $user['esMod'];
         echo $user['nombre'];
         return;
     }else{

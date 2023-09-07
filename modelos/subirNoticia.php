@@ -1,5 +1,13 @@
 <?php
+    session_start();
     require_once "../includes/config.php";
+
+    if(!isset($_SESSION['user_id']) || !$_SESSION['esMod']){
+        session_unset();
+        session_destroy();
+        
+        header('Location: index.php');
+    }
 
     $tit = nl2br($_POST['newTitle']);
     $body = nl2br($_POST['newBody']);

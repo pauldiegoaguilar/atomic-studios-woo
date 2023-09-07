@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    
+    if(!isset($_SESSION['user_id']) || !$_SESSION['esMod']){
+        session_unset();
+        session_destroy();
+        
+        header('Location: index.php');
+    }
 
     $apartado = $_GET['ap'];
     $la = $_GET['la'];

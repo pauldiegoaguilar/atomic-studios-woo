@@ -70,7 +70,11 @@
                         <ul class="dropdown-menu p-2 fs-5" style="background-color: #2c2c2c; border-top: 4px solid #7BB0FF;">
                             <li><a class="dropdown-item op" download href="includes/installer.txt">Descargar</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
-                            <li><a class="dropdown-item op" href="#">Administracion</a></li>
+
+                            <?php if($user['esMod']){?> 
+                                <li><a class="dropdown-item op" href="?section=moderacion&la=<?php echo $_GET['la']?>">Administracion</a></li>
+                            <?php }?>
+                            <li><a class="dropdown-item op" href="#">Perfil</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
                             <li><a class="dropdown-item op" href="modelos/logout.php">Cerrar Sesión</a></li>
                         </ul>

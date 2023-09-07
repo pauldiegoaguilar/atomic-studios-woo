@@ -1,5 +1,14 @@
 <?php
+    session_start();
+
     require_once "../includes/config.php";
+
+    if(!isset($_SESSION['user_id']) || !$_SESSION['esMod']){
+        session_unset();
+        session_destroy();
+        
+        header('Location: index.php');
+    }
 
     $torneo = $_GET['id'];
     $qry = mysqli_query($conn, "DELETE FROM torneos WHERE id = " . $torneo);
