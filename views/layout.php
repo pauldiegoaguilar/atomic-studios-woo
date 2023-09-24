@@ -30,8 +30,8 @@
 </head>
 
 <body>
-    
-    <?php 
+
+    <?php
     if(file_exists('includes/languages/' . $_GET['la'] . '.ini')){
         $lang = parse_ini_file('includes/languages/' . $_GET['la'] . '.ini', true, INI_SCANNER_RAW);
     } else{
@@ -49,6 +49,7 @@
                 <a class="links lnav text-white align-self-center" href="?section=noticias&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['n']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=soporte&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['s']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t']?></a>
+                <?php if(!empty($user)){?> <a class="links lnav text-white align-self-center" href="?section=tienda&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t1']?></a> <?php }?>
             </div>
             <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
                 <div class="dropdown-center">
@@ -88,8 +89,8 @@
         </div>
     </div>
 
-    <?php
-    if ($section != 'war-over-ocean') { ?>
+    <?php if ($section != 'war-over-ocean') {?>
+
         <div class="row position-relative w-100 m-0">
             <img src="img/background.png" alt="IMAGE" class="img-fluid p-0" style="filter: blur(4px);">
             <div class="text-center position-absolute top-50 start-50 translate-middle p-0" style="transform: translate(-50%, -50%);">
@@ -99,12 +100,9 @@
         </div>
 
         <div class="my-4 w-100">
-            <?php require_once "views/" . $section . ".php" ?>
+            <?php require_once "views/" . $section . ".php"?>
         </div>
-    <?php
-    } else {
-        require_once "views/" . $section . ".php";
-    } ?>
+    <?php }else { require_once "views/" . $section . ".php";}?>
 
     <?php
         if(!empty($user) && $user['esMod']){?>

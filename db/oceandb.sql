@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-07-2023 a las 18:47:57
+-- Tiempo de generación: 24-09-2023 a las 15:09:56
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.19
 
@@ -175,11 +175,25 @@ INSERT INTO `cofres` (`id`, `nombre`, `rareza`, `oro`, `tiempo`, `modelo`, `drop
 
 CREATE TABLE `compras` (
   `id_trans` int(10) UNSIGNED NOT NULL,
-  `datosComprador` varchar(100) NOT NULL,
-  `producto_id` int(10) UNSIGNED NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `codigoProducto` varchar(250) NOT NULL,
+  `estatus` varchar(50) NOT NULL,
   `fechaCompra` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id_trans`, `usuario_id`, `codigoProducto`, `estatus`, `fechaCompra`) VALUES
+(1, 1, '1236571417;8b93d2ed;c408;481e;b053;a83e6eb6b339', 'pendiente', '2023-09-24 09:54:24'),
+(2, 1, '1236571417;c4d29c4e;6dbb;4939;8385;868e5164ff23', 'pendiente', '2023-09-24 09:55:30'),
+(3, 1, '1236571417;8b93d2ed;c408;481e;b053;a83e6eb6b339', 'pendiente', '2023-09-24 09:56:12'),
+(4, 1, '1236571417;c4d29c4e;6dbb;4939;8385;868e5164ff23', 'pendiente', '2023-09-24 09:58:57'),
+(5, 1, '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', 'pendiente', '2023-09-24 10:00:00'),
+(6, 1, '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', 'pendiente', '2023-09-24 10:00:58'),
+(7, 1, '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', 'pendiente', '2023-09-24 10:01:41'),
+(8, 1, '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', 'pendiente', '2023-09-24 10:04:08');
 
 -- --------------------------------------------------------
 
@@ -228,6 +242,50 @@ CREATE TABLE `noticias` (
   `fecha_alta` date NOT NULL,
   `rutas` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `noticias`
+--
+
+INSERT INTO `noticias` (`id`, `titulo`, `cuerpo`, `lista`, `idioma`, `fecha_alta`, `rutas`) VALUES
+(11, 'este es el titulo de la noticia', 'esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.\r\n\r\nesta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.\r\n', '', 'esp', '2023-07-30', 'img/n1esp.png'),
+(12, 'NEW TITLE ', 'NEW NEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODY!\r\n\r\n\r\nNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYBODY.', '', 'eng', '2023-07-30', 'img/n1eng.png'),
+(13, 'NEW TITLE ', 'NEW NEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODY!\r\n\r\n\r\nNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYBODY.', '', 'eng', '2023-07-30', 'img/n1eng.png'),
+(14, 'the matadero de la convalecensia ', 'omg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.\r\n\r\nomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.', '', 'eng', '2023-07-30', 'img/DALL·E 2023-06-08 11.33.59 - una pintura colonial sobre gauchos descuerando vacas en el desierto con edificios estética colonial de fondo.png'),
+(15, 'asdasdasdasdasxd', 'omg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.<br />\r\n<br />\r\nomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.', '', 'eng', '2023-07-30', 'img/n1esp.png'),
+(16, 'IM HERE TO MAKE AN ANNOUNCEMENT', 'SHADOW THE HEDGEHOG IS A BITCH ASS MOTHER FUCKER, HE PISSED ON MY FUCKING WIFE. YEAH THATS RIGHT AND HE THEN SAID IT WAS \'this big\' AND THEN I SAID IT CAN \"BEE\".<br />\r\n<br />\r\nBUT THEN IT WENT BEE SO I GOT SCARED', '', 'eng', '2023-07-30', 'img/1607531228134.jpg'),
+(17, 'noticia con lista', 'epica noticia con lista albina', 'ola soy una lista|yo tambien mira que guay', 'esp', '2023-07-30', 'img/Design Suites - Relaciones.png'),
+(18, 'SHADOW THE HEDGEHOG', '\"', '', 'eng', '2023-07-30', 'img/n1eng.png'),
+(19, 'a', 'a', '', 'esp', '2023-08-06', 'img/n1eng.png'),
+(20, 'a', 'a', 'a|a22|a23', 'esp', '2023-08-13', 'img/background.png,img/cartel.png,img/cierre.jpg,img/clasificacion.png,img/DALL·E 2023-06-08 11.33.59 - una pintura colonial sobre gauchos descuerando vacas en el desierto con edificios estética colonial de fondo.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ofertas`
+--
+
+CREATE TABLE `ofertas` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(300) NOT NULL,
+  `precio` float UNSIGNED NOT NULL,
+  `cantidad` mediumint(8) UNSIGNED NOT NULL,
+  `productos_id` varchar(100) NOT NULL,
+  `img` varchar(100) NOT NULL,
+  `codigoProducto` varchar(250) NOT NULL,
+  `inicio_oferta` datetime DEFAULT NULL,
+  `fin_oferta` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `ofertas`
+--
+
+INSERT INTO `ofertas` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `productos_id`, `img`, `codigoProducto`, `inicio_oferta`, `fin_oferta`) VALUES
+(1, '1000 Monedas', 'Añade a tu cuenta 1000 monedas', 0.99, 1000, '', 'img/1000Monedas.png', '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', NULL, NULL),
+(2, '10000 Monedas', 'Añade a tu cuenta 10000 monedas', 3.99, 10000, '', 'img/10000Monedas.png', '1236571417-c4d29c4e-6dbb-4939-8385-868e5164ff23', NULL, NULL),
+(3, '100000 Monedas', 'Añade a tu cuenta 100000 monedas', 7.99, 100000, '', 'img/100000Monedas.png', '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -289,8 +347,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`, `partidas`, `esMod`) VALUES
-(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 0, '\"...\"', 1, '2023-06-24', NULL, 0, 0, 1),
-(25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', NULL, 0, 0, 0);
+(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 1000, '\"...\"', 1, '2023-06-24', NULL, 0, 0, 1),
+(25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', NULL, 0, 0, 0),
+(27, 'rata12', 'rata12@gmail.com', '@@@abc123', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-07', NULL, 0, 0, 0);
 
 --
 -- Índices para tablas volcadas
@@ -339,6 +398,12 @@ ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `ofertas`
+--
+ALTER TABLE `ofertas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `torneos`
 --
 ALTER TABLE `torneos`
@@ -376,7 +441,7 @@ ALTER TABLE `cofres`
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_trans` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_trans` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `flotas`
@@ -394,7 +459,13 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de la tabla `ofertas`
+--
+ALTER TABLE `ofertas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `torneos`
@@ -406,7 +477,7 @@ ALTER TABLE `torneos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
