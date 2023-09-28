@@ -54,7 +54,7 @@
                     data: {producto: currentProduct},
 
                     success: function(res){
-                        alert("Compra concretada con éxito");
+                        alert("Compra concretada con éxito, podras ver los resultados en tu perfil");
                     },
                     
                     error: function(res){

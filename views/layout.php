@@ -75,7 +75,7 @@
                             <?php if($user['esMod']){?> 
                                 <li><a class="dropdown-item op" href="?section=moderacion&la=<?php echo $_GET['la']?>">Administracion</a></li>
                             <?php }?>
-                            <li><a class="dropdown-item op" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item op" href="?section=perfil&la=<?php echo $_GET['la']?>">Perfil</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
                             <li><a class="dropdown-item op" href="modelos/logout.php">Cerrar Sesión</a></li>
                         </ul>
