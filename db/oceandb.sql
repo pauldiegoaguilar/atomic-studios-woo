@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2023 a las 15:09:56
+-- Tiempo de generación: 28-09-2023 a las 13:07:23
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.19
 
@@ -193,7 +193,7 @@ INSERT INTO `compras` (`id_trans`, `usuario_id`, `codigoProducto`, `estatus`, `f
 (5, 1, '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', 'pendiente', '2023-09-24 10:00:00'),
 (6, 1, '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', 'pendiente', '2023-09-24 10:00:58'),
 (7, 1, '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', 'pendiente', '2023-09-24 10:01:41'),
-(8, 1, '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', 'pendiente', '2023-09-24 10:04:08');
+(8, 28, '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', 'pendiente', '2023-09-24 10:04:08');
 
 -- --------------------------------------------------------
 
@@ -205,12 +205,19 @@ CREATE TABLE `flotas` (
   `id` int(10) UNSIGNED NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
-  `valor` mediumint(8) UNSIGNED NOT NULL,
+  `valor` mediumint(8) UNSIGNED DEFAULT NULL,
   `imagen` varchar(100) NOT NULL,
   `modelo` varchar(100) NOT NULL,
-  `droprate` varchar(50) NOT NULL,
-  `cofre_id` int(10) UNSIGNED NOT NULL
+  `droprate` varchar(50) DEFAULT NULL,
+  `cofre_id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `flotas`
+--
+
+INSERT INTO `flotas` (`id`, `nombre`, `descripcion`, `valor`, `imagen`, `modelo`, `droprate`, `cofre_id`) VALUES
+(1, 'default', 'Esta es la flota por defecto', NULL, 'img/flotas/default.png', 'modelos/default.blend', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -222,10 +229,17 @@ CREATE TABLE `inventario` (
   `id` int(10) UNSIGNED NOT NULL,
   `usuario_id` int(10) UNSIGNED NOT NULL,
   `flota_id` int(10) UNSIGNED NOT NULL,
-  `lastOwner` int(10) UNSIGNED NOT NULL,
+  `lastOwner` int(10) UNSIGNED DEFAULT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`id`, `usuario_id`, `flota_id`, `lastOwner`, `fecha_alta`, `fecha_baja`) VALUES
+(1, 28, 1, NULL, '2023-09-28', NULL);
 
 -- --------------------------------------------------------
 
@@ -347,9 +361,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`, `partidas`, `esMod`) VALUES
-(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 1000, '\"...\"', 1, '2023-06-24', NULL, 0, 0, 1),
+(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 1000, '\"...\"', 1, '2023-06-24', '2023-09-28', 0, 0, 1),
 (25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', NULL, 0, 0, 0),
-(27, 'rata12', 'rata12@gmail.com', '@@@abc123', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-07', NULL, 0, 0, 0);
+(27, 'rata12', 'rata12@gmail.com', '@@@abc123', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-07', NULL, 0, 0, 0),
+(28, 'augustoTorres', 'zicario@gmail.com', '123abc@@@', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-28', NULL, 0, 0, 0),
+(29, 'zikarioReal', 'elverdadero@gmail.com', '123abc@@@', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-28', NULL, 0, 0, 0),
+(30, 'cuentaaaa', 'cuentaaaa@gmail.com', '123abc@@@', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-28', NULL, 0, 0, 0);
 
 --
 -- Índices para tablas volcadas
@@ -447,13 +464,13 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `flotas`
 --
 ALTER TABLE `flotas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `noticias`
@@ -477,7 +494,7 @@ ALTER TABLE `torneos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

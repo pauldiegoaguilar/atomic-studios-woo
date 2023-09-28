@@ -5,8 +5,10 @@
     if(!isset($_SESSION['user_id']) || !$_SESSION['esMod']){
         session_unset();
         session_destroy();
-        header('Location: index.php');
+
+        header('Location: ../index.php');
     }
+ 
 
     if($_GET['del']){
     
@@ -19,6 +21,7 @@
         if(!$qry){
             header('HTTP/1.1 500 Internal Server Error');
         }
+   
     } else{
         $id = $_GET['id'];
 
