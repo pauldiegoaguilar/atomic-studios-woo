@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-09-2023 a las 13:07:23
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.0.19
+-- Tiempo de generación: 28-09-2023 a las 16:12:58
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `chestroom` (
   `lastOwner_id` int(10) UNSIGNED NOT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `codigos` (
   `codigo` varchar(50) NOT NULL,
   `fecha_alta` datetime NOT NULL,
   `fecha_baja` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `codigos`
@@ -157,7 +157,7 @@ CREATE TABLE `cofres` (
   `tiempo` time NOT NULL,
   `modelo` varchar(100) NOT NULL,
   `droprate` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `cofres`
@@ -179,7 +179,7 @@ CREATE TABLE `compras` (
   `codigoProducto` varchar(250) NOT NULL,
   `estatus` varchar(50) NOT NULL,
   `fechaCompra` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `compras`
@@ -210,7 +210,7 @@ CREATE TABLE `flotas` (
   `modelo` varchar(100) NOT NULL,
   `droprate` varchar(50) DEFAULT NULL,
   `cofre_id` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `flotas`
@@ -232,7 +232,7 @@ CREATE TABLE `inventario` (
   `lastOwner` int(10) UNSIGNED DEFAULT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `inventario`
@@ -255,23 +255,16 @@ CREATE TABLE `noticias` (
   `idioma` enum('esp','eng') NOT NULL,
   `fecha_alta` date NOT NULL,
   `rutas` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `noticias`
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `cuerpo`, `lista`, `idioma`, `fecha_alta`, `rutas`) VALUES
-(11, 'este es el titulo de la noticia', 'esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.\r\n\r\nesta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.esta es la mejor descripcion hecha por el hombre, apreciala y compartela con los demas sabiamente pedazo de anormal. Gracias por leer tanto texto.\r\n', '', 'esp', '2023-07-30', 'img/n1esp.png'),
-(12, 'NEW TITLE ', 'NEW NEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODY!\r\n\r\n\r\nNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYBODY.', '', 'eng', '2023-07-30', 'img/n1eng.png'),
-(13, 'NEW TITLE ', 'NEW NEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYNEW BODY!\r\n\r\n\r\nNEW BODYNEW BODYNEW BODYNEW BODYNEW BODYBODY.', '', 'eng', '2023-07-30', 'img/n1eng.png'),
-(14, 'the matadero de la convalecensia ', 'omg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.\r\n\r\nomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.', '', 'eng', '2023-07-30', 'img/DALL·E 2023-06-08 11.33.59 - una pintura colonial sobre gauchos descuerando vacas en el desierto con edificios estética colonial de fondo.png'),
-(15, 'asdasdasdasdasxd', 'omg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.<br />\r\n<br />\r\nomg this book note was fantastic i would read it again when i get older bc now im so stupid lmaoomg this book note was fantastic i would read it again when i get older bc now im so stupid lmao.', '', 'eng', '2023-07-30', 'img/n1esp.png'),
-(16, 'IM HERE TO MAKE AN ANNOUNCEMENT', 'SHADOW THE HEDGEHOG IS A BITCH ASS MOTHER FUCKER, HE PISSED ON MY FUCKING WIFE. YEAH THATS RIGHT AND HE THEN SAID IT WAS \'this big\' AND THEN I SAID IT CAN \"BEE\".<br />\r\n<br />\r\nBUT THEN IT WENT BEE SO I GOT SCARED', '', 'eng', '2023-07-30', 'img/1607531228134.jpg'),
-(17, 'noticia con lista', 'epica noticia con lista albina', 'ola soy una lista|yo tambien mira que guay', 'esp', '2023-07-30', 'img/Design Suites - Relaciones.png'),
-(18, 'SHADOW THE HEDGEHOG', '\"', '', 'eng', '2023-07-30', 'img/n1eng.png'),
-(19, 'a', 'a', '', 'esp', '2023-08-06', 'img/n1eng.png'),
-(20, 'a', 'a', 'a|a22|a23', 'esp', '2023-08-13', 'img/background.png,img/cartel.png,img/cierre.jpg,img/clasificacion.png,img/DALL·E 2023-06-08 11.33.59 - una pintura colonial sobre gauchos descuerando vacas en el desierto con edificios estética colonial de fondo.png');
+(21, 'nueva pagina disponible!!!!!!', 'Esta es un pagina que llega a cambiarlo todo, tiene una interfaz bien chevere ', '', 'esp', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png'),
+(22, 'nueva pagina disponible!!!', '¡Únete a la batalla naval más emocionante jamás vista en \"War Over Ocean\"! Enfréntate a un mundo lleno de acción y estrategia en alta mar. Conviértete en el comandante supremo de una flota poderosa y lucha contra jugadores de todo el mundo en tiempo real. <br />\r\n<br />\r\nDomina los mares, personaliza tus barcos, y despliega tus habilidades estratégicas en escenarios impresionantes. ¡Defiende tus rutas comerciales, forma alianzas estratégicas y sumérgete en un mundo de batallas navales épicas!<br />\r\n<br />\r\nExperimenta la emoción de la guerra en el océano, donde cada decisión cuenta. ¿Tienes lo que se necesita para gobernar los mares y ser el capitán legendario que todos temen? ¡Descarga \"War Over Ocean\" y demuestra tu dominio en la batalla naval definitiva! ¡Únete hoy mismo y comienza tu épica aventura marítima!', 'Nuevo Soporte: Centro de Ayuda Mejorado: Un recurso integral con preguntas frecuentes, tutoriales y guías para ayudar a los jugadores a resolver problemas y mejorar su experiencia.|Nueva Tienda: Permite a los jugadores personalizar y mejorar sus barcos con una amplia selección de armamento, equipos y pinturas únicas.', 'esp', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png'),
+(23, 'new page available!!!', 'Join the most exciting naval battle ever seen in \"War Over Ocean\"! Face a world full of action and strategy on the high seas. Become the supreme commander of a powerful fleet and fight against players from all over the world in real time.<br />\r\nDominate the seas, customize your ships, and deploy your strategic skills in impressive settings. Defend your trade routes, form strategic alliances and immerse yourself in a world of epic naval battles!<br />\r\nExperience the thrill of war on the ocean, where every decision counts. Do you have what it takes to rule the seas and be the legendary captain everyone fears? Download \"War Over Ocean\" and show your dominance in the ultimate naval battle! Join today and begin your epic maritime adventure!', 'New Support: Improved Help Center: A comprehensive resource with FAQs, tutorials and guides to help players resolve issues and improve their experience.|Nueva Tienda: Permite a los jugadores personalizar y mejorar sus barcos con una amplia selección de armamento, equipos y pinturas únicas.', 'eng', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png');
 
 -- --------------------------------------------------------
 
@@ -290,7 +283,7 @@ CREATE TABLE `ofertas` (
   `codigoProducto` varchar(250) NOT NULL,
   `inicio_oferta` datetime DEFAULT NULL,
   `fin_oferta` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `ofertas`
@@ -319,7 +312,7 @@ CREATE TABLE `torneos` (
   `fecha_baja` date DEFAULT NULL,
   `rutas` varchar(100) NOT NULL,
   `idioma` enum('esp','eng') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `torneos`
@@ -354,7 +347,7 @@ CREATE TABLE `usuarios` (
   `victorias` mediumint(8) UNSIGNED NOT NULL,
   `partidas` mediumint(8) UNSIGNED NOT NULL,
   `esMod` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -476,7 +469,7 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `ofertas`
