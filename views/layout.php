@@ -39,13 +39,13 @@
     }?>
 
     <div class="row w-100 m-0" style="background-color: #1B191B;">
-        <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center mt-1" href="?section=war-over-ocean&la=<?php echo $_GET['la']?>" style="text-decoration: none;">
+        <a class="col-sm-4 col-md-3 col-lg-2 d-flex homewoo align-self-center mt-1 p-0" href="?section=war-over-ocean&la=<?php echo $_GET['la']?>" style="text-decoration: none;">
             <img src="img/logo.png" class="col-sm-6 d-none d-sm-block" alt="LOGO" style="rotate: -90deg;">
-            <div class="col-12 col-sm-6 text-sm-start text-center text-white align-self-center fs-3 lh-1 mt-1">ATOMIC <br class='d-none d-sm-block'>STUDIOS</div>
+            <div class="col-12 col-sm-6 text-sm-start text-center text-white align-self-center fs-2 lh-1 mt-1">ATOMIC <br class='d-none d-sm-block'>STUDIOS</div>
         </a>
         <hr class="d-block d-sm-none w-75 m-0 mx-auto mt-2"> 
-        <div class="row col-sm-8 col-md-9 col-lg-10">
-            <div class="col-lg-6 d-flex justify-content-around align-items-start lead fs-3">
+        <div class="row col-sm-8 col-md-9 col-lg-10 p-0 fs-2">
+            <div class="col-lg-6 d-flex flex-wrap justify-content-around align-items-start">
                 <a class="links lnav text-white align-self-center" href="?section=noticias&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['n']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=soporte&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['s']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t']?></a>
@@ -54,17 +54,17 @@
             <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
                 <div class="dropdown-center">
                     <button class="btn btn-sm" type="button" style="border: none;" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-                        <img src="img/language.png" alt="lang-icon" style="width: 30px; cursor: pointer;">
+                        <img src="img/language.png" alt="lang-icon" style="width: 40px; cursor: pointer;">
                     </button>
                     <ul class="dropdown-menu p-2" style="background-color: #ffffff; border-top: 4px solid #7BB0FF; border-left: none; border-right: none; border-bottom: none;">
-                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'?>')">Español</a></li>
+                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'?>')">Español</a></li>
                         <li><hr class="dropdown-divider" style="color: #878787;"></li>
-                        <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'?>')">Ingles</a></li>
+                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'?>')">Ingles</a></li>
                     </ul>
                 </div>
             <?php
                 if(!empty($user)){ ?>
-                    <div class="dropdown">
+                    <div class="dropdown fs-3">
                         <button class="btn dropdown-toggle text-white fs-5" style="background-color: #2c2c2c; border-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
                             <?php echo $user['nombre']; ?>
                         </button>
@@ -82,8 +82,8 @@
                     </div>
 
             <?php }else{ ?>
-                <a class="lead rounded border-0 btn-login p-2 m-2 fs-4" href="main2.php?section=login&la=<?php echo $_GET['la']?>" style="text-decoration: none; background-color: #2B282C;"><?php echo $lang['nav']['i']?></a>
-                <a class="lead rounded border-0 download p-2 m-2 fs-4" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF"><?php echo $lang['nav']['j']?></a>
+                <a class="lead rounded border-0 btn-login p-2 m-2 fs-2" href="main2.php?section=login&la=<?php echo $_GET['la']?>" style="text-decoration: none; background-color: #2B282C;"><?php echo $lang['nav']['i']?></a>
+                <a class="lead rounded border-0 download p-2 m-2 fs-2" href="includes/installer.txt" download style="text-decoration: none; background-color: #7BB0FF"><?php echo $lang['nav']['j']?></a>
             <?php } ?>
             </div>
         </div>
@@ -166,7 +166,7 @@
             </script>  
     <?php }?>
 
-    <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 lead" style="background-color: #222022;">
+    <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 fs-3" style="background-color: #222022;">
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=acerca-de-woo&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['a']?></a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=desarrolladores&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['d']?></a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none; cursor: pointer;" onclick="$('#preferencesMenu').css({'display': 'flex'});"><?php echo $lang['navBottom']['p']?></a>
@@ -218,15 +218,15 @@
 
     <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B;">
         <div class="d-flex flex-column">
-            <div class="d-flex align-self-center">
+            <div class="d-flex align-self-center fs-3">
                 <img src="img/logo.png" alt="LOGO" style="max-width: 60px; height: auto; rotate: -90deg; filter:invert(50%);">
-                <div class="text-grey align-self-center" style="line-height: 15px; margin-right: 5px;">ATOMIC<br>STUDIOS</div>
+                <div class="text-grey align-self-center" style="line-height: 25px; margin-right: 5px;">ATOMIC<br>STUDIOS</div>
             </div>
-            <p class="text-center" style="font-size: 15px">&copy 2023 Atomic Studios</p>
+            <p class="text-center" style="font-size: 25px">&copy 2023 Atomic Studios</p>
         </div>
         <div class="d-flex justify-content-center w-50 py-2" style="margin: 20px 0;">
-            <a class="links text-white text-center lead" href="?section=aviso-de-privacidad&la=<?php echo $_GET['la']?>" style="margin-left: 25px; margin-right: 25px; text-decoration: none;"><?php echo $lang['footer']['a']?></a>
-            <a class="links text-white text-center lead" href="?section=terminos-de-servicio&la=<?php echo $_GET['la']?>" style="margin-left: 25px; margin-right: 25px; text-decoration: none;"><?php echo $lang['footer']['te']?></a>
+            <a class="links text-white text-center lead fs-3" href="?section=aviso-de-privacidad&la=<?php echo $_GET['la']?>" style="margin-left: 25px; margin-right: 25px; text-decoration: none;"><?php echo $lang['footer']['a']?></a>
+            <a class="links text-white text-center lead fs-3" href="?section=terminos-de-servicio&la=<?php echo $_GET['la']?>" style="margin-left: 25px; margin-right: 25px; text-decoration: none;"><?php echo $lang['footer']['te']?></a>
         </div>
         <div class="d-flex py-2 px-2" style="background-color: #222022; margin-bottom: 25px;">
             <img src="img/clasificacion.png" alt="TEENS ONLY" style="width: 90px; margin-right: 10px;">

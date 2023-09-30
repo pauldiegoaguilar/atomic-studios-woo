@@ -18,7 +18,7 @@
     <div class="col-lg-4 px-5 d-flex flex-column">
         <h1 style="color: #7BB0FF;"><?php echo $lang['war over ocean']['txtSec1t']?></h1>
         <hr>
-        <p class="lead">
+        <p class="fs-4">
             <?php echo $lang['war over ocean']['txtSec1b']?>
         </p>
     </div>
@@ -30,9 +30,9 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec2t']?></p>
+            <p class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec2t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p class="lead mt-2"><?php echo $lang['war over ocean']['txtSec2b']?></p>
+            <p class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec2b']?></p>
         </div>
     </div>
     <div class="row col-lg-4 d-flex flex-lg-column m-lg-0 mb-2">
@@ -40,9 +40,9 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec3t']?></p>
+            <p class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec3t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p class="lead mt-2"><?php echo $lang['war over ocean']['txtSec3b']?></p>
+            <p class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec3b']?></p>
         </div>
     </div>
     <div class="row col-lg-4 d-flex flex-lg-column">
@@ -50,20 +50,20 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec4t']?></p>
+            <p class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec4t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p class="lead mt-2"><?php echo $lang['war over ocean']['txtSec4b']?></p>
+            <p class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec4b']?></p>
         </div>
     </div>
 </div>
 <?php return; }?>
 <!--    MODERADORES     -->
 <div class="row m-4" id="mainPageContTxt">
-    <iframe class="col-lg-8 position-relative p-0" style="top: -40px;" height="420" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <div class="col-lg-4 px-5 d-flex flex-column">
+    <iframe class="col-xl-7 position-relative p-0" style="top: -40px;" height="420" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="col-xl-5 px-5 d-flex flex-column">
         <p name="txtSec1t" contenteditable="true" class="display-6" style="color: #7BB0FF;"><?php echo $lang['war over ocean']['txtSec1t']?></p>
         <hr>
-        <p class="lead" name="txtSec1b" contenteditable="true"><?php echo $lang['war over ocean']['txtSec1b']?></p>
+        <p class="fs-4" name="txtSec1b" contenteditable="true"><?php echo $lang['war over ocean']['txtSec1b']?></p>
     </div>
 </div>
 
@@ -73,9 +73,9 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p name="txtSec2t" contenteditable="true" class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec2t']?></p>
+            <p name="txtSec2t" contenteditable="true" class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec2t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p name="txtSec2b" contenteditable="true" class="lead mt-2"><?php echo $lang['war over ocean']['txtSec2b']?></p>
+            <p name="txtSec2b" contenteditable="true" class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec2b']?></p>
         </div>
     </div>
     <div class="row col-lg-4 d-flex flex-lg-column m-lg-0 mb-2">
@@ -83,9 +83,9 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p name="txtSec3t" contenteditable="true" class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec3t']?></p>
+            <p name="txtSec3t" contenteditable="true" class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec3t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p name="txtSec3b" contenteditable="true" class="lead mt-2"><?php echo $lang['war over ocean']['txtSec3b']?></p>
+            <p name="txtSec3b" contenteditable="true" class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec3b']?></p>
         </div>
     </div>
     <div class="row col-lg-4 d-flex flex-lg-column">
@@ -93,9 +93,9 @@
             <img src="img/cartel.png" alt="img" class="h-100 w-100">
         </div>
         <div class="col-lg-12 col-sm-6 col-12 d-flex flex-column text-center align-items-center text-cartel flex-grow-1">
-            <p name="txtSec4t" contenteditable="true" class="fs-4 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec4t']?></p>
+            <p name="txtSec4t" contenteditable="true" class="fs-3 m-0 mt-2"><?php echo $lang['war over ocean']['txtSec4t']?></p>
             <div style="height: 5px; width: 80%; border-bottom: 2px solid #1B191B;"></div>
-            <p name="txtSec4b" contenteditable="true" class="lead mt-2"><?php echo $lang['war over ocean']['txtSec4b']?></p>
+            <p name="txtSec4b" contenteditable="true" class="fs-4 mt-2"><?php echo $lang['war over ocean']['txtSec4b']?></p>
         </div>
     </div>
 </div>

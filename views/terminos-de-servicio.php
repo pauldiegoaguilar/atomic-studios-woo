@@ -1,5 +1,5 @@
 <?php if(!$user || !$user['esMod']){ ?>
-    <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">  
+    <div class="text-start fs-3" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">  
   
     <p class="text-white display-6"><?php echo $lang['terminos de servicio']['txtSec1t']?></p>
     <p>
@@ -47,7 +47,7 @@
     </div>
 <?php return; }?>
 
-<div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;" id="termsContTxt">  
+<div class="text-start fs-3" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;" id="termsContTxt">  
 
     <p name="txtSec1t" contenteditable="true" class="text-white display-6"><?php echo $lang['terminos de servicio']['txtSec1t']?></p>
     <p name="txtSec1b" contenteditable="true"><?php echo $lang['terminos de servicio']['txtSec1b']?></p>

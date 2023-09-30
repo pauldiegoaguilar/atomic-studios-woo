@@ -9,6 +9,7 @@
 
     $filas = mysqli_fetch_all($qry, MYSQLI_ASSOC);
 ?>
+
 <div class="display-6 text-light text-center mb-4">&bull;&nbsp;<?php echo $lang['tienda']['txtSec1t']?>&nbsp;&bull;</div>
 
 

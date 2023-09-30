@@ -11,9 +11,11 @@
 
     $rAmount = $_GET['from'];
     $fIndex = $_GET['filter'];
-    $nick = $_GET['user'];
+    $usInfo = $_GET['user'];
 
-    $filters = array("none"=>"", "banned"=>"AND fecha_baja is not null", "userName"=>"AND nombre = '".$nick."'" );
+    $filters = array("none"=>"", "banned"=>"AND fecha_baja IS NOT NULL", "userName"=>"AND nombre = '".$usInfo."'", 
+                    "unBanned" => "AND fecha_baja IS NULL", "userMail" => "AND email = '".$usInfo."'"
+                    );
 
     $sql = "SELECT id, nombre, email, clave, genero, monedas, descripcion, fecha_alta, fecha_baja FROM usuarios";
     $sql .= " WHERE esMod = 0 " .  $filters[$fIndex];
@@ -32,7 +34,7 @@
     $html = "";
 
     foreach($rows as $row){
-        $html .= "<tr id='col-" . $row['id'] . "' onclick='selectRow(this);'>";
+        $html .= "<tr id='f-" . $row['id'] . "' onclick='selectRow(this);'>";
 
         foreach ($row as $col) {
             $html .= "<td>" . $col . "</td>";
