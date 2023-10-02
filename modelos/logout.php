@@ -3,5 +3,8 @@
     session_unset();
     session_destroy();
 
-    header('Location: ../index.php');
+    $lan = $_GET['la'];
+
+    header('Location: ../main.php?section=war-over-ocean&la=' . $lan );
+    exit;
 ?>

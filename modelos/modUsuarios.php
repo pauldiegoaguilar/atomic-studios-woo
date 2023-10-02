@@ -17,7 +17,7 @@
                     "unBanned" => "AND fecha_baja IS NULL", "userMail" => "AND email = '".$usInfo."'"
                     );
 
-    $sql = "SELECT id, nombre, email, clave, genero, monedas, descripcion, fecha_alta, fecha_baja FROM usuarios";
+    $sql = "SELECT id, nombre, email, clave, genero, monedas, fecha_alta, fecha_baja FROM usuarios";
     $sql .= " WHERE esMod = 0 " .  $filters[$fIndex];
     $sql .= " LIMIT 0, " . $rAmount;
 
@@ -38,7 +38,6 @@
 
         foreach ($row as $col) {
             $html .= "<td>" . $col . "</td>";
-         
         }
 
         if(!$row['fecha_baja']){

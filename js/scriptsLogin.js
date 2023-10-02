@@ -70,6 +70,7 @@ function verifRegis(form) {
 
       success: function(res) {
         if(res){
+          console.log(res);
           let selArr = res.split('&');
           selArr.shift();
           let selector = selArr.toString();
@@ -243,7 +244,7 @@ function verifLogin(form) {
 
   let valid = true;
 
-  $('#errorLog').css('display', 'none');
+  $('#errorLog, #bannedLog').css('display', 'none');
 
   if(valid) {
     $.ajax({
@@ -252,14 +253,12 @@ function verifLogin(form) {
       data: { emailL: mail, passL: pass, remindL: remind },
 
       success: function(res) {
-        if(res){
-          $('#successLog').html('Bienvenido, ' + res);
-
+        if(!res){
           $('#successLog').css('display', 'block');
           setTimeout(function(){location.assign('main.php?section=war-over-ocean&'+getLan())}, 1500);
         }
         else{
-          $('#errorLog').css('display', 'block');
+          $('#'+res).css('display', 'block');
         }
       },
 

@@ -3,6 +3,7 @@
 
     if(empty($_SESSION)){
         header('Location: index.php');
+        exit;
     }
 
     require_once "../includes/config.php";

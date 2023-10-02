@@ -60,6 +60,10 @@
             $('#slide'+currentS).animate({opacity: 1, width: '100%'}, 800);
         }
     }
+    function autoResize(textarea){
+        textarea.style.height = 'auto';
+        textarea.style.height = (textarea.scrollHeight) + 'px';
+    }
 </script>
 
 <style>
@@ -113,7 +117,7 @@
                 </div>
                 <div id="newList" class="text-light lead w-75 my-4">
                     <p id="listText" class="d-flex">&diams;&nbsp;&nbsp;
-                        <textarea oninput="$(this).css('height', this.scrollHeight);" id="lTxt"
+                        <textarea oninput="autoResize(this)" id="lTxt"
                             class="overflow-hidden border-0 position-relative w-100 text-start"
                                 placeholder="<?php echo $lang['crear noticia']['l']?>" maxlength="500"></textarea>
                     </p>

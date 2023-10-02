@@ -7,5 +7,5 @@
     $lan = $_GET['la'];
 
     header('Location: ../main2.php?section=' . $section . '&la=' . $lan );
-    exit();
+    exit;
 ?>

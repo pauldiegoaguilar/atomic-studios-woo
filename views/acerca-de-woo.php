@@ -19,7 +19,7 @@
             <?php echo $lang['acerca de woo']['txtSec4e']?>
         </p>
     
-        <img src="<?php echo $lang['acerca de woo']['src0']?>" class="w-100" style="height: 350px;">
+        <img src="<?php echo $lang['acerca de woo']['src0']?>" class="w-100">
     
         <p class="paragraph text-muted">
             <br>

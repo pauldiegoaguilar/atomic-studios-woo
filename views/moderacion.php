@@ -31,7 +31,6 @@
                         <th scope='col'>Clave</th>
                         <th scope='col'>Genero</th>
                         <th scope='col'>Monedas</th>
-                        <th scope='col'>Descripcion</th>
                         <th scope='col'>Registro</th>
                         <th scope='col'>De baja</th>
                         <th scope='col'>Acciones</th>
@@ -45,12 +44,22 @@
 
     <div class="display-6 text-white border-bottom my-4">Información del usuario:&nbsp;<span id="selectedUser" class="text-info"></span></div>
     
+    <div class="border-bottom text-center text-light lead">Descripcion</div>
+    <table class="table table-sm table-bordered table-hover table-dark text-center my-2">
+        <thead>
+            <tr>
+                <th scope='col'>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody class="table table-light" id="usersDesc"></tbody>
+    </table>
+
     <div class="border-bottom text-center text-light lead">Inventario</div>
     <table class="table table-sm table-bordered table-hover table-dark text-center my-2">
         <thead>
             <tr>
                 <th scope='col'>Flota</th>
-                <th scope='col'>Usuario</th>
+                <th scope='col'>Propietario Actual</th>
                 <th scope='col'>Ultimo Propietario</th>
             </tr>
         </thead>
@@ -62,7 +71,7 @@
         <thead>
             <tr>
                 <th scope='col'>id</th>
-                <th scope='col'>Usuario</th>
+                <th scope='col'>Código</th>
                 <th scope='col'>Producto</th>
                 <th scope='col'>Fecha de Compra</th>
             </tr>
@@ -113,7 +122,7 @@
 
     function selectRow(fila){
         let idUser = fila.id.split("-")[1];
-        console.log($(fila).children()[1]);
+   
         $('#selectedUser').text($(fila).children()[1].innerHTML);
 
         $.ajax({
@@ -122,11 +131,10 @@
 
                 success: function(res){
                     console.log(res);
-                    $('#usersInventory').html("");
-                    $('#usersInventory').append(res[0]);
-                    $('#usersBuys').html("");
-                    $('#usersBuys').append(res[1]);
-                    cantidadFilas = cantidadFilas + registros;
+                    $('#usersDesc, #usersInventory, #usersBuys').html("");
+                    $('#usersDesc').append(res.descripcion);
+                    $('#usersInventory').append(res.inventario);
+                    $('#usersBuys').append(res.compras);
                 },
 
                 error: function(jqXHR, textStatus, errorThrown){
@@ -146,8 +154,8 @@
 
                     let fila = $('#f-'+usId).children();
                     let fecha = new Date();
-                    fila[8].innerHTML = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()}`;
-                    fila[9].innerHTML = '<button class="btn form-control" onclick="desBanear('+usId+');">Quitar Ban</button>';
+                    fila[7].innerHTML = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()}`;
+                    fila[8].innerHTML = '<button class="btn form-control" onclick="desBanear('+usId+');">Quitar Ban</button>';
                 },
 
                 error: function(jqXHR, textStatus, errorThrown){
@@ -168,8 +176,8 @@
 
                     let fila = $('#f-'+usId).children();
                     let fecha = new Date();
-                    fila[8].innerHTML = "";
-                    fila[9].innerHTML = '<button class="btn form-control" onclick="suspenderUsuario('+usId+');">Suspender</button>';
+                    fila[7].innerHTML = "";
+                    fila[8].innerHTML = '<button class="btn form-control" onclick="suspenderUsuario('+usId+');">Suspender</button>';
                 },
 
                 error: function(jqXHR, textStatus, errorThrown){

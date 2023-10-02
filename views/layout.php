@@ -44,12 +44,11 @@
             <div class="col-12 col-sm-6 text-sm-start text-center text-white align-self-center fs-2 lh-1 mt-1">ATOMIC <br class='d-none d-sm-block'>STUDIOS</div>
         </a>
         <hr class="d-block d-sm-none w-75 m-0 mx-auto mt-2"> 
-        <div class="row col-sm-8 col-md-9 col-lg-10 p-0 fs-2">
+        <div class="row col-sm-8 col-md-9 col-lg-10 p-0 fs-2 ps-4">
             <div class="col-lg-6 d-flex flex-wrap justify-content-around align-items-start">
                 <a class="links lnav text-white align-self-center" href="?section=noticias&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['n']?></a>
-                <a class="links lnav text-white align-self-center" href="?section=soporte&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['s']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t']?></a>
-                <?php if(!empty($user)){?> <a class="links lnav text-white align-self-center" href="?section=tienda&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t1']?></a> <?php }?>
+                <a class="links lnav text-white align-self-center" href="?section=tienda&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t1']?></a>
             </div>
             <div class="col-lg-6 d-flex justify-content-around justify-content-lg-end align-items-center text-center p-0">
                 <div class="dropdown-center">
@@ -57,9 +56,9 @@
                         <img src="img/language.png" alt="lang-icon" style="width: 40px; cursor: pointer;">
                     </button>
                     <ul class="dropdown-menu p-2" style="background-color: #ffffff; border-top: 4px solid #7BB0FF; border-left: none; border-right: none; border-bottom: none;">
-                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'?>')">Español</a></li>
+                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'?>')"><?php echo $lang['nav']['esp']?></a></li>
                         <li><hr class="dropdown-divider" style="color: #878787;"></li>
-                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'?>')">Ingles</a></li>
+                        <li><a class="fs-5 dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'?>')"><?php echo $lang['nav']['en']?></a></li>
                     </ul>
                 </div>
             <?php
@@ -77,7 +76,7 @@
                             <?php }?>
                             <li><a class="dropdown-item op" href="?section=perfil&la=<?php echo $_GET['la']?>">Perfil</a></li>
                             <li><hr class="dropdown-divider" style="background-color: grey;"></li>
-                            <li><a class="dropdown-item op" href="modelos/logout.php">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item op" href="modelos/logout.php?la=<?php echo $_GET['la']?>">Cerrar Sesión</a></li>
                         </ul>
                     </div>
 
@@ -169,51 +168,7 @@
     <div class="row w-100 m-0 d-flex justify-content-around align-items-center py-4 fs-3" style="background-color: #222022;">
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=acerca-de-woo&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['a']?></a>
         <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=desarrolladores&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['d']?></a>
-        <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none; cursor: pointer;" onclick="$('#preferencesMenu').css({'display': 'flex'});"><?php echo $lang['navBottom']['p']?></a>
-    </div>
-
-    <div id="preferencesMenu" class="fixed-top justify-content-end" style="z-index: 1030; background-color: #242424aa; height: 100vh; display: none;">
-        <div class="d-flex flex-column bg-white text-dark p-3 overflow-auto" style="max-width: 400px; position: relative; ">
-            <div class="d-flex justify-content-between">
-                <h4 class="mb-4">Preferencias de almacenamiento</h4>
-                <button type="button" class="btn btn-dark btn-sm mb-4" onclick="$('#preferencesMenu').css({'display': 'none'});">X</button>
-            </div>
-            <div>
-                <h5>Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
-                </div>
-            </div>
-            <hr>
-            <div>
-                <h5>Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
-                </div>
-            </div>
-            <hr style="color: black;">
-            <div>
-                <h5>Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
-                </div>
-            </div>
-            <hr style="color: black;">
-            <div>
-                <h5>Lorem ipsum</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa laudantium, quod quisquam cupiditate, ea fuga consequuntur reiciendis nostrum nulla soluta illum ab alias sequi harum labore asperiores pariatur explicabo.</p>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Lorem ipsum</label> -->
-                </div>
-            </div>
-        </div>
+        <a class="links col-sm-4 text-center text-white p-2" style="text-decoration: none;" href="?section=soporte&la=<?php echo $_GET['la']?>" ><?php echo $lang['navBottom']['s']?></a>
     </div>
 
     <div class="d-flex flex-column align-items-center justify-content-center py-3" style="background-color: #1B191B;">

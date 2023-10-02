@@ -9,10 +9,18 @@
         header('Location: ../index.php');
     }
 
-    $res = [];
+    
     $idUser = $_GET['user'];
     
-    $sqlFlotas = "SELECT flotas.nombre as flota, usuarios.nombre as usuario, lastP.nombre as lastProp FROM inventario INNER JOIN usuarios ON inventario.usuario_id = usuarios.id INNER JOIN usuarios as lastP ON inventario.usuario_id = lastP.id INNER JOIN flotas ON inventario.flota_id = flotas.id WHERE usuario_id = '".$idUser."'";
+    $sqlFlotas = "SELECT id_trans, compras.codigoProducto, ofertas.nombre as producto, fechaCompra, flotas.nombre as flota, " .
+                    "usuarios.nombre as usuario, IF(lastOwner.nombre IS NULL, 'Objeto nuevo', lastOwner.nombre) as lastProp, usuarios.descripcion FROM usuarios " .
+                    "LEFT JOIN compras ON compras.usuario_id = usuarios.id ".
+                    "LEFT JOIN ofertas ON compras.codigoProducto = ofertas.codigoProducto ".
+                    "LEFT JOIN inventario ON inventario.usuario_id = usuarios.id ".
+                    "LEFT JOIN flotas ON flotas.id = inventario.flota_id ".
+                    "LEFT JOIN usuarios as lastOwner ON lastOwner.id = inventario.lastOwner ".
+                    "WHERE usuarios.id = '".$idUser."'";
+                    
     $qryFlotas = mysqli_query($conn, $sqlFlotas);
 
     if(!$qryFlotas){
@@ -20,44 +28,35 @@
         exit;
     }
 
-    $rowsF = mysqli_fetch_all($qryFlotas);
-    
+    $res = [];
     $htmlF = "";
-
-    foreach($rowsF as $row){
-        $htmlF .= "<tr>";
-
-        foreach ($row as $col) {
-            $htmlF .= "<td>" . $col . "</td>";
-        }
-
-        $htmlF .= "</tr>";
-    }
-    
-    $res[0] = $htmlF;
-
-    $sqlCompras = "SELECT id_trans, usuarios.nombre as usuario, ofertas.nombre as producto, fechaCompra FROM compras INNER JOIN usuarios ON compras.usuario_id = usuarios.id INNER JOIN ofertas ON compras.codigoProducto = ofertas.codigoProducto WHERE usuario_id = '".$idUser."'";
-    $qryCompras = mysqli_query($conn, $sqlCompras);
-
-    if(!$qryCompras){
-        header('HTTP/1.1 500 Internal Server Error');
-        exit;
-    }
-
-    $rowsC = mysqli_fetch_all($qryCompras); 
-
     $htmlC = "";
+    $htmlD = "";
 
-    foreach($rowsC as $row){
+    while($row = mysqli_fetch_assoc($qryFlotas)){
+        $htmlD .= "<tr>";
+        $htmlD .= "<td>".$row['descripcion']."</td>";
+        $htmlD .= "</tr>";
+
+        $res['descripcion'] = $htmlD;
+        
+        $htmlF .= "<tr>";
+        $htmlF .= "<td>".$row['flota']."</td>";
+        $htmlF .= "<td>".$row['usuario']."</td>";
+        $htmlF .= "<td>".$row['lastProp']."</td>";
+        $htmlF .= "</tr>";
+
+        $res['inventario'] = $htmlF;
+
         $htmlC .= "<tr>";
-
-        foreach ($row as $col) {
-            $htmlC .= "<td>" . $col . "</td>";
-        }
-
+        $htmlC .= "<td>".$row['id_trans']."</td>";
+        $htmlC .= "<td>".$row['codigoProducto']."</td>";
+        $htmlC .= "<td>".$row['producto']."</td>";
+        $htmlC .= "<td>".$row['fechaCompra']."</td>";
         $htmlC .= "</tr>";
+
+        $res['compras'] = $htmlC;
     }
 
-    $res[1] = $htmlC;
     echo json_encode($res);
 ?>

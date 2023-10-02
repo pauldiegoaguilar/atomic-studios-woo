@@ -43,8 +43,9 @@ function showPost(index){
     console.log(noticias[index]);
     
     removeCarrusel();
-
+    ndDate
     $('#ndTitle').html(noticias[index].titulo);
+    $('#ndDate').html(noticias[index].fecha_alta);
     $('#ndBody').html(noticias[index].cuerpo);
 
     if(noticias[index].lista){

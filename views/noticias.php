@@ -13,21 +13,20 @@
     <script>var noticias = <?php echo json_encode($noticias)?>;</script>
 
     <div id="newsFather" class="m-5 mb-0">
-    <?php
-        foreach($noticias as $index => $noticia){
-            $preImg = explode(',', $noticia['rutas'])[0];?>
-            <a href="javascript:showPost('<?php echo $index?>');" class="row my-5" style="height: 325px; text-decoration: none;" title="click for details" id="new">
-                <div class="col-7 text-center h-100">
-                    <img class="img-fluid h-100" style="object-fit: content;" src="<?php echo $preImg?>" alt="img-noticia">
+        <?php foreach($noticias as $index => $noticia){
+                $preImg = explode(',', $noticia['rutas'])[0];?>
+
+                <div class="row my-5" onclick="showPost('<?php echo $index?>');" title="click for details" id="new">
+                    <img class="col-md-7" style="height: 325px; object-fit: contain;" src="<?php echo $preImg?>" alt="New-Image">
+                    <div class="col-md-5" style="height: 200px;">
+                        <i class="text-grey fs-5"><?php echo $noticia['fecha_alta']?></i>
+                        <h1 style="color: #7BB0FF;" class="text-uppercase fs-2 my-2"><?php echo $noticia['titulo']?></h1>
+                        <p class="h-75 overflow-hidden text-white lead"><?php echo $noticia['cuerpo']?></p>
+                    </div>
                 </div>
-                <div class="col-5 text-start d-flex flex-column mt-1 h-100">
-                    <i class="text-grey fs-5"><?php echo $noticia['fecha_alta']?></i>
-                    <h1 style="color: #7BB0FF;" class="text-uppercase fs-2 my-2"><?php echo $noticia['titulo']?></h1>
-                    <p class="h-75 overflow-hidden text-white lead"><?php echo $noticia['cuerpo']?></p>
-                </div>
-            </a>
-            <hr class="bg-primary" style="height: 5px;">
-    <?php }?>
+                <hr class="bg-primary" style="height: 5px;">
+
+        <?php }?>
     </div>
 
     <div id="newDetails" class="d-none position-relative w-100">
@@ -39,7 +38,7 @@
             </div>
             <div class="d-flex justify-content-between border-bottom">
                 <h1 style="color: #7BB0FF;" class="my-auto text-uppercase" id="ndTitle">Titulo Noticia</h1>
-                <p class="text-muted fs-4 my-auto">2030/03/23</p>
+                <p class="text-muted fs-4 my-auto" id="ndDate">2030/03/23</p>
             </div>
             <p class="text-white mt-2 fs-4" style="margin-bottom: 125px;" id="ndBody">
                 Hello and welcome! A while ago we asked on Twitter if you had any questions you’d like us to answer. We took a while to collect the best and most frequently asked questions and prepare some answers for you guys.
