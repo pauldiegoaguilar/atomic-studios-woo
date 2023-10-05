@@ -13,7 +13,7 @@
   </h2>
 
   <div class="row d-flex flex-wrap justify-content-around">
-  <?php foreach($torneosInfo as $torneo){?>
+  <?php foreach($torneosInfo as $torneo){ if ($torneo['fecha_baja'] === NULL){?>
     <div class="custom-card m-2 p-0 overflow-hidden position-relative" style="width: 19rem; height: 450px; cursor: pointer;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
     <?php if(!empty($user) && $user['esMod']){?>
       <div type="button" class="btn-close btn-close-white position-absolute end-0 top-0 border rounded-circle bg-light" aria-label="Close" onclick="confirm('<?php echo $lang['torneos']['alertM']?>') ? location.assign('modelos/eliminarTorneo.php?id=<?php echo $torneo['id'] . '&la=' . $_GET['la']?>') : 'xd'"></div>
@@ -34,8 +34,34 @@
         <p class="d-none" id="t-cofre-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></p>
       </div>
     </div>
-  <?php }?>
+  <?php } }?>
+
+  <h2 class="d-flex justify-content-between text-white border-bottom py-1">
+    <?php echo $lang['torneos']['txtSec2t']?>
+  </h2>
+    
+  <div class="row d-flex flex-wrap justify-content-around">
+  <?php foreach($torneosInfo as $torneo){ if ($torneo['fecha_baja'] != NULL){?>
+    <div class="custom-card m-2 p-0 overflow-hidden position-relative" style="width: 19rem; height: 450px; cursor: pointer;" id="card-<?php echo $torneo['id']?>" onclick="MostrarCard(<?php echo $torneo['id']?>);">
+    <img class="w-100 h-50" style="object-fit: contain;" src="<?php echo $torneo['rutas']?>" alt="Card image cap" id="t-img-<?php echo $torneo['id']?>">
+      <div class="h-50 py-2">
+        <div class="d-flex fs-6 my-1">
+          <p class="text-white m-0" id="t-alta-<?php echo $torneo['id']?>"><?php echo str_replace('-', '/', $torneo['fecha_alta'])?></p>
+          <span>&nbsp;&nbsp;->&nbsp;&nbsp;</span>
+          <p class="text-white m-0" id="t-baja-<?php echo $torneo['id']?>"><?php echo $torneo['fecha_baja'] === NULL ? '--/--/--' : $torneo['fecha_baja']?></p>
+        </div>
+        <h3 class="row justify-content-center text-center text-uppercase text-white" id="t-title-<?php echo $torneo['id']?>"><?php echo $torneo['titulo']?></h3>
+        <p id="t-desc-<?php echo $torneo['id']?>"><?php echo ucfirst(strtolower($torneo['descripcion']))?></p>
+        <p class="d-none" id="t-coins-<?php echo $torneo['id']?>"><?php echo $torneo['monedas']?></p>
+        <p class="d-none" id="t-champ-<?php echo $torneo['id']?>"><?php echo $torneo['userName']?></p>
+        <p class="d-none" id="t-prolife-<?php echo $torneo['id']?>"><?php echo $torneo['fotoPerfil']?></p>
+        <p class="d-none" id="t-cofreCant-<?php echo $torneo['id']?>"><?php echo $torneo['cantidadCofres']?></p>
+        <p class="d-none" id="t-cofre-<?php echo $torneo['id']?>"><?php echo $torneo['nombre']?></p>
+      </div>
+    </div>
+  <?php } }?>
   </div>
+  
 
   <div class="w-100 h-100 fixed-top justify-content-center align-items-center bg-transparent" id="fk-screen" style="display: none;">
     <div class="row m-3 overflow-auto position-relative" id="ts-card" style="display: none; max-width: 1000px; max-height: 530px; background-color: #222022;">
@@ -70,7 +96,9 @@
         </div>
       </div>
     </div>
+
     <?php if(!empty($user) && $user['esMod']){?>
+      <!-- MODERACION -->
       <form onsubmit="event.preventDefault(); verifForm();" action="modelos/crearTorneo.php" method="POST" enctype="multipart/form-data" class="row m-3 overflow-auto position-relative" id="createCard" style="display: none; max-width: 1000px; max-height: 530px; background-color: #222022;">
         <div type="button" class="btn-close btn-close-white position-absolute end-0 top-0 p-2" style="z-index: 1;" aria-label="Close" onclick="$('#createCard, #fk-screen').hide('slow');"></div>
         <div class="col-lg-6 position-relative d-none p-0 d-flex align-items-center justify-content-center m-auto" id="preview">

@@ -7,11 +7,11 @@
         session_unset();
         session_destroy();
         
-        header('Location: index.php');
+        header('Location: ../index.php');
     }
 
     $torneo = $_GET['id'];
-    $qry = mysqli_query($conn, "DELETE FROM torneos WHERE id = " . $torneo);
+    $qry = mysqli_query($conn, "UPDATE torneos SET fecha_baja = NOW() WHERE id = '".$torneo."'");
     
     if(!$qry){
         die('Error de consulta: ' . mysqli_error($conn));
