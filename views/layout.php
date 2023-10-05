@@ -45,7 +45,7 @@
         </a>
         <hr class="d-block d-sm-none w-75 m-0 mx-auto mt-2"> 
         <div class="row col-sm-8 col-md-9 col-lg-10 p-0 fs-2 ps-4">
-            <div class="col-lg-6 d-flex flex-wrap justify-content-around align-items-start">
+            <div class="col-lg-6 d-flex justify-content-around align-items-start">
                 <a class="links lnav text-white align-self-center" href="?section=noticias&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['n']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=torneos&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t']?></a>
                 <a class="links lnav text-white align-self-center" href="?section=tienda&la=<?php echo $_GET['la']?>" style="text-decoration: none;"><?php echo $lang['nav']['t1']?></a>

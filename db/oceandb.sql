@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-09-2023 a las 16:12:58
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 05-10-2023 a las 12:01:17
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `chestroom` (
   `lastOwner_id` int(10) UNSIGNED NOT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `codigos` (
   `codigo` varchar(50) NOT NULL,
   `fecha_alta` datetime NOT NULL,
   `fecha_baja` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `codigos`
@@ -157,7 +157,7 @@ CREATE TABLE `cofres` (
   `tiempo` time NOT NULL,
   `modelo` varchar(100) NOT NULL,
   `droprate` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cofres`
@@ -179,7 +179,7 @@ CREATE TABLE `compras` (
   `codigoProducto` varchar(250) NOT NULL,
   `estatus` varchar(50) NOT NULL,
   `fechaCompra` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `compras`
@@ -210,7 +210,7 @@ CREATE TABLE `flotas` (
   `modelo` varchar(100) NOT NULL,
   `droprate` varchar(50) DEFAULT NULL,
   `cofre_id` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `flotas`
@@ -232,7 +232,7 @@ CREATE TABLE `inventario` (
   `lastOwner` int(10) UNSIGNED DEFAULT NULL,
   `fecha_alta` date NOT NULL,
   `fecha_baja` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `inventario`
@@ -255,14 +255,13 @@ CREATE TABLE `noticias` (
   `idioma` enum('esp','eng') NOT NULL,
   `fecha_alta` date NOT NULL,
   `rutas` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `noticias`
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `cuerpo`, `lista`, `idioma`, `fecha_alta`, `rutas`) VALUES
-(21, 'nueva pagina disponible!!!!!!', 'Esta es un pagina que llega a cambiarlo todo, tiene una interfaz bien chevere ', '', 'esp', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png'),
 (22, 'nueva pagina disponible!!!', '¡Únete a la batalla naval más emocionante jamás vista en \"War Over Ocean\"! Enfréntate a un mundo lleno de acción y estrategia en alta mar. Conviértete en el comandante supremo de una flota poderosa y lucha contra jugadores de todo el mundo en tiempo real. <br />\r\n<br />\r\nDomina los mares, personaliza tus barcos, y despliega tus habilidades estratégicas en escenarios impresionantes. ¡Defiende tus rutas comerciales, forma alianzas estratégicas y sumérgete en un mundo de batallas navales épicas!<br />\r\n<br />\r\nExperimenta la emoción de la guerra en el océano, donde cada decisión cuenta. ¿Tienes lo que se necesita para gobernar los mares y ser el capitán legendario que todos temen? ¡Descarga \"War Over Ocean\" y demuestra tu dominio en la batalla naval definitiva! ¡Únete hoy mismo y comienza tu épica aventura marítima!', 'Nuevo Soporte: Centro de Ayuda Mejorado: Un recurso integral con preguntas frecuentes, tutoriales y guías para ayudar a los jugadores a resolver problemas y mejorar su experiencia.|Nueva Tienda: Permite a los jugadores personalizar y mejorar sus barcos con una amplia selección de armamento, equipos y pinturas únicas.', 'esp', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png'),
 (23, 'new page available!!!', 'Join the most exciting naval battle ever seen in \"War Over Ocean\"! Face a world full of action and strategy on the high seas. Become the supreme commander of a powerful fleet and fight against players from all over the world in real time.<br />\r\nDominate the seas, customize your ships, and deploy your strategic skills in impressive settings. Defend your trade routes, form strategic alliances and immerse yourself in a world of epic naval battles!<br />\r\nExperience the thrill of war on the ocean, where every decision counts. Do you have what it takes to rule the seas and be the legendary captain everyone fears? Download \"War Over Ocean\" and show your dominance in the ultimate naval battle! Join today and begin your epic maritime adventure!', 'New Support: Improved Help Center: A comprehensive resource with FAQs, tutorials and guides to help players resolve issues and improve their experience.|Nueva Tienda: Permite a los jugadores personalizar y mejorar sus barcos con una amplia selección de armamento, equipos y pinturas únicas.', 'eng', '2023-09-28', 'img/1.png,img/2.png,img/3.png,img/4.png,img/5.png');
 
@@ -278,21 +277,27 @@ CREATE TABLE `ofertas` (
   `descripcion` varchar(300) NOT NULL,
   `precio` float UNSIGNED NOT NULL,
   `cantidad` mediumint(8) UNSIGNED NOT NULL,
-  `productos_id` varchar(100) NOT NULL,
   `img` varchar(100) NOT NULL,
   `codigoProducto` varchar(250) NOT NULL,
   `inicio_oferta` datetime DEFAULT NULL,
   `fin_oferta` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `ofertas`
 --
 
-INSERT INTO `ofertas` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `productos_id`, `img`, `codigoProducto`, `inicio_oferta`, `fin_oferta`) VALUES
-(1, '1000 Monedas', 'Añade a tu cuenta 1000 monedas', 0.99, 1000, '', 'img/1000Monedas.png', '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', NULL, NULL),
-(2, '10000 Monedas', 'Añade a tu cuenta 10000 monedas', 3.99, 10000, '', 'img/10000Monedas.png', '1236571417-c4d29c4e-6dbb-4939-8385-868e5164ff23', NULL, NULL),
-(3, '100000 Monedas', 'Añade a tu cuenta 100000 monedas', 7.99, 100000, '', 'img/100000Monedas.png', '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', NULL, NULL);
+INSERT INTO `ofertas` (`id`, `nombre`, `descripcion`, `precio`, `cantidad`, `img`, `codigoProducto`, `inicio_oferta`, `fin_oferta`) VALUES
+(1, '1000 Monedas', 'Añade a tu cuenta 1000 monedas', 0.99, 1000, 'img/ofertas/1000Monedas.png', '1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339', NULL, NULL),
+(2, '10000 Monedas', 'Añade a tu cuenta 10000 monedas', 3.99, 10000, 'img/ofertas/10000Monedas.png', '1236571417-c4d29c4e-6dbb-4939-8385-868e5164ff23', NULL, NULL),
+(3, '100000 Monedas', 'Añade a tu cuenta 100000 monedas', 7.99, 100000, 'img/ofertas/100000Monedas.png', '1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685', NULL, NULL),
+(4, '123', '123123', 123123, 12312312, 'img/ofertas/moneda (1).png', '123123', '2023-10-02 17:34:15', '2020-10-22 00:00:00'),
+(5, 'elpepe', 'elpepe :0', 12, 12, 'img/ofertas/Captura5.PNG', '12123123- 1kjrudsfjlkpojidosahjcv-asdasv.sld', '2023-10-02 17:37:35', '2023-12-12 00:00:00'),
+(6, 'elpepe', 'elpepe :0', 12, 12, 'img/ofertas/Captura5.PNG', '12123123- 1kjrudsfjlkpojidosahjcv-asdasv.sld', '2023-10-02 17:37:35', '2023-12-12 00:00:00'),
+(7, 'ELNEEENEEEEEEE', 'elpepe :0', 12, 12, 'img/ofertas/Captura3.PNG', '12123123- 1kjrudsfjlkpojidosahjcv-asdasv.sld', '2023-10-02 17:37:50', '2023-12-12 00:00:00'),
+(8, 'mas o menos lo ', 'que seria, osea, lo termine pero le falta eso que es algo fundamentalmente fundamentado referente a lo hecho susodichamente por elpepe', 123, 123, 'img/ofertas/Captura2.PNG', '12312312451r', '2023-10-02 17:42:09', '2023-12-12 00:00:00'),
+(9, 's', 's', 123, 123, 'img/ofertas/Captura4.PNG', '123', '2023-10-03 01:40:09', '2020-10-22 00:00:00'),
+(10, '2023-10-05 01:2', '2023-10-05 01:25:30', 2023, 2, 'img/ofertas/1.png', '2023-10-05 01:25:30', '2023-10-05 01:25:34', '2023-10-05 01:26:00');
 
 -- --------------------------------------------------------
 
@@ -312,7 +317,7 @@ CREATE TABLE `torneos` (
   `fecha_baja` date DEFAULT NULL,
   `rutas` varchar(100) NOT NULL,
   `idioma` enum('esp','eng') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `torneos`
@@ -347,15 +352,15 @@ CREATE TABLE `usuarios` (
   `victorias` mediumint(8) UNSIGNED NOT NULL,
   `partidas` mediumint(8) UNSIGNED NOT NULL,
   `esMod` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `clave`, `genero`, `fotoPerfil`, `monedas`, `descripcion`, `flota_id`, `fecha_alta`, `fecha_baja`, `victorias`, `partidas`, `esMod`) VALUES
-(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 1000, '\"...\"', 1, '2023-06-24', '2023-09-28', 0, 0, 1),
-(25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', NULL, 0, 0, 0),
+(1, 'lol', 'roroacostacant@gmail.com', '@@@123abc', 'masculino', 'img/perfil-def.png', 1000, '\"...\"', 1, '2023-06-24', NULL, 0, 0, 1),
+(25, 'elpepe', 'pepaso@yahoo.net.com', 'abc123@@@', 'indefinido', NULL, 0, '...', 1, '2023-07-21', '2023-10-05', 0, 0, 0),
 (27, 'rata12', 'rata12@gmail.com', '@@@abc123', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-07', NULL, 0, 0, 0),
 (28, 'augustoTorres', 'zicario@gmail.com', '123abc@@@', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-28', NULL, 0, 0, 0),
 (29, 'zikarioReal', 'elverdadero@gmail.com', '123abc@@@', 'indefinido', 'img/user.png', 0, '...', 1, '2023-09-28', NULL, 0, 0, 0),
@@ -469,13 +474,13 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `ofertas`
 --
 ALTER TABLE `ofertas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `torneos`

@@ -16,7 +16,7 @@
         <?php foreach($noticias as $index => $noticia){
                 $preImg = explode(',', $noticia['rutas'])[0];?>
 
-                <div class="row my-5" onclick="showPost('<?php echo $index?>');" title="click for details" id="new">
+                <div class="row my-5" onclick="showPost('<?php echo $index?>');<?php if($user['esMod']) echo '$(\'#fNe input[name=la]\').val(\''.$_GET['la'].'\');$(\'#fNe input[name=id]\').val('.$noticia['id'].')'?>" title="click for details" id="new">
                     <img class="col-md-7" style="height: 325px; object-fit: contain;" src="<?php echo $preImg?>" alt="New-Image">
                     <div class="col-md-5" style="height: 200px;">
                         <i class="text-grey fs-5"><?php echo $noticia['fecha_alta']?></i>
@@ -30,7 +30,15 @@
     </div>
 
     <div id="newDetails" class="d-none position-relative w-100">
-        <button class="position-absolute left-0 btn btn-dark border-0 fs-1 fw-bold ms-1 py-0" onclick="$('#newsPageHeader, #newDetails, #newsFather').toggleClass('d-none');">&#8617;</button>
+        <div class="position-absolute left-0 d-flex flex-column">
+            <button class="btn btn-light border-0 fs-1 fw-bold ms-1 py-0" onclick="$('#newsPageHeader, #newDetails, #newsFather').toggleClass('d-none');">&#8617;</button>
+            <form action="modelos/eliminarNota.php" method="POST" onsubmit="event.preventDefault();" class="mt-2" id="fNe">
+                <input type="hidden" value="¿Está seguro de querer eliminar la nota? No podrá deshacer esta acción" id="nTxt">
+                <input name="la" type="hidden" value="" id="nTxt">
+                <input name="id" type="hidden" value="" id="nTxt">
+                <input type="submit" class="btn btn-dark border-0 fs-1 fw-bold ms-1 py-0" onclick="if (confirm($('#nTxt').val())) this.form.submit();" value="&#128465;">
+            </form>
+        </div>
         <div class="w-75 mx-auto">
             <div class="d-flex align-items-center position-relative w-100 bg-dark overflow-hidden" style="height: 380px; top: -60px;" id="ndCarrusel">
                 <button class="position-absolute start-0 text-light btn border-0 fs-4" onclick="lastSlide();"><</button>

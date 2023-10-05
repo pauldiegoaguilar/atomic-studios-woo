@@ -1,7 +1,7 @@
 <?php
-    session_start();
-
     require_once "../includes/config.php";
+
+    session_start();
 
     if(!isset($_SESSION['user_id']) || !$_SESSION['esMod']){
         session_unset();
