@@ -19,7 +19,7 @@
 
     $sql = "SELECT id, nombre, email, clave, genero, monedas, fecha_alta, fecha_baja FROM usuarios";
     $sql .= " WHERE esMod = 0 " .  $filters[$fIndex];
-    $sql .= " LIMIT 0, " . $rAmount;
+    $sql .= " LIMIT 0, " . $rAmount;  
 
     $qry = mysqli_query($conn, $sql);
 

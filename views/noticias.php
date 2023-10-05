@@ -16,7 +16,7 @@
         <?php foreach($noticias as $index => $noticia){
                 $preImg = explode(',', $noticia['rutas'])[0];?>
 
-                <div class="row my-5" onclick="showPost('<?php echo $index?>');<?php if($user['esMod']) echo '$(\'#fNe input[name=la]\').val(\''.$_GET['la'].'\');$(\'#fNe input[name=id]\').val('.$noticia['id'].')'?>" title="click for details" id="new">
+                <div class="row my-5" onclick="showPost('<?php echo $index?>');<?php if(!empty($user) && $user['esMod']) echo '$(\'#fNe input[name=la]\').val(\''.$_GET['la'].'\');$(\'#fNe input[name=id]\').val('.$noticia['id'].')'?>" title="click for details" id="new">
                     <img class="col-md-7" style="height: 325px; object-fit: contain;" src="<?php echo $preImg?>" alt="New-Image">
                     <div class="col-md-5" style="height: 200px;">
                         <i class="text-grey fs-5"><?php echo $noticia['fecha_alta']?></i>
