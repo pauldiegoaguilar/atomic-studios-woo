@@ -1,0 +1,10 @@
+<script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+data-preference-id="1236571417-8b93d2ed-c408-481e-b053-a83e6eb6b339" data-source="link">
+</script>
+<script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+data-preference-id="1236571417-c4d29c4e-6dbb-4939-8385-868e5164ff23" data-source="button">
+</script>
+<script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+data-preference-id="1236571417-a1934d85-d6a4-4312-8f28-d81a4e3e9685" data-source="button">
+</script>
+

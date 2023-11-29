@@ -4,7 +4,7 @@
     $user = '';
 
     if (isset($_SESSION['user_id'])) {
-        $qryUser = "SELECT id, nombre, email, esMod FROM usuarios WHERE id = " . $_SESSION['user_id'] . ";";
+        $qryUser = "SELECT id, nombre, email, esMod, monedas, descripcion, fotoPerfil FROM usuarios WHERE id = " . $_SESSION['user_id'] . ";";
         $resUser = mysqli_query($conn, $qryUser);
 
         if(!$resUser){

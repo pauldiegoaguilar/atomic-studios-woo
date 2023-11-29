@@ -53,7 +53,7 @@
 
     <div class="w-50 d-flex flex-column mt-3 fixed-bottom d-none d-lg-flex">
         <div class="d-flex flex-wrap" style="z-index: 1;">
-            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte&la=<?php echo $_GET['la']?>"><?php echo $lang['nav']['s']?></a>
+            <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=soporte&la=<?php echo $_GET['la']?>"><?php echo $lang['navBottom']['s']?></a>
             <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=aviso-de-privacidad&la=<?php echo $_GET['la']?>"><?php echo $lang['footer']['a']?></a>
             <a class="homewoo text-center text-white fs-6 px-2" style="text-decoration: none;" href="main.php?section=terminos-de-servicio&la=<?php echo $_GET['la']?>"><?php echo $lang['footer']['te']?></a>
         </div>
@@ -66,9 +66,9 @@
                 <img src="img/language.png" alt="lang-icon" style="width: 30px; cursor: pointer;">
             </button>
             <ul class="dropdown-menu p-2" style="background-color: #ffffff; border-right: 4px solid #7BB0FF; border-left: none; border-top: none; border-bottom: none;">
-                <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'; /*$_GET['la']*/?>')">Español</a></li>
+                <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'eng'; /*$_GET['la']*/?>')"><?php echo $lang['nav']['esp']?></a></li>
                 <li><hr class="dropdown-divider" style="color: #878787;"></li>
-                <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'; /*$_GET['la']*/?>')">Ingles</a></li>
+                <li><a class="dropdown-item text-black opl" onclick="switchLan('<?php echo 'esp'; /*$_GET['la']*/?>')"><?php echo $lang['nav']['en']?></a></li>
             </ul>
         </div>
     </div>

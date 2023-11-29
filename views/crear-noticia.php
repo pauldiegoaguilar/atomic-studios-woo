@@ -36,9 +36,9 @@
         if(filesAmount < 6 && filesAmount != 0){
             $('#fileLabel, #carrusel').toggleClass('d-none');
             for(let i=0; i<filesAmount; i++){
-                $('#carrusel').append('<img id="slide'+i+'" style="opacity: 0; width: 0%;" class="h-100" src='+URL.createObjectURL(input.files[i])+'>');
+                $('#carrusel').append('<img id="slide'+i+'" style="opacity: 0; width: 0%; object-fit: contain;" class="h-100" src='+URL.createObjectURL(input.files[i])+'>');
             }
-            $('#carrusel img').first().attr('style', 'opacity: 1; width: 100%;');
+            $('#carrusel img').first().attr('style', 'opacity: 1; width: 100%; object-fit: contain;');
         }
         else{
             input.value = '';
@@ -59,6 +59,10 @@
             currentS = currentS + 1;
             $('#slide'+currentS).animate({opacity: 1, width: '100%'}, 800);
         }
+    }
+    function autoResize(textarea){
+        textarea.style.height = 'auto';
+        textarea.style.height = (textarea.scrollHeight) + 'px';
     }
 </script>
 
@@ -86,7 +90,7 @@
         width: 50%;
     }
 </style>
-    <form action="modelos/subirNoticia.php" onsubmit="formatString();" enctype="multipart/form-data" method="POST">
+    <form action="modelos/subirNoticia.php" onsubmit="formatString();" enctype="multipart/form-data" method="POST" class="mx-auto" style="width: 90%;">
         <div id="newsCarrusel" class="d-flex align-items-center position-relative m-auto bg-dark w-100" style="top: -70px; height: 380px;">
             <label for="fileSelector" class="position-relative text-center rounded border border-light w-75 h-50 mx-auto" id="fileLabel">
                 <input id="fileSelector" name="fileSelector[]" type="file" accept="image/*" style="cursor: pointer;" class="position-absolute opacity-0 w-100 h-100 start-0" onchange="showImgs(this);" multiple required>
@@ -113,7 +117,7 @@
                 </div>
                 <div id="newList" class="text-light lead w-75 my-4">
                     <p id="listText" class="d-flex">&diams;&nbsp;&nbsp;
-                        <textarea oninput="$(this).css('height', this.scrollHeight);" id="lTxt"
+                        <textarea oninput="autoResize(this)" id="lTxt"
                             class="overflow-hidden border-0 position-relative w-100 text-start"
                                 placeholder="<?php echo $lang['crear noticia']['l']?>" maxlength="500"></textarea>
                     </p>
@@ -124,5 +128,5 @@
         <input type="hidden" name="listText" id="postFormat">
         <input type="hidden" name="la" value="<?php echo $_GET['la']?>">
         <input type="submit" class="form-control mt-4" value="<?php echo $lang['crear noticia']['p']?>">
+        <p id="alertMsg"><?php echo $lang['errors']['alertNews']?><p>
     </form>
-    <p id="alertMsg"><?php echo $lang['errors']['alertNews']?><p>

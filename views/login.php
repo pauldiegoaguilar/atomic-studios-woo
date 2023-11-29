@@ -5,8 +5,9 @@
         <div class="form-outline form-white m-4 input-div">
             <input style="background-color: #9cbfdd;" type="email" id="typeEmailX" name="emailL" autocomplete="off" class="form-control form-control-lg mb-4" value="<?php echo (isset($_COOKIE['email'])) ? $_COOKIE['email'] : '' ?>" placeholder="<?php echo $lang['login']['cor']?>" />
             <input style="background-color: #9cbfdd;" type="password" id="typePasswordX" name="passL" class="form-control form-control-lg" value="<?php echo (isset($_COOKIE['pass'])) ? $_COOKIE['pass'] : '' ?>" placeholder="<?php echo $lang['login']['con']?>" />
-            <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="errorLog" style="color: rgb(182 190 197 / 80%); display: none;">Correo electronico y/o contraseña incorrectos</p>
-            <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="successLog" style="color: #013c70; display: none;">Has iniciado sesion correctamente</p>
+            <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="errorLog" style="color: rgb(182 190 197 / 80%); display: none;"><?php echo $lang['errors']['errorLog']?></p>
+            <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="bannedLog" style="color: rgb(182 190 197 / 80%); display: none;"><?php echo $lang['errors']['banned']?></p>
+            <p class="row text-center fs-5 m-0 pt-0 lh-1 my-2" id="successLog" style="color: #013c70; display: none;"><?php echo $lang['login']['b']?></p>
         </div>
     
         <div class="d-flex justify-content-around m-4 text-center">

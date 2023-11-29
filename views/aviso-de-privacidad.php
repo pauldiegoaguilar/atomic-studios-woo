@@ -1,5 +1,5 @@
 <?php if(!$user || !$user['esMod']){ ?>
-    <div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
+    <div class="text-start fs-3" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;">
 
         <h1 class="text-white"><?php echo $lang['aviso de privacidad']['txtSec1t']?></h1>
 
@@ -47,13 +47,13 @@
     </div>
 <?php return; }?>
 
-<div class="text-start" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;" id="avisoContTxt">
+<div class="text-start fs-3" style="margin-top: 4%; margin-bottom: 5%; margin-left: 7.5%; margin-right: 7.5%;" id="avisoContTxt">
 
     <p name="txtSec1t" contenteditable="true" class="text-white display-6"><?php echo $lang['aviso de privacidad']['txtSec1t']?></p>
 
     <p name="txtSec1b" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec1b']?></p>
 
-    <p name="txtSec2t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec2t']?></p>
+    <p name="txtSec2t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec2t']?></p>
     <p name="txtSec2bp" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec2bp']?></p>
     <ul>
         <li><p name="txtSec2bn" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec2bn']?></p></li>
@@ -61,7 +61,7 @@
         <li><p name="txtSec2bi" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec2bi']?></p></li>
     </ul>
 
-    <p name="txtSec3t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec3t']?></p>
+    <p name="txtSec3t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec3t']?></p>
     <p name="txtSec3bl" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec3bl']?></p>
     <ul>
         <li><p name="txtSec3bc" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec3bc']?></p></li>
@@ -71,7 +71,7 @@
         <li><p name="txtSec3be" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec3be']?></p></li>
     </ul>
 
-    <p name="txtSec4t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec4t']?></p>
+    <p name="txtSec4t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec4t']?></p>
     <p name="txtSec4bn" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec4bn']?></p>
     <ul>
         <li><p name="txtSec4bpc" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec4bpc']?></p></li>
@@ -79,13 +79,13 @@
         <li><p name="txtSec4bc" contenteditable="true" class="m-0"><?php echo $lang['aviso de privacidad']['txtSec4bc']?></p></li>
     </ul>
 
-    <p name="txtSec5t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec5t']?></p>
+    <p name="txtSec5t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec5t']?></p>
     <p name="txtSec5b" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec5b']?></p>
 
-    <p name="txtSec6t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec6t']?></p>
+    <p name="txtSec6t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec6t']?></p>
     <p name="txtSec6b" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec6b']?></p>
 
-    <p name="txtSec7t" contenteditable="true" class="text-white fs-3"><?php echo $lang['aviso de privacidad']['txtSec7t']?></p>
+    <p name="txtSec7t" contenteditable="true" class="text-white fs-2"><?php echo $lang['aviso de privacidad']['txtSec7t']?></p>
     <p name="txtSec7bn" contenteditable="true"><?php echo $lang['aviso de privacidad']['txtSec7bn']?></p>
 
     <div class="d-flex">
