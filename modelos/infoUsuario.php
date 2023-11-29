@@ -13,7 +13,7 @@
     $idUser = $_GET['user'];
     
     $sqlFlotas = "SELECT id_trans, compras.codigoProducto, ofertas.nombre as producto, fechaCompra, flotas.nombre as flota, " .
-                    "usuarios.nombre as usuario, IF(lastOwner.nombre IS NULL, 'Objeto nuevo', lastOwner.nombre) as lastProp, usuarios.descripcion FROM usuarios " .
+                    "usuarios.nombre as usuario, IF(lastOwner.nombre IS NULL, 'Objeto nuevo', lastOwner.nombre) as lastProp, inventario.fecha_baja as iBaja, usuarios.descripcion FROM usuarios " .
                     "LEFT JOIN compras ON compras.usuario_id = usuarios.id ".
                     "LEFT JOIN ofertas ON compras.codigoProducto = ofertas.codigoProducto ".
                     "LEFT JOIN inventario ON inventario.usuario_id = usuarios.id ".
@@ -35,7 +35,8 @@
 
     while($row = mysqli_fetch_assoc($qryFlotas)){
         $htmlD .= "<tr>";
-        $htmlD .= "<td>".$row['descripcion']."</td>";
+        $htmlD .= "<td contenteditable='true'>".$row['descripcion']."</td>";
+        $htmlD .= "<td><button class='btn form-control' onclick='modificarUsuario();'>Modificar</button></td>";
         $htmlD .= "</tr>";
 
         $res['descripcion'] = $htmlD;
@@ -44,6 +45,8 @@
         $htmlF .= "<td>".$row['flota']."</td>";
         $htmlF .= "<td>".$row['usuario']."</td>";
         $htmlF .= "<td>".$row['lastProp']."</td>";
+        $htmlF .= "<td>".$row['iBaja']."</td>";
+        $htmlD .= "<td><button class='btn form-control' onclick='modificarUsuario();'>Modificar</button></td>";
         $htmlF .= "</tr>";
 
         $res['inventario'] = $htmlF;

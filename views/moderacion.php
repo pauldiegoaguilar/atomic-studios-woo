@@ -45,10 +45,11 @@
     <div class="display-6 text-white border-bottom my-4">Información del usuario:&nbsp;<span id="selectedUser" class="text-info"></span></div>
     
     <div class="border-bottom text-center text-light lead">Descripcion</div>
-    <table class="table table-sm table-bordered table-hover table-dark text-center my-2">
+    <table class="table table-sm table-bordered table-dark text-center my-2">
         <thead>
             <tr>
-                <th scope='col'>Descripcion</th>
+                <th scope='col' width="90%">Descripcion</th>
+                <th scope='col' width="10%">Acciones</th>
             </tr>
         </thead>
         <tbody class="table table-light" id="usersDesc"></tbody>
@@ -61,6 +62,8 @@
                 <th scope='col'>Flota</th>
                 <th scope='col'>Propietario Actual</th>
                 <th scope='col'>Ultimo Propietario</th>
+                <th scope='col'>Eliminación</th>
+                <th scope='col'>Acciones</th>
             </tr>
         </thead>
         <tbody class="table table-light" id="usersInventory"></tbody>
@@ -82,13 +85,13 @@
 
 <script>
     let registros = 2;
-    let cantidadFilas = 2;
     let currentFilter = "none";
     let nick = "";
-
+    let filasFiltro = {"none":registros,"banned":registros,"unBanned":registros,"userName":0,"userMail":0};
     traerFilas();
 
     $("#filtList").change(function() {
+        $('#nick').val("");
         selectedFilter = $('#filtList option:selected').text();
         currentFilter = $('#filtList option:selected').val();
         cantidadFilas=2;
@@ -102,15 +105,14 @@
     });
 
     function traerFilas(){
-        console.log(cantidadFilas);
+        console.log(filasFiltro[currentFilter]);
         $.ajax({
-                url: "modelos/modUsuarios.php?from=" + cantidadFilas + "&filter=" + currentFilter + "&user=" + $('#nick').val(),
+                url: "modelos/modUsuarios.php?from=" + filasFiltro[currentFilter] + "&filter=" + currentFilter + "&user=" + $('#nick').val(),
 
                 success: function(res){
                     $('#usersBody').html("");
                     $('#usersBody').append(res);
-                    $('#nick').val("");
-                    cantidadFilas = cantidadFilas + registros;
+                    filasFiltro[currentFilter] = filasFiltro[currentFilter] + registros;
                 },
 
                 error: function(jqXHR, textStatus, errorThrown){
@@ -120,9 +122,11 @@
         });
     }
 
+    let currentUser = 0;
     function selectRow(fila){
         let idUser = fila.id.split("-")[1];
-   
+        currentUser = idUser;
+
         $('#selectedUser').text($(fila).children()[1].innerHTML);
 
         $.ajax({
@@ -144,10 +148,28 @@
         });
     }
 
+    function modificarUsuario(){
+        if(confirm("Se modificará la descripción del usuario")){
+            let des = $('#usersDesc td[contenteditable=true]').text();
+            $.ajax({
+                url: "modelos/modModificarUsuario.php?id=" + currentUser + "&op=desc&user=" + des,
+
+                success: function(){
+                    alert('La descripción ha sido modificada');
+                },
+
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log(jqXHR, textStatus,errorThrown);
+                    alert("Hubo un error, intentelo más tarde: " + errorThrown);
+                }
+            })
+        }
+    }
+
     function suspenderUsuario(usId){
         if(confirm("Se suspenderá la cuenta del usuario hasta nuevo aviso")){
             $.ajax({
-                url: "modelos/modEliminar.php?id=" + usId + "&del=1",
+                url: "modelos/modModificarUsuario.php?id=" + usId + "&op=ban&user=none",
 
                 success: function(res){
                     alert('La cuenta ha sido suspendida');
@@ -169,7 +191,7 @@
     function desBanear(usId){
         if(confirm("Se quitará la suspensión del usuario")){
             $.ajax({
-                url: "modelos/modEliminar.php?id=" + usId + "&del=0",
+                url: "modelos/modModificarUsuario.php?id=" + usId + "&op=unBan&user=none",
 
                 success: function(res){
                     alert('Se ha quitado la suspensión');
